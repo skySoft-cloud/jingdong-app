@@ -1,21 +1,112 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c81624;
+    color: #fff;
+}
+.logo01>image{
+    width: 290rpx;
+    height: 40rpx;
+}
+.motto{
+    margin-top: 23rpx;
+}
+.motto>text{
+    font-size:28rpx;
+}
+.search{
+    margin:50rpx 0 18rpx 0;
+}
+.search>input{
+    color: #c6c6c6;
+    width: 680rpx;
+    height:40rpx;
+    border-radius: 25px;
+    background: #ffffff;
+    font-size:24rpx;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    font-size:24rpx;
+    margin-top: 52rpx;
+}
+.nav>view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav>view text{
+    margin:33rpx 0;
+}
+.nav-item1>image{
+    width: 57rpx;
+    height: 47rpx;
+}
+.nav-item2>image{
+    width: 46rpx;
+    height: 47rpx;
+}
+.nav-item3>image{
+    width: 54rpx;
+    height: 47rpx;
+}
+.nav-item4>image{
+    width: 46rpx;
+    height: 47rpx;
+}
+.section-bar{
+    width:100%;
+    height:18rpx;
+    background: #e9e8ed;
+}
+.seckill{
+    font-size: 34rpx;
+    font-weight: 800;
+    margin:27rpx 0;
+    text-align: center;
+}
+.time{
+    display: flex;
+    justify-content: space-around;
+    font-size: 24rpx;
+}
+.time>view text:nth-of-type(1){
+    width: 110rpx;
+    height: 66rpx;
+    line-height: 66rpx;
+    font-size:24rpx;
+    text-align: center;
+}
+.time>view:nth-of-type(1) text:nth-of-type(1){
+    width: 110rpx;
+    height: 66rpx;
+    color: #ffffff;
+    background-color: #f35a5f;
+    font-size:24rpx;
+    border-radius: 25rpx;
+    line-height: 66rpx;
+}
+.time-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time-item>text:nth-of-type(1){
+    margin-bottom: 10rpx;
+}
+.count_down{
+    font-size:28rpx;
+    text-align: center;
+    margin-top:32rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
 
-.userinfo-nickname {
-  color: #aaa;
-}
 
-.usermotto {
-  margin-top: 200px;
-}
+
+
+
+
+
