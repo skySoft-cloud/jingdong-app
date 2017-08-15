@@ -9,7 +9,7 @@
             <text>多·快·好·省</text>
         </view>
         <view class="search">
-            <input placeholder=""/>
+            <input placeholder="搜索京东商品" style="background-image:url('../images/index/scale.png');"/>
         </view>
     </view>
     <view class="nav">

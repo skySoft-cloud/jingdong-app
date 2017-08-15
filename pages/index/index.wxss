@@ -26,6 +26,10 @@
     border-radius: 25px;
     background: #ffffff;
     font-size:24rpx;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: 228rpx center;
+    background-size: 32rpx 32rpx;
 }
 .nav{
     display: flex;
