@@ -58,7 +58,7 @@
             </view>
         </view>
         <view class="count_down">
-            <text>距本场结束还有</text>
+            <text>距本场结束</text>
         </view>
     </view>
 </view>
