@@ -11,24 +11,26 @@
     "navigationBarTextStyle": "#fff"
   },
   "tabBar": {
-    "selectedColor":"red",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "pages/images/tabbar/home.png",
-      "selectedIconPath": "pages/images/tabbar/home_sel.png"
-    },
-    {
-      "pagePath": "pages/buycar/buycar",
-      "text": "购物车",
-      "iconPath": "pages/images/tabbar/buycar.png",
-      "selectedIconPath": "pages/images/tabbar/buycar_sel.png"
-    },
-    {
-      "pagePath": "pages/logs/logs",
-      "text": "我的",
-      "iconPath": "pages/images/tabbar/me.png",
-      "selectedIconPath": "pages/images/tabbar/me_sel.png"
-    }]
+    "selectedColor": "red",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/home_sel.png"
+      },
+      {
+        "pagePath": "pages/buycar/buycar",
+        "text": "购物车",
+        "iconPath": "images/tabbar/buycar.png",
+        "selectedIconPath": "images/tabbar/buycar_sel.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "images/tabbar/me.png",
+        "selectedIconPath": "images/tabbar/me_sel.png"
+      }
+    ]
   }
 }

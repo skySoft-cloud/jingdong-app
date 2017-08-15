@@ -1,64 +1,64 @@
 <!--index.wxml-->
 <!--首页-->
 <view class="wrap-content">
-    <view class="header">
-        <view class="logo01">
-            <image src="../images/index/logo01.png"></image>
-        </view>
-        <view class="motto">
-            <text>多·快·好·省</text>
-        </view>
-        <view class="search">
-            <input placeholder="搜索京东商品" style="background-image:url('../images/index/scale.png');"/>
-        </view>
+  <view class="header">
+    <view class="logo01">
+      <image src="../../images/index/logo01.png"></image>
     </view>
-    <view class="nav">
-        <view class="nav-item1">
-            <image src="../images/index/cheap_card.png"></image>
-            <text>领优惠券</text>
-        </view>
-        <view class="nav-item2">
-            <image src="../images/index/scan_code.png"></image>
-            <text>扫码购物</text>
-        </view>
-        <view class="nav-item3">
-            <image src="../images/index/logistics.png"></image>
-            <text>物流查询</text>
-        </view>
-        <view class="nav-item4">
-            <image src="../images/index/class_goods.png"></image>
-            <text>商品分类</text>
-        </view>
+    <view class="motto">
+      <text>多·快·好·省</text>
     </view>
-    <view class="section-bar"></view>
-    <view class="content">
-        <view class="seckill">
-            <text>京东秒杀</text>
-        </view>
-        <view class="time">
-            <view class="time-item">
-                <text>14:00</text>
-                <text>抢购中</text>
-            </view>
-            <view class="time-item">
-                <text>14:00</text>
-                <text>抢购中</text>
-            </view>
-            <view class="time-item">
-                <text>14:00</text>
-                <text>抢购中</text>
-            </view>
-            <view class="time-item">
-                <text>14:00</text>
-                <text>抢购中</text>
-            </view>
-            <view class="time-item">
-                <text>14:00</text>
-                <text>抢购中</text>
-            </view>
-        </view>
-        <view class="count_down">
-            <text>距本场结束</text>
-        </view>
+    <view class="search">
+      <input placeholder="搜索京东商品" style="background-image:url('../../images/index/scale.png');" />
     </view>
+  </view>
+  <view class="nav">
+    <view class="nav-item1">
+      <image src="../../images/index/cheap_card.png"></image>
+      <text>领优惠券</text>
+    </view>
+    <view class="nav-item2">
+      <image src="../../images/index/scan_code.png"></image>
+      <text>扫码购物</text>
+    </view>
+    <view class="nav-item3">
+      <image src="../../images/index/logistics.png"></image>
+      <text>物流查询</text>
+    </view>
+    <view class="nav-item4">
+      <image src="../../images/index/class_goods.png"></image>
+      <text>商品分类</text>
+    </view>
+  </view>
+  <view class="section-bar"></view>
+  <view class="content">
+    <view class="seckill">
+      <text>京东秒杀</text>
+    </view>
+    <view class="time">
+      <view class="time-item">
+        <text>14:00</text>
+        <text>抢购中</text>
+      </view>
+      <view class="time-item">
+        <text>14:00</text>
+        <text>抢购中</text>
+      </view>
+      <view class="time-item">
+        <text>14:00</text>
+        <text>抢购中</text>
+      </view>
+      <view class="time-item">
+        <text>14:00</text>
+        <text>抢购中</text>
+      </view>
+      <view class="time-item">
+        <text>14:00</text>
+        <text>抢购中</text>
+      </view>
+    </view>
+    <view class="count_down">
+      <text>距本场结束</text>
+    </view>
+  </view>
 </view>
