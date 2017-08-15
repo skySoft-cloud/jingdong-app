@@ -58,7 +58,9 @@
             </view>
         </view>
         <view class="count_down">
-            <text>距本场结束</text>
+            <text>距本场结束还有</text>
+            <text >{{clock}}</text>
+            <text>{{micro_second}}</text>
         </view>
     </view>
 </view>
