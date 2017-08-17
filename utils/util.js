@@ -17,11 +17,12 @@ function formatNumber(n) {
 }
 
 //全局共通方法
-function http(url, callback) {
+function http(url,callback,data) {
     //发送请求
     //wx.request发起的是https请求,一个微信小程序，同时只能有5个网络请求连接
     wx.request({
         url,
+        method : data ? "POST" : "GET",
         header: {
             'content-type': 'application/xml'
         },

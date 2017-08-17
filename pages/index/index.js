@@ -8,15 +8,17 @@ var {
     globalData
     } = getApp();
 
-Page({
-  data: {
+const app = getApp();
 
-  },
-  //事件处理函数
-  onLoad: function () {
-    var baseUrl = globalData.baseUrl;
-    http(`${baseUrl}test`, (data) => {
-      console.log(data);
-    });
-  }
+Page({
+    data: {
+        userInfo: {}
+    },
+    //事件处理函数
+    onLoad: function () {
+        var baseUrl = globalData.baseUrl;
+        http(`${baseUrl}test`, (data) => {
+            console.log(data);
+        });
+    }
 });
