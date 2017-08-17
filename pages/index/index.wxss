@@ -105,12 +105,55 @@
     font-size:28rpx;
     text-align: center;
     margin-top:32rpx;
+    margin-bottom:45rpx;
 }
-
-
-
-
-
-
+.goods_item{
+    display: flex;
+    justify-content:space-around;
+}
+.goods_item01>image{
+    width:228rpx;
+    height:270rpx;
+}
+.goods_item01_pro{
+    display: flex;
+    flex-direction: column;
+}
+.goods_item01_pro>text{
+    font-size:30rpx;
+}
+.now-price>text:nth-of-type(1){
+    display: inline-block;
+    color: #f46366;
+    font-size:26rpx;
+    margin:22rpx 22rpx 16rpx 22rpx ;
+}
+.now-price{
+    font-size: 30rpx;
+    color: #f46366;
+}
+.now-price>text:nth-of-type(2){
+    font-size:26rpx;
+    text-decoration: line-through;
+    color: #b5b5b5;
+}
+.percent{
+    display: inline-block;
+    font-size:26rpx;
+    margin:0 16rpx 22rpx 22rpx ;
+}
+.immediately-btn text{
+    display: inline-block;
+    border-radius: 25rpx;
+    width: 140rpx;
+    height: 66rpx;
+    line-height: 66rpx;
+    font-size:30rpx;
+    text-align: center;
+    background: #f46366;
+    color: #ffffff;
+    padding:2rpx 8rpx;
+    margin:0 22rpx 22rpx 22rpx ;
+}
 
 

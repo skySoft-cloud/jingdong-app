@@ -9,7 +9,7 @@
             <text>多·快·好·省</text>
         </view>
         <view class="search">
-            <input bindtap="hideBg" placeholder="搜索京东商品" style="background-image:url('../../images/index/scale.png');"/>
+            <input bindtap="hideBg" placeholder="搜索京东商品" style="background-image:url('../../images/index/scale.png');" maxlength="14"/>
         </view>
     </view>
     <view class="nav">
@@ -59,6 +59,26 @@
         </view>
         <view class="count_down">
             <text>距本场结束</text>
+        </view>
+    </view>
+    <view class="goods_item">
+        <view class="goods_item01">
+            <image src="../../images/index/goods_item01.png"></image>
+        </view>
+        <view class="goods_item01_pro">
+            <text>【厂家直销】 【两件减8元】</text>
+            <text>比达尼 2017夏装新款修身气</text>
+            <view class="now-price">
+                <text>￥</text>58.00
+                <text>￥139</text>
+            </view>
+            <view>
+                <text class="percent">已售 17%</text>
+                <view></view>
+            </view>
+            <view class="immediately-btn">
+                <text>立即抢购</text>
+            </view>
         </view>
     </view>
 </view>
