@@ -2,7 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/buycar/buycar",
-    "pages/logs/logs"
+    "pages/user_info/user_info"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,7 +26,7 @@
         "selectedIconPath": "images/tabbar/buycar_sel.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/user_info/user_info",
         "text": "我的",
         "iconPath": "images/tabbar/me.png",
         "selectedIconPath": "images/tabbar/me_sel.png"
