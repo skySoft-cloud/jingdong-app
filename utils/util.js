@@ -16,19 +16,22 @@ function formatNumber(n) {
     return n[1] ? n : '0' + n
 }
 
-//全局共通方法
-function http(url,callback,data) {
-    //发送请求
-    //wx.request发起的是https请求,一个微信小程序，同时只能有5个网络请求连接
+/**
+ * 接口请求方法：wx.request发起的是https请求,一个微信小程序，同时只能有5个网络请求连接
+ * @param options  调用该方法时传入的对象
+ */
+function http(options) {
+    // 获取全局对象并进行解构
+    let {globalData:{baseUrl}} = getApp();
     wx.request({
-        url,
-        method : data ? "POST" : "GET",
+        url: `${baseUrl}${options.url}`,
         header: {
             'content-type': 'application/xml'
         },
+        method: options.data ? "POST" : "GET",
         success: (res)=> {
             //回调
-            callback(res.data)
+            options.func(res.data);
         }
     })
 }

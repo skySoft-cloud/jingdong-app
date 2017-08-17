@@ -1,0 +1,83 @@
+.my-container {
+    width: 100%;
+    height: 10009rpx;
+    background-color: #e9e8ed;
+}
+.user-wechat-info {
+    width: 100%;
+    height: 192rpx;
+    background-color: #E45050;
+    overflow: hidden;
+}
+.order-details {
+    width: 100%;
+    height: 342rpx;
+    background-color: white;
+    margin-top: 19rpx;
+}
+.order-detail {
+    width: 100%;
+    height: 85rpx;
+    background-color: white;
+}
+.order-detail:not(:last-child) {
+    border-bottom: 1rpx solid #e9e8ed;
+}
+.order-detail:last-child {
+    border-bottom: 1rpx solid #e9e8ed;
+}
+.discount-coupon {
+    width: 100%;
+    height: 85rpx;
+    background-color: white;
+    margin-top: 19rpx;
+}
+.detail_info {
+    width: 682rpx;
+    margin: 0 auto;
+}
+.user-wechat-info > image {
+    width: 96rpx;
+    height: 96rpx;
+    margin: 42rpx 30rpx 42rpx 40rpx;
+    border: 4rpx solid #BA4356;
+    border-radius: 50%;
+    display: block;
+    float: left;
+}
+.words-info {
+    float: left;
+    height: 96rpx;
+    margin: 42rpx 0;
+}
+.nick-name {
+    color: white;
+}
+.jd-account {
+    color: #FFC7BC;
+    font-size: 24rpx;
+    margin-top: 22rpx;
+}
+.detail-info {
+    height: 40rpx;
+    padding: 22rpx 20rpx;
+    font-size: 28rpx;
+}
+.order-icon {
+    width: 39rpx;
+    height: 41rpx;
+    display: block;
+    float: left;
+    margin-right: 24rpx;
+}
+.detail-info > text {
+    display: block;
+    float: left;
+    line-height: 40rpx;
+}
+.right-array {
+    width: 16rpx;
+    height: 25rpx;
+    float: right;
+    margin-top: 10rpx;
+}
