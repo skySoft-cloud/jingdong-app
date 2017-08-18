@@ -11,28 +11,28 @@
         </view>
     </view>
     <view class="order-details">
-        <view class="order-detail">
+        <view class="order-detail" bindtap="tapMyOrder">
             <view class="detail-info">
                 <image class="order-icon" src="../../images/user_info/all_orders.png"></image>
                 <text>全部订单</text>
                 <image class="right-array" src="../../images/user_info/left_grey_array.png"></image>
             </view>
         </view>
-        <view class="order-detail">
+        <view class="order-detail" bindtap="tapUnpaidOrder">
             <view class="detail-info">
                 <image class="order-icon" src="../../images/user_info/not_paided.png"></image>
                 <text>待付款</text>
                 <image class="right-array" src="../../images/user_info/left_grey_array.png"></image>
             </view>
         </view>
-        <view class="order-detail">
+        <view class="order-detail" bindtap="tapNotReceived">
             <view class="detail-info">
                 <image class="order-icon" src="../../images/user_info/not_received.png"></image>
                 <text>待收货</text>
                 <image class="right-array" src="../../images/user_info/left_grey_array.png"></image>
             </view>
         </view>
-        <view class="order-detail">
+        <view class="order-detail" bindtap="tapPaidOrder">
             <view class="detail-info">
                 <image class="order-icon" src="../../images/user_info/paid_order.png"></image>
                 <text>售后订单</text>
@@ -40,7 +40,7 @@
             </view>
         </view>
     </view>
-    <view class="discount-coupon">
+    <view class="discount-coupon" bindtap="tapDiscountedOrder">
         <view class="detail-info">
             <image class="order-icon" src="../../images/user_info/discound_card.png"></image>
             <text>优惠券</text>

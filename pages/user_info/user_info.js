@@ -1,6 +1,5 @@
-// pages/user_info/user_info.js
-//获取应用实例
 const app = getApp();
+const tapItemArray = [];
 Page({
   /**
    * 页面的初始数据
@@ -8,6 +7,44 @@ Page({
   data: {
       wechatInfo: {}
   },
+    /**
+     * 点击链接到订单详情页
+     */
+  tapMyOrder: () => {
+      wx.navigateTo({
+          url: "../user_info/my_order/my_order"
+      })
+  },
+    /**
+     * 点击链接到待付款页面
+     */
+    tapUnpaidOrder: () => {
+        wx.navigateTo({
+            url: "../user_info/unpaid_order/unpaid_order"
+        })
+    },
+    /**
+     * 点击链接到待收货页面
+     */
+    tapNotReceived: () => {
+        wx.navigateTo({
+            url: "../user_info/not_received/not_received"
+        })
+    },
+    /**
+     * 点击弹出售后订单后台设置详情
+     */
+    tapPaidOrder: () => {
+
+    },
+    /**
+     * 点击链接到优惠券页面
+     */
+    tapDiscountedOrder: () => {
+        wx.navigateTo({
+            url: "../user_info/discount_order/discount_order"
+        })
+    },
 
   /**
    * 生命周期函数--监听页面加载
