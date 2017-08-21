@@ -1,1 +1,32 @@
 /* pages/user_info/my_order/my_order.wxss */
+.my-container {
+    width: 100%;
+    height: 1206rpx;
+    background-color: #e9e8ed;
+}
+.head-nav {
+    width: 100%;
+    height: 94rpx;
+    background-color: white;
+    border-top: 2rpx solid #e9e8ed;
+    border-bottom: 2rpx solid #e9e8ed;
+    display: flex;
+    flex-direction: row;
+}
+.head-nav > view {
+    flex: 1;
+    text-align: center;
+    line-height: 94rpx;
+    font-size: 28rpx;
+}
+.active-item {
+    color: #D74053;
+    border-bottom: 4rpx solid #D74053;
+}
+.no-order {
+    width: 100%;
+    text-align: center;
+    font-size: 28rpx;
+    color: #5B5A60;
+    margin-top: 60rpx;
+}

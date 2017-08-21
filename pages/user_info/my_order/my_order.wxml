@@ -1,2 +1,14 @@
 <!--pages/user_info/my_order/my_order.wxml-->
-<text>pages/user_info/my_order/my_order.wxml</text>
+<view class="my-container">
+    <view class="head-nav">
+        <block wx:for="{{navTabs}}">
+            <view class="{{activeIndex == index ? 'active-item':''}}" id="{{index}}" bindtap="tapNavItem">{{item}}</view>
+        </block>
+    </view>
+    <view >
+        <view class="no-order" hidden="{{activeIndex != 0}}">您暂时还没有订单</view>
+        <view class="no-order" hidden="{{activeIndex != 1}}">您暂时还没有待支付订单</view>
+        <view class="no-order" hidden="{{activeIndex != 2}}">您暂时还没有待收货订单</view>
+    </view>
+</view>
+
