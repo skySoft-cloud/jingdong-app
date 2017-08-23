@@ -1,2 +1,55 @@
 <!--pages/buycar/buycar.wxml-->
-<text>pages/buycar/buycar.wxml</text>
+<view class="my-container">
+  <view class="goods-wrap">
+    <view class="shop-title">
+      <label>
+        <radio class="choose-shop" value="value" checked="true" color="#f23030" />
+      </label>
+      <image src="../../images/buycar/JDshopTitle.png" class="shop-img"></image>
+      <text class="shop-name">京东自营</text>
+    </view>
+    <view class="goods-detail-wrap">
+      <view class="money-off">
+        <image class="money-off-icon" src="../../images/buycar/JDshopTitle.png"></image>
+        <text>购满2件，即可享受</text>
+        <text class="add-goods">去凑单></text>
+      </view>
+      <view class="goods-detail">
+        <view>
+          <radio class="choose" value="value" checked="true" color="#f23030"/>
+        </view>
+        <view class="goods-img">
+          <image src="../../images/buycar/goods_1.jpg"></image>
+        </view>
+        <view class="goods-describe">
+          <view class="goods-describe-txt">                                     sante三特水果果干燕麦片脆麦片两包组合装 即食健康营养麦片 350g*2 混合果干燕麦片+浆果燕麦片</view>
+          <view class="goods-spec">口味:混合果干燕麦片+浆果燕麦片</view>
+          <view class="goods-price-wrap">
+            <text class="goods-price">￥49.9</text>
+            <view class="goods-num">
+              <view class="subtract">-</view>
+              <view class="num"><input type="text" value="1"/></view>
+              <view class="add">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="total-wrap">
+    <view class="total">
+      <view class="choose-all-wrap">
+        <radio value="value" checked="true" color="#f23030"/>
+        <text>全选</text>
+      </view>
+      <view class="total-price-wrap">
+        <view class="total-txt">
+          <text>总计: </text>
+          <text id="total_price">￥49.9</text>
+        </view>
+        <view class="discount-price">不含运费，已优惠￥30</view>
+      </view>
+    </view>
+    <view class="go-pay">去结算(<text id="toatl_num">1</text>)件</view>
+  </view>
+</view>
