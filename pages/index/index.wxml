@@ -9,8 +9,7 @@
             <text>多·快·好·省</text>
         </view>
         <view class="search">
-            <icon class="search-static" type="search" size="16"/>
-            <input placeholder="搜索京东商品" bindfocus="wxSearchFocus"/>
+            <input bindtap="hideBg" placeholder="搜索京东商品" style="background-image:url('../../images/index/scale.png');" maxlength="14"/>
         </view>
     </view>
     <view class="nav">
@@ -22,7 +21,7 @@
             <image src="../../images/index/scan_code.png"></image>
             <text>扫码购物</text>
         </view>
-        <view class="nav-item3" bindtap="tapMyOrder">
+        <view class="nav-item3">
             <image src="../../images/index/logistics.png"></image>
             <text>物流查询</text>
         </view>
@@ -36,26 +35,26 @@
         <view class="seckill">
             <text>京东秒杀</text>
         </view>
-        <view class="time" bindtap="clickNum">
+        <view class="time">
             <view class="time-item">
-                <text class="{{num == 1?'time-active':''}}" data-num="1">14:00</text>
+                <text>14:00</text>
                 <text>抢购中</text>
             </view>
             <view class="time-item">
-                <text class="{{num == 2?'time-active':''}}" data-num="2">16:00</text>
-                <text>即将开始</text>
+                <text>14:00</text>
+                <text>抢购中</text>
             </view>
             <view class="time-item">
-                <text class="{{num == 3?'time-active':''}}" data-num="3">18:00</text>
-                <text>即将开始</text>
+                <text>14:00</text>
+                <text>抢购中</text>
             </view>
             <view class="time-item">
-                <text class="{{num == 4?'time-active':''}}" data-num="4">20:00</text>
-                <text>即将开始</text>
+                <text>14:00</text>
+                <text>抢购中</text>
             </view>
             <view class="time-item">
-                <text class="{{num == 5?'time-active':''}}" data-num="5">22:00</text>
-                <text>即将开始</text>
+                <text>14:00</text>
+                <text>抢购中</text>
             </view>
         </view>
         <view class="count_down">
@@ -75,12 +74,10 @@
             </view>
             <view>
                 <text class="percent">已售 17%</text>
-                <progress percent="17" activeColor="#f35a5f" active="{{true}}"></progress>
                 <view></view>
             </view>
             <view class="immediately-btn">
                 <text>立即抢购</text>
-
             </view>
         </view>
     </view>

@@ -18,23 +18,18 @@
 }
 .search{
     margin:50rpx 0 18rpx 0;
-    position: relative;
 }
-.search-static{
-    position: absolute;
-    left:232rpx;
-    top:10rpx;
-    z-index:2;
-}
-
 .search>input{
     color: #c6c6c6;
     width: 680rpx;
     height:40rpx;
-    border-radius: 32rpx;
+    border-radius: 25px;
     background: #ffffff;
     font-size:24rpx;
     text-align: center;
+    background-repeat: no-repeat;
+    background-position: 228rpx center;
+    background-size: 32rpx 32rpx;
 }
 .nav{
     display: flex;
@@ -89,14 +84,14 @@
     font-size:24rpx;
     text-align: center;
 }
-.time-active{
-    width: 114rpx;
-    height: 65rpx;
+.time>view:nth-of-type(1) text:nth-of-type(1){
+    width: 110rpx;
+    height: 66rpx;
     color: #ffffff;
     background-color: #f35a5f;
     font-size:24rpx;
-    border-radius: 32rpx;
-    line-height: 65rpx;
+    border-radius: 25rpx;
+    line-height: 66rpx;
 }
 .time-item{
     display: flex;
@@ -115,24 +110,23 @@
 .goods_item{
     display: flex;
     justify-content:space-around;
-    color: #323232;
 }
 .goods_item01>image{
-    width:214rpx;
-    height:214rpx;
+    width:228rpx;
+    height:270rpx;
 }
 .goods_item01_pro{
     display: flex;
     flex-direction: column;
 }
 .goods_item01_pro>text{
-    font-size:28rpx;
+    font-size:30rpx;
 }
 .now-price>text:nth-of-type(1){
     display: inline-block;
-    color: #e77c89;
+    color: #f46366;
     font-size:26rpx;
-    margin:16rpx 22rpx 0rpx 0;
+    margin:22rpx 22rpx 16rpx 22rpx ;
 }
 .now-price{
     font-size: 30rpx;
@@ -141,31 +135,25 @@
 .now-price>text:nth-of-type(2){
     font-size:26rpx;
     text-decoration: line-through;
-    color: #a2a2a2;
+    color: #b5b5b5;
 }
 .percent{
     display: inline-block;
     font-size:26rpx;
-    margin:0 16rpx 16rpx 0 ;
-    color: #707070;
-}
-progress{
-    display:inline-block;
-    width:200rpx;
+    margin:0 16rpx 22rpx 22rpx ;
 }
 .immediately-btn text{
     display: inline-block;
-    border-radius: 10rpx;
-    width: 155rpx;
-    height: 49rpx;
-    line-height: 49rpx;
-    font-size:28rpx;
+    border-radius: 25rpx;
+    width: 140rpx;
+    height: 66rpx;
+    line-height: 66rpx;
+    font-size:30rpx;
     text-align: center;
     background: #f46366;
     color: #ffffff;
     padding:2rpx 8rpx;
-    margin:0 22rpx 16rpx 0 ;
+    margin:0 22rpx 22rpx 22rpx ;
 }
-
 
 
