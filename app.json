@@ -4,8 +4,6 @@
     "pages/buycar/buycar",
     "pages/user_info/user_info",
     "pages/user_info/my_order/my_order",
-    "pages/user_info/unpaid_order/unpaid_order",
-    "pages/user_info/not_received/not_received",
     "pages/user_info/discount_order/discount_order"
   ],
   "window": {

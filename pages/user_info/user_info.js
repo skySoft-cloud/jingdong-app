@@ -8,44 +8,21 @@ Page({
       wechatInfo: {}
   },
     /**
-     * 点击链接到订单详情页
-     */
-  tapMyOrder: () => {
-      wx.navigateTo({
-          url: "../user_info/my_order/my_order"
-      })
-  },
-    /**
-     * 点击链接到待付款页面
-     */
-    tapUnpaidOrder: () => {
-        wx.navigateTo({
-            url: "../user_info/unpaid_order/unpaid_order"
-        })
-    },
-    /**
-     * 点击链接到待收货页面
-     */
-    tapNotReceived: () => {
-        wx.navigateTo({
-            url: "../user_info/not_received/not_received"
-        })
-    },
-    /**
      * 点击弹出售后订单后台设置详情
      */
     tapPaidOrder: () => {
-
+        wx.showModal({
+            content: `请至"微信-发现-购物-个人中心"进行售后订单管理`,
+            confirmText: "知道了",
+            confirmColor: "#E45050",
+            showCancel: false,
+            success: function (res) {
+                if (res.confirm) {
+                    console.log('用户点击确定')
+                }
+            }
+        });
     },
-    /**
-     * 点击链接到优惠券页面
-     */
-    tapDiscountedOrder: () => {
-        wx.navigateTo({
-            url: "../user_info/discount_order/discount_order"
-        })
-    },
-
   /**
    * 生命周期函数--监听页面加载
    */

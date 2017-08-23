@@ -11,27 +11,27 @@
         </view>
     </view>
     <view class="order-details">
-        <view class="order-detail" bindtap="tapMyOrder">
+        <navigator class="order-detail" url="../user_info/my_order/my_order?activeIndex=0">
             <view class="detail-info">
                 <image class="order-icon" src="../../images/user_info/all_orders.png"></image>
                 <text>全部订单</text>
                 <image class="right-array" src="../../images/user_info/left_grey_array.png"></image>
             </view>
-        </view>
-        <view class="order-detail" bindtap="tapUnpaidOrder">
+        </navigator>
+        <navigator class="order-detail" url="../user_info/my_order/my_order?activeIndex=1">
             <view class="detail-info">
                 <image class="order-icon" src="../../images/user_info/not_paided.png"></image>
                 <text>待付款</text>
                 <image class="right-array" src="../../images/user_info/left_grey_array.png"></image>
             </view>
-        </view>
-        <view class="order-detail" bindtap="tapNotReceived">
+        </navigator>
+        <navigator class="order-detail" url="../user_info/my_order/my_order?activeIndex=2">
             <view class="detail-info">
                 <image class="order-icon" src="../../images/user_info/not_received.png"></image>
                 <text>待收货</text>
                 <image class="right-array" src="../../images/user_info/left_grey_array.png"></image>
             </view>
-        </view>
+        </navigator>
         <view class="order-detail" bindtap="tapPaidOrder">
             <view class="detail-info">
                 <image class="order-icon" src="../../images/user_info/paid_order.png"></image>
@@ -40,11 +40,11 @@
             </view>
         </view>
     </view>
-    <view class="discount-coupon" bindtap="tapDiscountedOrder">
+    <navigator class="discount-coupon" url="../user_info/discount_order/discount_order">
         <view class="detail-info">
             <image class="order-icon" src="../../images/user_info/discound_card.png"></image>
             <text>优惠券</text>
             <image class="right-array" src="../../images/user_info/left_grey_array.png"></image>
         </view>
-    </view>
+    </navigator>
 </view>
