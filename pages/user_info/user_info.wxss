@@ -70,10 +70,10 @@
     float: left;
     margin-right: 24rpx;
 }
-.detail-info > text {
+.detail-info > .item-name {
     display: block;
     float: left;
-    line-height: 40rpx;
+    line-height: 42rpx;
 }
 .right-array {
     width: 16rpx;
@@ -81,3 +81,12 @@
     float: right;
     margin-top: 10rpx;
 }
+.detail-info > .item-num {
+    display: block;
+    float: right;
+    line-height: 42rpx;
+    font-size: 24rpx;
+    color:#c81624;
+    margin-right: 28rpx;
+}
+

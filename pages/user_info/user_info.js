@@ -1,11 +1,16 @@
 const app = getApp();
 const tapItemArray = [];
+const {http} = require('../../utils/util.js');
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-      wechatInfo: {}
+      wechatInfo: {},
+      allOrders: "",
+      unpaidOrder: "",
+      notReceivedOrder: "",
+      discountCard: ""
   },
     /**
      * 点击弹出售后订单后台设置详情
@@ -17,9 +22,7 @@ Page({
             confirmColor: "#E45050",
             showCancel: false,
             success: function (res) {
-                if (res.confirm) {
-                    console.log('用户点击确定')
-                }
+
             }
         });
     },
@@ -35,7 +38,19 @@ Page({
               wechatInfo: userInfo
           });
           console.log(userInfo)
-      })
+      });
+      // 调接口GetOrderNum
+      http({
+          url: "GetOrderNum",
+          func: function(data){
+              that.setData({
+                  allOrders: data["all_orders"] ? data["all_orders"]+"单" : "",
+                  unpaidOrder: data["unpaid_order"] ? data["unpaid_order"]+"单" : "",
+                  notReceivedOrder: data["not_received_order"] ? data["not_received_order"]+"单" : "",
+                  discountCard: data["discount_card"] ? data["all_orders"]+"单" : ""
+              });
+          }
+      });
   },
 
   /**
