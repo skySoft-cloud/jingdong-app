@@ -1,0 +1,66 @@
+<!--pages/cart/cart.wxml-->
+<view class="my-container">
+  <view class="goods-wrap" wx:if="{{has_list}}">
+    <view class="shop-title">
+      <icon class="shop-select" wx:if="{{shop_select_status}}" type="success" color="#f23030" bindtap="shopSelectAll" />
+      <icon class="shop-select" wx:else type="circle" color="#000" bindtap="shopSelectAll" />
+      <image src="../../images/buycar/JDshopTitle.png" class="shop-img"></image>
+      <text class="shop-name">京东自营</text>
+    </view>
+    <view class="goods-list" wx:for="{{goods_list}}" wx:key="">
+      <view class="special-offer">
+        <text class="money-off">满减</text>
+        <text>购满2件，即可享受</text>
+        <text class="fr jd-main-color">去凑单></text>
+      </view>
+      <view class="goods-detail-wrap {{item.isTouchMove ? 'touch-move-active' : ''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}">
+        <view class="goods-detail">
+          <view class="margin-auto">
+            <icon wx:if="{{item.selected}}" type="success" color="#f23030" bindtap="selectList" data-index="{{index}}" />
+            <icon wx:else type="circle" color="#000" bindtap="selectList" data-index="{{index}}" />
+          </view>
+          <view class="goods-img">
+            <image src="{{item.goods_img}}"></image>
+          </view>
+          <view class="goods-describe">
+            <view class="goods-describe-txt"> {{item.goods_describe}}</view>
+            <view class="goods-spec">{{item.goods_spec}}</view>
+            <view class="goods-price-wrap">
+              <text class="goods-price">￥{{item.goods_price}}</text>
+              <view class="goods-num">
+                <view class="subtract" bindtap="minusCount" data-index="{{index}}">-</view>
+                <view class="num">
+                  <input type="text" value="{{item.default_num}}" />
+                </view>
+                <view class="add" bindtap="addCount" data-index="{{index}}">+</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="del" bindtap="delGoods">
+          <text>删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="cart-no-data">去添加点什么吧~</view>
+  </view>
+  <view class="bottom-wrap">
+    <view class="choose-all">
+      <icon wx:if="{{select_all_status}}" type="success" color="#f23030" bindtap="selectAll" />
+      <icon wx:else type="circle" color="#000" bindtap="selectAll" />
+      <text>全选</text>
+    </view>
+    <view class="total-price-wrap">
+      <view class="total-txt">
+        总计:
+        <text class="jd-main-color">￥{{total_price}}</text>
+      </view>
+      <view class="discount-price">不含运费，已优惠￥{{discount_price}}</view>
+    </view>
+    <view class="go-pay">
+      <text>去结算({{total_num}})件</text>
+    </view>
+  </view>
+</view>
