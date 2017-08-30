@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/buycar/buycar",
+    "pages/cart/cart",
     "pages/user_info/user_info",
     "pages/user_info/my_order/my_order",
     "pages/user_info/discount_order/discount_order"
@@ -23,7 +23,7 @@
         "selectedIconPath": "images/tabbar/home_sel.png"
       },
       {
-        "pagePath": "pages/buycar/buycar",
+        "pagePath": "pages/cart/cart",
         "text": "购物车",
         "iconPath": "images/tabbar/buycar.png",
         "selectedIconPath": "images/tabbar/buycar_sel.png"
