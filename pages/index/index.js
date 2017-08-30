@@ -9,12 +9,12 @@ Page({
     //事件处理函数
     onLoad: function () {
         /*请求假数据demo*/
-        /*     http({
-         url: "test",
-         func: (data) => {
-         console.log(data);
-         }
-         });*/
+        http({
+            url: "test",
+            func: (data) => {
+                console.log(data);
+            }
+        });
         this.selectDefaultTimeItem();
     },
     /**
@@ -40,9 +40,19 @@ Page({
         })
     },
     /**
-     * 当searchbar获得焦点时
+     * 点击searchbar进入搜索页面
      */
-    wxSearchFocus:function(){
-
+    goSearchPage: function () {
+        wx.navigateTo({
+          url: "search/search"
+        })
+    },
+    /**
+     * 点击領優惠券进入搜索页面
+     */
+    goReceiveCoupon: function () {
+      wx.navigateTo({
+        url: "receive_coupon/receive_coupon"
+      })
     }
 });

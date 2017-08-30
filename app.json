@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/receive_coupon/receive_coupon",
+    "pages/index/search/search",
     "pages/cart/cart",
     "pages/user_info/user_info",
     "pages/user_info/my_order/my_order",
@@ -14,7 +16,7 @@
   },
   "tabBar": {
     "selectedColor": "red",
-    "borderStyle":"black",
+    "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/index/index",

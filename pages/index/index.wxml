@@ -8,13 +8,13 @@
         <view class="motto">
             <text>多·快·好·省</text>
         </view>
-        <view class="search">
+        <view class="search" bindtap="goSearchPage">
             <icon class="search-static" type="search" size="16"/>
-            <input placeholder="搜索京东商品" bindfocus="wxSearchFocus"/>
+            <input placeholder="搜索京东商品"/>
         </view>
     </view>
     <view class="nav">
-        <view class="nav-item1">
+        <view class="nav-item1" bindtap="goReceiveCoupon">
             <image src="../../images/index/cheap_card.png"></image>
             <text>领优惠券</text>
         </view>
