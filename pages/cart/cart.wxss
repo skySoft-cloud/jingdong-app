@@ -91,21 +91,21 @@ page {
   padding-bottom: 30rpx;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  -webkit-transform: translateX(80rpx);
-  transform: translateX(80rpx);
-  margin-left: -80rpx;
+  -webkit-transform: translateX(100rpx);
+  transform: translateX(100rpx);
+  margin-left: -100rpx;
 }
 
 .del {
-  width: 80rpx;
+  width: 100rpx;
   background-color: #f23030;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  -webkit-transform: translateX(80rpx);
-  transform: translateX(80rpx);
+  -webkit-transform: translateX(100rpx);
+  transform: translateX(100rpx);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -221,4 +221,7 @@ page {
   text-align: center;
   background-color: #f23030;
   color: #fff;
+}
+.go-pay-disabled{
+  background-color: #b2b2b2;
 }

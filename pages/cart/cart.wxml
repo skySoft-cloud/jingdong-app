@@ -30,7 +30,7 @@
               <view class="goods-num">
                 <view class="subtract" bindtap="minusCount" data-index="{{index}}">-</view>
                 <view class="num">
-                  <input type="text" value="{{item.default_num}}" />
+                  <input type="number" value="{{item.default_num}}" data-index="{{index}}" bindblur="getInputVal" />
                 </view>
                 <view class="add" bindtap="addCount" data-index="{{index}}">+</view>
               </view>
@@ -46,7 +46,7 @@
   <view wx:else>
     <view class="cart-no-data">去添加点什么吧~</view>
   </view>
-  <view class="bottom-wrap">
+  <view class="bottom-wrap" wx:if="{{has_list}}">
     <view class="choose-all">
       <icon wx:if="{{select_all_status}}" type="success" color="#f23030" bindtap="selectAll" />
       <icon wx:else type="circle" color="#000" bindtap="selectAll" />
@@ -61,6 +61,22 @@
     </view>
     <view class="go-pay">
       <text>去结算({{total_num}})件</text>
+    </view>
+  </view>
+  <view class="bottom-wrap" wx:else>
+    <view class="choose-all">
+      <icon type="warn" color="grey" />
+      <text>全选</text>
+    </view>
+    <view class="total-price-wrap">
+      <view class="total-txt">
+        总计:
+        <text class="jd-main-color">￥0</text>
+      </view>
+      <view class="discount-price">不含运费，已优惠￥0</view>
+    </view>
+    <view class="go-pay go-pay-disabled">
+      <text>去结算(0)件</text>
     </view>
   </view>
 </view>

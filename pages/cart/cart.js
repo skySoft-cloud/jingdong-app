@@ -1,7 +1,7 @@
 // pages/cart/cart.js
-//const {
-//  http
-//} = require('../../utils/util.js');
+const {
+  http
+} = require('../../utils/util.js');
 Page({
   /**
    * 页面的初始数据
@@ -11,22 +11,29 @@ Page({
     has_list: false,                      // 购物车是否有数据
     total_price: 0,                       // 总价，初始为0
     select_all_status: true,              // 全选状态,默认全选
-    startX: 0,                            // 开始坐标
-    startY: 0,
+    startX: 0,                            // 开始坐标X
+    startY: 0,                            // 开始坐标Y
     shop_select_status: true,             // 商店选择状态
     discount_price: 0,                    // 优惠价格
-    total_num: 1
+    total_num: 0                          // 选择商品总数
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // http({
-    //   url: "../../test/GetCartInfo",
-    //   func: (data) => {
-    //     console.log(data);
-    //   }
-    // });
+    http({
+      url: "GetCartInfo",
+      func: (data) => {
+        var cart_len = data["cart_info"].length;
+        if (cart_len != 0) {
+          this.setData({
+            has_list: true,
+            goods_list: data.cart_info
+          });
+        }
+        this.getTotalPrice();
+      }
+    });
   },
 
   /**
@@ -40,14 +47,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      has_list: true,
-      goods_list: [
-        { id: 1, shop_name: "京东自营", goods_img: "../../images/buycar/mask.jpg", goods_describe: "【京东超市】Mediheal可莱丝美迪惠尔水润保湿面膜10片水库针剂（保湿补水男女士 护肤品）新老包装随机发放", goods_spec: "重量：0.350kg；规格：水润保湿面膜10片", default_num: 1, goods_price: "128.00", selected: true, isTouchMove: false },
-        { id: 2, shop_name: "连夏阁旗舰店", goods_img: "../../images/buycar/2.jpg", goods_describe: "连夏阁 大码休闲套装女2017夏季新款修身时尚裤腿短裤短袖雪纺衫两件套女装 荧光绿套装裤 XL", goods_spec: "规格： 荧光绿套装裤， XL", default_num: 1, goods_price: "78.00", selected: true, isTouchMove: false }
-      ]
-    });
-    this.getTotalPrice();
+
   },
 
   /**
@@ -133,7 +133,21 @@ Page({
     //返回角度 /Math.atan()返回数字的反正切值
     return 360 * Math.atan(_Y / _X) / (2 * Math.PI);
   },
-
+  // 获取手动输入数量的值
+  getInputVal(e) {
+    const index = e.currentTarget.dataset.index;
+    let carts = this.data.goods_list;
+    let num = parseInt(e.detail.value);
+    if(num == 0){
+      carts[index].default_num = 1;
+    }else{
+      carts[index].default_num = num;
+    }
+    this.setData({
+      goods_list: this.data.goods_list
+    });
+    this.getTotalPrice();
+  },
   // 计算总额
   getTotalPrice() {
     let carts = this.data.goods_list;                // 获取购物车列表
@@ -170,7 +184,7 @@ Page({
         selected_arr.push(carts[i]);
       }
     }
-    if (selected_arr.length == carts.length) {
+    if (selected_arr.length == carts.length) {       // 判断当前商店中的商品是否都选中
       this.setData({
         shop_select_status: true,
         select_all_status: true
@@ -253,8 +267,7 @@ Page({
   delGoods(e) {
     var that = this;
     wx.showModal({
-      title: '提示',
-      content: '您确定要删除吗？',
+      content: '是否确认删除此商品？',
       success: function (res) {
         if (res.confirm) {
           const index = e.currentTarget.dataset.index;
@@ -271,11 +284,8 @@ Page({
             that.getTotalPrice();
             that.getTotalNum();
           }
-        } else if (res.cancel) {
-          console.log('用户点击取消')
         }
       }
     })
-
   }
 })
