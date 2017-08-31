@@ -1,34 +1,35 @@
 <!--pages/index/search/search.wxml-->
 <view class="search-title">
     <view class="search-bar">
-        <icon type="search" size="16"/>
-        <input placeholder="搜索京东商品" placeholder-class="placeholder"/>
-        <button type="default" class="cancel">取消</button>
+        <icon type="search" size="16" class="search"/>
+        <input placeholder="搜索京东商品" placeholder-class="placeholder" bindinput="inputShow" value="{{input_value}}"/>
+        <button type="default" class="cancel" bindtap="getBack">取消</button>
+        <icon hidden="{{cancel_icon}}" type="cancel"  color="grey" size="16" class="cancel-icon" bindtap="clearInput"/>
     </view>
 </view>
 <view class="content">
-    <view class="wrap-content">
-        <view class="content-title">
-            <text>热门搜索</text>
-            <text>换一批</text>
-        </view>
-        <view class="tags">
-            <text>苹果手机</text>
-            <text>三星</text>
-            <text>真丝连衣裙</text>
-            <text>衬衫女</text>
-            <text>摩托车</text>
-        </view>
-        <view class="tags">
-            <text>休闲鞋</text>
-            <text>电话手表</text>
-            <text>玩具</text>
-            <text>运动鞋</text>
-            <text>自行车</text>
-        </view>
-        <view class="tags">
-            <text>孕妇装</text>
-            <text>汽车用品</text>
-        </view>
+<view class="wrap-content">
+    <view class="content-title">
+        <text>热门搜索</text>
+        <text>换一批</text>
     </view>
+    <view class="tags">
+        <text>苹果手机</text>
+        <text>三星</text>
+        <text>真丝连衣裙</text>
+        <text>衬衫女</text>
+        <text>摩托车</text>
+    </view>
+    <view class="tags">
+        <text>休闲鞋</text>
+        <text>电话手表</text>
+        <text>玩具</text>
+        <text>运动鞋</text>
+        <text>自行车</text>
+    </view>
+    <view class="tags">
+        <text>孕妇装</text>
+        <text>汽车用品</text>
+    </view>
+</view>
 </view>

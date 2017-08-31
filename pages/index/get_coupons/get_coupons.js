@@ -1,4 +1,4 @@
-// pages/index/receive_coupon/receive_coupon.js
+// pages/index/get_coupons/get_coupons.js
 Page({
 
   /**

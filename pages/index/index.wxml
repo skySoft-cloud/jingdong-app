@@ -14,21 +14,22 @@
         </view>
     </view>
     <view class="nav">
-        <view class="nav-item1" bindtap="goReceiveCoupon">
+        <view class="nav-item1">
             <image src="../../images/index/cheap_card.png"></image>
-            <text>领优惠券</text>
+            <navigator url="get_coupons/get_coupons">领优惠券</navigator>
         </view>
         <view class="nav-item2">
             <image src="../../images/index/scan_code.png"></image>
-            <text>扫码购物</text>
+            <navigator>扫码购物</navigator>
         </view>
-        <view class="nav-item3" bindtap="tapMyOrder">
+        <view class="nav-item3">
             <image src="../../images/index/logistics.png"></image>
-            <text>物流查询</text>
+            <navigator url="../user_info/my_order/my_order" open-type="navigate">物流查询</navigator>
         </view>
         <view class="nav-item4">
             <image src="../../images/index/class_goods.png"></image>
-            <text>商品分类</text>
+            <navigator url="goods_classification/goods_classification" open-type="navigate">商品分类</navigator>
+            <!--<text>商品分类</text>-->
         </view>
     </view>
     <view class="section-bar"></view>

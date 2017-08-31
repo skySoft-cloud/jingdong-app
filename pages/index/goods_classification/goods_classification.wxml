@@ -1,0 +1,8 @@
+<!--pages/index/goods_classification/goods_classification.wxml-->
+<view class="top-content">
+    <view class="search">
+        <icon type="search" size="16" class="static" hidden="{{static_show}}"/>
+        <input placeholder="{{placeholder}}" bindfocus="clearInput" bindblur="recoverPlaceholder"/>
+        <icon type="search" size="16" class="active" hidden="{{input_show}}"/>
+    </view>
+</view>

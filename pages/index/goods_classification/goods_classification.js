@@ -1,12 +1,13 @@
-// pages/index/search/search.js
+// pages/index/goods_classification/goods_classification.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        cancel_icon: true,
-        input_value:""
+        placeholder: "请搜索商品",
+        static_show: false,
+        input_show: true
     },
 
     /**
@@ -17,41 +18,26 @@ Page({
     },
 
     /**
-     * input输入内容时cancel按钮的显示隐藏
+     * 聚焦时清空input
      */
-    inputShow(e){
-        if (e.detail.value) {
-            this.setData({
-                cancel_icon: false,
-                input_value:e.detail.value
-            })
-        } else {
-            this.setData({
-                cancel_icon: true,
-                input_value:""
-            })
-        }
-    },
-
-    /**
-     * input输入内容时cancel按钮的显示隐藏
-     */
-    clearInput(e){
-      this.setData({
-          cancel_icon: true,
-          input_value:""
-      })
-    },
-
-
-    /**
-     * 点击取消返回上一级
-     */
-    getBack(){
-        wx.navigateBack({
-            delta: 1
+    clearInput: function (e) {
+        this.setData({
+            placeholder: "",
+            input_show: false,
+            static_show: true
         })
     },
+    /**
+     * 失去焦点时恢复
+     */
+    recoverPlaceholder: function () {
+        this.setData({
+            placeholder: "请搜索商品",
+            input_show: true,
+            static_show: false
+        })
+    },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

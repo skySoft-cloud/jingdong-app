@@ -17,14 +17,6 @@ Page({
         });
         this.selectDefaultTimeItem();
     },
-    /**
-     * 点击链接到订单详情页
-     */
-    tapMyOrder: () => {
-        wx.navigateTo({
-            url: "../user_info/my_order/my_order"
-        })
-    },
     /*页面初始化加载默认选中进行中的抢购条目*/
     selectDefaultTimeItem: function () {
         this.setData({
@@ -46,13 +38,5 @@ Page({
         wx.navigateTo({
           url: "search/search"
         })
-    },
-    /**
-     * 点击領優惠券进入搜索页面
-     */
-    goReceiveCoupon: function () {
-      wx.navigateTo({
-        url: "receive_coupon/receive_coupon"
-      })
     }
 });

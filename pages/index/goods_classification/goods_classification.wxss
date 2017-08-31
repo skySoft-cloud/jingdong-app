@@ -1,0 +1,32 @@
+/* pages/index/goods_classification/goods_classification.wxss */
+
+.search{
+    position: relative;
+    padding:22rpx 0;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+}
+.static{
+    position: absolute;
+    top:32rpx;
+    left:254rpx;
+    z-index:2;
+}
+.active{
+    font-size:0;
+    position:absolute;
+    top:36rpx;
+    left:62rpx;
+    z-index:2;
+}
+.search input{
+    width: 670rpx;
+    height: 58rpx;
+    margin:0 auto;
+    background: #f1f1f1;
+    font-size:28rpx;
+    color: #8d8d8d;
+    border-radius: 35rpx;
+    text-align: center;
+    line-height: 58rpx;
+}

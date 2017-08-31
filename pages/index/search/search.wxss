@@ -7,10 +7,16 @@
     position: relative;
     margin-bottom:14rpx;
 }
-.search-bar icon{
+.search{
     position: absolute;
     z-index: 2;
     left:16rpx;
+    top:10rpx;
+}
+.cancel-icon{
+    position: absolute;
+    right:150rpx;
+    z-index:2;
     top:10rpx;
 }
 .search-bar>input{
