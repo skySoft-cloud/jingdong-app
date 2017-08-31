@@ -1,7 +1,8 @@
+page {
+    background-color:#f0f2f5;
+}
 .my-container {
     width: 100%;
-    height: 1110rpx;
-    background-color: #e9e8ed;
 }
 .user-wechat-info {
     width: 100%;

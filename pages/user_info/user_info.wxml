@@ -49,8 +49,8 @@
             </view>
         </view>
     </view>
-    <!--点击链接到领优惠券列表页-->
-    <navigator class="discount-coupon" url="../user_info/discount_order/discount_order">
+    <!--点击链接到已领到的优惠券列表页-->
+    <navigator class="discount-coupon" url="../user_info/received_coupons/received_coupons">
         <view class="detail-info">
             <image class="order-icon" src="../../images/user_info/discound_card.png"></image>
             <text class="item-name">优惠券</text>

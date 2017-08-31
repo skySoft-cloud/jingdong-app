@@ -4,10 +4,12 @@
     "pages/index/get_coupons/get_coupons",
     "pages/index/goods_classification/goods_classification",
     "pages/index/search/search",
+
     "pages/cart/cart",
+
     "pages/user_info/user_info",
     "pages/user_info/my_order/my_order",
-    "pages/user_info/discount_order/discount_order"
+    "pages/user_info/received_coupons/received_coupons"
   ],
   "window": {
     "backgroundTextStyle": "light",

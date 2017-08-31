@@ -1,4 +1,4 @@
-// pages/user_info/discount_order/discount_order.js
+// pages/user_info/received_coupons/received_coupons.js
 Page({
 
   /**
