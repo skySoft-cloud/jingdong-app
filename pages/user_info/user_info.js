@@ -6,14 +6,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-      wechatInfo: {},
-      allOrders: "",
-      unpaidOrder: "",
-      notReceivedOrder: "",
-      discountCard: ""
+      wechatInfo: {},       // 初始化账户信息，包括头像、昵称等
+      allOrders: "",        // 初始化订单数量
+      unpaidOrder: "",      // 初始化待付款订单数量
+      notReceivedOrder: "", // 初始化待收货订单数量
+      discountCard: ""      // 初始化优惠券数量
   },
     /**
-     * 点击弹出售后订单后台设置详情
+     * 点击弹出售后订单后台设置提示
      */
     tapPaidOrder: () => {
         wx.showModal({

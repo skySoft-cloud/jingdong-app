@@ -1,1 +1,30 @@
 /* pages/user_info/discount_order/discount_order.wxss */
+.my-container {
+    width: 100%;
+    height: 1206rpx;
+    background-color: #e9e8ed;
+}
+.title {
+    width: 100%;
+    height: 125rpx;
+    border-top: 2rpx solid #E3E3E3;
+    border-bottom: 2rpx solid #E3E3E3;
+    background-color: white;
+    text-align: center;
+}
+.title > text {
+    display: block;
+    margin-top: 20rpx;
+}
+.title > text:nth-child(1) {
+    font-size: 28rpx;
+    font-weight: 600;
+    color:#363636;
+    letter-spacing: 6rpx;
+}
+.title > text:nth-child(2) {
+    font-size: 24rpx;
+    font-weight: 400;
+    color:#989898;
+    letter-spacing: 2rpx;
+}
