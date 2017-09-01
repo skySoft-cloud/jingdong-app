@@ -4,19 +4,32 @@ const {
     } = require('../../utils/util.js');
 Page({
     data: {
-        num: 0
+        num: 0,
+        products_data: {}
     },
     //事件处理函数
     onLoad: function () {
+        const _this = this;
         /*请求假数据demo*/
         http({
-            url: "test",
+            url: "GetSeckillProducts",
             func: (data) => {
-                console.log(data);
+                _this.initPage(data);
             }
         });
         this.selectDefaultTimeItem();
     },
+
+    /**
+     * 初始化页面
+     */
+    initPage: function (data) {
+        this.setData({
+            products_data: data
+        });
+        console.log(this.data.products_data)
+    },
+
     /*页面初始化加载默认选中进行中的抢购条目*/
     selectDefaultTimeItem: function () {
         this.setData({
@@ -36,7 +49,7 @@ Page({
      */
     goSearchPage: function () {
         wx.navigateTo({
-          url: "search/search"
+            url: "search/search"
         })
     }
 });

@@ -15,7 +15,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": " #c81624",
     "navigationBarTitleText": "京东购物",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarTextColor": "#fff"
   },
   "tabBar": {
     "selectedColor": "red",
