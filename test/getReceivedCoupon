@@ -1,0 +1,36 @@
+{
+    "not_used_coupon": [
+        {
+            "use_condition": "",
+            "discount_amount": "30",
+            "description": "仅可购买长虹电视指定商品",
+            "use_time_range": "2017.9.1-2017.9.15"
+        },
+        {
+            "use_condition": "500",
+            "discount_amount": "50",
+            "description": "仅可购买长虹电视指定商品",
+            "use_time_range": "2017.9.20-2017.9.25"
+        },
+        {
+            "use_condition": "100",
+            "discount_amount": "60",
+            "description": "仅可购买质高空调指定商品",
+            "use_time_range": "2017.9.22-2017.9.25"
+        },
+        {
+            "use_condition": "1500",
+            "discount_amount": "70",
+            "description": "仅可购买质高空调指定商品",
+            "use_time_range": "2017.9.25-2017.9.31"
+        },
+        {
+            "use_condition": "2000",
+            "discount_amount": "100",
+            "description": "仅可购买质高空调指定商品",
+            "use_time_range": "2017.9.1-2017.9.31"
+        }
+    ],
+    "used_coupon": [],
+    "expired_coupon": []
+}
