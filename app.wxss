@@ -1,5 +1,7 @@
 /**app.wxss**/
+
 /*全局共通样式均放在这里*/
+
 .container {
   height: 100%;
   display: flex;
@@ -8,4 +10,46 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+
+/*页面基本样式
+* 背景色 #f0f2f5(灰色)
+* 字体：14px
+* 字体颜色：#232326（基本上是标题）其余是#848689(灰色字体)
+* 首页button等同色调使用color-pink，其余红色都使用color-red
+*/
+
+page {
+  background-color: #f0f2f5;
+  font-family: PingFangSC-Regular, Helvetica, "Droid Sans", Arial, sans-serif;
+  font-size: 28rpx;
+  color: #232326;
+}
+
+.font-12 {
+  font-size: 24rpx !important;
+}
+
+.font-16 {
+  font-size: 32rpx !important;
+}
+
+.font-18 {
+  font-size: 36rpx !important;
+}
+
+.font-24 {
+  font-size: 48rpx !important;
+}
+
+.color-red {
+  color: #f23030;
+}
+
+.color-grey {
+  color: #848689;
+}
+
+.color-pink {
+  color: #ff7878;
+}
