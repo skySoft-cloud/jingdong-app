@@ -48,7 +48,11 @@
     color: #F46366;
     border: 1rpx solid  #F46366;
     background-color: #F46366;
-
+}
+.cant-be-used .green-coupon,.cant-be-used .red-coupon{
+    color: #CCCCCC !important;
+    border: 1rpx solid  #CCCCCC !important;
+    background-color: #CCCCCC !important;
 }
 .coupon-time-range {
     width: 100%;
@@ -95,4 +99,39 @@
     text-align: center;
     display: block;
 }
+
+
+.empty-coupon {
+    width: 345rpx;
+    margin: 0 auto;
+    margin-top: 130rpx;
+}
+.serch-icon-wrap {
+    width: 178rpx;
+    height: 178rpx;
+    background-color: #D6D5DA;
+    border: 1rpx solid #CDCCD1;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.serch-icon-wrap > icon {
+    display: block;
+    margin: 46rpx;
+}
+.empty-coupon > text:nth-child(2) {
+    width:100%;
+    display:block;
+    text-align:center;
+    margin-top:27rpx;
+}
+button {
+    width:190rpx;
+    height:58rpx;
+    font-size:24rpx;
+    font-weight:600;
+    letter-spacing:2px;
+    margin-top:30rpx;
+}
+
 

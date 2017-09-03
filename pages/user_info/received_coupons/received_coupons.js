@@ -15,7 +15,8 @@ Page({
     // 定义已使用优惠券信息
     usedCouponInfo: [],
     // 定义已过期优惠券信息
-    expiredCouponInfo: []
+    expiredCouponInfo: [],
+    couponColor: "item['use_condition'] ? 'green-coupon' : 'red-coupon'"
   },
   /**
    * 生命周期函数--监听页面加载
@@ -45,8 +46,6 @@ Page({
           //couponInfo[couponArr] = data[couponArr];
           navTabs.push(navTabInfo);
         }
-        console.log(navTabs)
-        console.log(data)
         that.setData({
           navTabs: navTabs,
           notUsedCouponInfo: data["not_used_coupon"],
@@ -67,5 +66,14 @@ Page({
     this.setData({
       activeIndex: e.currentTarget.id
     });
+    console.log(this.activeIndex)
+  },
+  /**
+   * 点击去领取链接到领券中心
+   */
+  toDiscountCenter: function () {
+    wx.navigateTo({
+      url: "../../index/get_coupons/get_coupons"
+    })
   }
 })

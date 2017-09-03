@@ -1,37 +1,54 @@
-<!--pages/user_info/received_coupons/received_coupons.wxml-->
-<view class="my-container" xmlns:wx="http://www.w3.org/1999/XSL/Transform">
+<!--陈列优惠券信息的模版Start-->
+<template name="coupon-template">
+    <!--有领取的优惠券信息，陈列这些优惠券-->
+    <view wx:if="{{data.length > 0}}" class="coupon-content">
+        <block wx:for="{{data}}">
+            <view class="{{item['use_condition'] ? 'green-coupon' : 'red-coupon'}}">
+                <view class="coupon-info">
+                    <view class="coupon-info-left">
+                        ￥<text>{{item.discount_amount}}</text>
+                    </view>
+                    <view class="coupon-info-right">
+                        <text wx:if="{{item.use_condition}}">满{{item.use_condition}}可用</text>
+                        <text wx:else>无金额门槛</text>
+                        <text>{{item.description}}</text>
+                    </view>
+                </view>
+                <view class="coupon-time-range">
+                    <text>全平台</text>
+                    <text>{{item.use_time_range}}</text>
+                </view>
+            </view>
+        </block>
+    </view>
+    <!--没有领取的优惠券信息，给出提示，点击去领券跳转到领优惠券页-->
+    <view wx:else class="empty-coupon">
+        <view class="serch-icon-wrap">
+            <icon type="search" size="43" color="white"></icon>
+        </view>
+        <text>您当前暂无该类优惠券</text>
+        <button bindtap="toDiscountCenter">去领券</button>
+    </view>
+</template>
+<!--陈列优惠券信息的模版End-->
+<view class="my-container">
     <view class="head-nav">
         <block wx:for="{{navTabs}}">
             <view class="{{activeIndex == index ? 'active-item':''}}" id="{{index}}" bindtap="tapNavItem">{{item.navTabName }}</view>
         </block>
     </view>
-    <view >
+    <view>
+        <!--待使用部分-->
         <view  hidden="{{activeIndex != 0}}">
-            <!--有领取的优惠券信息，陈列这些优惠券-->
-            <view wx:if="{{notUsedCouponInfo.length > 0}}" class="coupon-content">
-                <block wx:for="{{notUsedCouponInfo}}">
-                    <view class="{{item['use_condition'] ? 'green-coupon' : 'red-coupon'}}">
-                        <view class="coupon-info">
-                            <view class="coupon-info-left">
-                                ￥<text>{{item.discount_amount}}</text>
-                            </view>
-                            <view class="coupon-info-right">
-                                <text wx:if="{{item.use_condition}}">满{{item.use_condition}}可用</text>
-                                <text wx:else>无金额门槛</text>
-                                <text>{{item.description}}</text>
-                            </view>
-                        </view>
-                        <view class="coupon-time-range">
-                            <text>全平台</text>
-                            <text>{{item.use_time_range}}</text>
-                        </view>
-                    </view>
-                </block>
-            </view>
-            <!--没有领取的优惠券信息，给出提示，点击去领券跳转到领优惠券页-->
-            <view wx:else>您当前暂无该类优惠券</view>
+            <template is="coupon-template" data="{{data:notUsedCouponInfo}}"></template>
         </view>
-        <view class="no-order" hidden="{{activeIndex != 1}}">您暂时还没有待支付订单</view>
-        <view class="no-order" hidden="{{activeIndex != 2}}">您暂时还没有待收货订单</view>
+        <!--已过期部分-->
+        <view hidden="{{activeIndex != 1}}" class="cant-be-used">
+            <template is="coupon-template" data="{{data:expiredCouponInfo}}"></template>
+        </view>
+        <!--已使用部分-->
+        <view hidden="{{activeIndex != 2}}" class="cant-be-used">
+            <template is="coupon-template" data="{{data:usedCouponInfo}}"></template>
+        </view>
     </view>
 </view>
