@@ -1,7 +1,4 @@
 /* pages/user_info/my_order/my_order.wxss */
-page {
-    background-color:#f0f2f5;
-}
 .my-container {
     width: 100%;
 }
@@ -18,7 +15,6 @@ page {
     flex: 1;
     text-align: center;
     line-height: 94rpx;
-    font-size: 28rpx;
 }
 .active-item {
     color: #D74053;
@@ -27,7 +23,6 @@ page {
 .no-order {
     width: 100%;
     text-align: center;
-    font-size: 28rpx;
     color: #5B5A60;
     margin-top: 60rpx;
 }
