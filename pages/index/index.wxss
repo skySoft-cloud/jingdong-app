@@ -124,6 +124,7 @@
 .goods_item01_pro{
     display: flex;
     flex-direction: column;
+    margin-right:38rpx;
 }
 .goods_item01_pro>text{
     font-size:28rpx;

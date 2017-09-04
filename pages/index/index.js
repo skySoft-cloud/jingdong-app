@@ -4,20 +4,18 @@ const {
     } = require('../../utils/util.js');
 Page({
     data: {
-        num: 0,
+        num: 1,
         products_data: {}
     },
     //事件处理函数
     onLoad: function () {
         const _this = this;
-        /*请求假数据demo*/
         http({
             url: "GetSeckillProducts",
             func: (data) => {
                 _this.initPage(data);
             }
         });
-        this.selectDefaultTimeItem();
     },
 
     /**
@@ -27,15 +25,8 @@ Page({
         this.setData({
             products_data: data
         });
-        console.log(this.data.products_data)
     },
 
-    /*页面初始化加载默认选中进行中的抢购条目*/
-    selectDefaultTimeItem: function () {
-        this.setData({
-            num: 1
-        })
-    },
     /**
      * 点击抢购的时间切换样式
      */
@@ -50,6 +41,16 @@ Page({
     goSearchPage: function () {
         wx.navigateTo({
             url: "search/search"
+        })
+    },
+
+    /**
+     * 点击商品进入商品对应的详情页
+     * @pram e 当前点击对象的属性集合
+     */
+    goDetail: (e)=> {
+        wx.navigateTo({
+            url: `search/search?product_id=${e.currentTarget.dataset.id}` //将该商品的id传到详情页
         })
     }
 });
