@@ -1,6 +1,26 @@
 {
     "cart_info":[
-        { "id": 1, "shop_name": "京东自营", "goods_img": "../../images/buycar/mask.jpg", "goods_describe": "【京东超市】Mediheal可莱丝美迪惠尔水润保湿面膜10片水库针剂（保湿补水男女士 护肤品）新老包装随机发放", "goods_spec": "重量：0.350kg；规格：水润保湿面膜10片", "default_num": 1, "goods_price": 128.00, "selected": true, "isTouchMove": false },
-        { "id": 2, "shop_name": "连夏阁旗舰店", "goods_img": "../../images/buycar/2.jpg", "goods_describe": "连夏阁 大码休闲套装女2017夏季新款修身时尚裤腿短裤短袖雪纺衫两件套女装 荧光绿套装裤 XL", "goods_spec": "规格： 荧光绿套装裤， XL", "default_num": 1, "goods_price": 78.00, "selected": true, "isTouchMove": false }
+        {
+            "id": "1",
+            "shop_name": "京东自营",
+            "goods_img": "../../images/buycar/mask.jpg",
+            "goods_describe": "【京东超市】Mediheal可莱丝美迪惠尔水润保湿面膜10片水库针剂（保湿补水男女士 护肤品）新老包装随机发放",
+            "goods_spec": "重量：0.350kg；规格：水润保湿面膜10片",
+            "default_num": "1",
+            "goods_price": "128.00",
+            "selected": true,
+            "isTouchMove": false
+        },
+        {
+            "id": "2",
+            "shop_name": "连夏阁旗舰店",
+            "goods_img": "../../images/buycar/2.jpg",
+            "goods_describe": "连夏阁 大码休闲套装女2017夏季新款修身时尚裤腿短裤短袖雪纺衫两件套女装 荧光绿套装裤 XL",
+            "goods_spec": "规格： 荧光绿套装裤， XL",
+            "default_num": "1",
+            "goods_price": "78.00",
+            "selected": true,
+            "isTouchMove": false
+        }
     ]
 }

@@ -1,13 +1,13 @@
 /* pages/cart/cart.wxss */
 
-page {
+/*page {
   background-color: #f0f2f5;
-}
+}*/
 
 .my-container {
   border-top: 1rpx solid #e8e8e8;
-  font-family: PingFangSC-Regular, Helvetica, "Droid Sans", Arial, sans-serif;
-  font-size: 28rpx;
+  /*font-family: PingFangSC-Regular, Helvetica, "Droid Sans", Arial, sans-serif;
+  font-size: 28rpx;*/
 }
 
 .jd-main-color {

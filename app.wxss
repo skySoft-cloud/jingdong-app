@@ -53,3 +53,7 @@ page {
 .color-pink {
   color: #ff7878;
 }
+
+.fr{
+  float: right;
+}

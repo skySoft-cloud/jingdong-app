@@ -1,0 +1,171 @@
+/* pages/goods_detail/goods_detail.wxss */
+
+page {
+  border-top: 1rpx solid #ededed;
+}
+.no-padding-bottom{
+  padding-bottom: 0 !important;
+}
+.no-padding-top{
+  padding-top: 0 !important;
+}
+swiper {
+  width: 100%;
+  height: 736rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.goods-price {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  display: flex;
+}
+
+.price-wrap {
+  width: 506rpx;
+  color: #fff;
+  background-color: #ec4c56;
+  display: flex;
+}
+
+.new-price {
+  padding: 0 20rpx;
+  line-height: 100rpx;
+}
+
+.old-price {
+  margin-top: 20rpx;
+  text-decoration: line-through;
+}
+
+.count-down {
+  width: 244rpx;
+  text-align: center;
+}
+
+.count-down .color-grey {
+  display: block;
+  margin-top: 10rpx;
+}
+
+.goods-describe {
+  padding: 20rpx 20rpx 30rpx 20rpx;
+  line-height: 1.5em;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.accordion-group {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding-left: 20rpx;
+}
+
+.accordion-heading {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-right: 20rpx;
+}
+
+.icon-arrow {
+  display: block;
+  background-image: url(https://st.360buyimg.com/item/images/5.4/product-detail-sprites-mjs.png?v=1);
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+}
+
+.arrow-right {
+  background-position: -8rpx -80rpx;
+}
+
+.arrow-up {
+  width: 40rpx;
+  height: 20rpx;
+  background-position: 0rpx -20px;
+  position: relative;
+  top: 30rpx;
+}
+
+.accordion-heading {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.sale-title {
+  margin-right: 20rpx;
+}
+
+.sale-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.sale-tag {
+  border: 1px solid #f23030;
+  border-radius: 5rpx;
+  padding: 0 5rpx;
+  color: #f23030;
+  font-size: 24rpx;
+  margin-right: 10rpx;
+}
+
+.goods-color {
+  display: block;
+  float: left;
+  background-color: #f3f2f8;
+  padding: 15rpx 20rpx;
+  margin-right: 24rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.goods-color-picked {
+  background-color: #f23030;
+  color: #fff;
+}
+
+.picked-item {
+  display: flex;
+  padding: 30rpx 0;
+}
+
+.left {
+  width: 72rpx;
+  font-size: 24rpx;
+  color: #848689;
+  padding-top: 15rpx;
+}
+
+.num-wrap {
+  display: flex;
+  border: 1rpx solid #bebebe;
+  border-radius: 10rpx;
+}
+
+.minus, .add {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.minus {
+  border-right: 1rpx solid #bebebe;
+}
+
+.add {
+  border-left: 1rpx solid #bebebe;
+}
+.input-num{
+  width: 90rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.input-num input{
+  height: 100%;
+}

@@ -5,7 +5,7 @@
       <icon class="shop-select" wx:if="{{shop_select_status}}" type="success" color="#f23030" bindtap="shopSelectAll" />
       <icon class="shop-select" wx:else type="circle" color="#000" bindtap="shopSelectAll" />
       <image src="../../images/buycar/JDshopTitle.png" class="shop-img"></image>
-      <text class="shop-name">京东自营</text>
+      <text class="shop-name color-pink">京东自营</text>
     </view>
     <view class="goods-list" wx:for="{{goods_list}}" wx:key="">
       <view class="special-offer">

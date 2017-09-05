@@ -138,9 +138,9 @@ Page({
     const index = e.currentTarget.dataset.index;
     let carts = this.data.goods_list;
     let num = parseInt(e.detail.value);
-    if(num == 0){
+    if (num == 0) {
       carts[index].default_num = 1;
-    }else{
+    } else {
       carts[index].default_num = num;
     }
     this.setData({
@@ -155,8 +155,8 @@ Page({
     let total_num = 0;
     for (let i = 0; i < carts.length; i++) {         // 循环列表得到每个数据
       if (carts[i].selected) {                       // 判断选中才会计算价格
-        total_num += carts[i].default_num;           // 所有商品总数
-        total_price += total_num * carts[i].goods_price;      // 所有价格加起来                           
+        total_num += parseInt(carts[i].default_num);           // 所有商品总数
+        total_price += total_num * parseInt(carts[i].goods_price);      // 所有价格加起来                           
       }
     }
     this.setData({                                   // 最后赋值到data中渲染到页面
@@ -219,7 +219,7 @@ Page({
   addCount(e) {
     const index = e.currentTarget.dataset.index;
     let carts = this.data.goods_list;
-    let num = carts[index].default_num;
+    let num = parseInt(carts[index].default_num);
     num = num + 1;
     carts[index].default_num = num;
     this.setData({
@@ -234,7 +234,7 @@ Page({
   minusCount(e) {
     const index = e.currentTarget.dataset.index;
     let carts = this.data.goods_list;
-    let num = carts[index].default_num;
+    let num = parseInt(carts[index].default_num);
     if (num <= 1) {
       return false;
     }
