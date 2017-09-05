@@ -31,20 +31,16 @@ Page({
         let navTabs = [];
         // 将返回data重新组合
         for (let couponArr in data) {
-          // 初始化navTabInfo
-          let navTabInfo = {};
           // 有优惠券信息，length为信息的长度，没有优惠券信息，将lengtgh置为空
           let length = data[couponArr].length > 0 ? " "+ data[couponArr].length: "";
           // 根据couponArr类型做不同字符串拼接
           if (couponArr == "not_used_coupon") {
-            navTabInfo.navTabName = `待使用${length}`;
+            navTabs.push(`待使用${length}`);
           } else if (couponArr == "expired_coupon"){
-            navTabInfo.navTabName = `已过期${length}`;
+            navTabs.push(`已过期${length}`);
           } else {
-            navTabInfo.navTabName = `已使用${length}`;
+            navTabs.push(`已使用${length}`);
           }
-          //couponInfo[couponArr] = data[couponArr];
-          navTabs.push(navTabInfo);
         }
         that.setData({
           navTabs: navTabs,

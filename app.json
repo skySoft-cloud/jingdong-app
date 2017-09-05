@@ -9,6 +9,7 @@
 
     "pages/user_info/user_info",
     "pages/user_info/my_order/my_order",
+    "pages/user_info/order_detail/order_detail",
     "pages/user_info/received_coupons/received_coupons"
   ],
   "window": {

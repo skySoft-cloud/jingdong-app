@@ -34,7 +34,7 @@
 <view class="my-container">
     <view class="head-nav">
         <block wx:for="{{navTabs}}">
-            <view class="{{activeIndex == index ? 'active-item':''}}" id="{{index}}" bindtap="tapNavItem">{{item.navTabName }}</view>
+            <view class="{{activeIndex == index ? 'active-item':''}}" id="{{index}}" bindtap="tapNavItem">{{item}}</view>
         </block>
     </view>
     <view>

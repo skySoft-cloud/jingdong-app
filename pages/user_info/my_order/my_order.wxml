@@ -1,4 +1,32 @@
-<!--pages/user_info/my_order/my_order.wxml-->
+<!--陈列订单信息的模版Start-->
+<template name="order-template">
+    <view wx:if="{{data.length > 0}}" class="has-order">
+        <view wx:for="{{data}}">
+            <view class="order-head">
+                <view class="status-price">
+                    <view wx:if="{{item.order_status == '0'}}">状态: <text class="unpaid-color">待支付</text></view>
+                    <view wx:elif="{{item.order_status == '1'}}">状态: <text>已取消</text></view>
+                    <view wx:else>状态: <text>已支付</text></view>
+                    <view>总价: <text>￥{{item.order_price}}</text></view>
+                </view>
+                <view wx:if="{{item.order_status == '0'}}" class="to-pay-btn">
+                    <button>去支付</button>
+                </view>
+            </view>
+            <view wx:for="{{item.order_goods}}" class="goods-content">
+                <view class="goods-info">
+                    <image src="{{item.img_url}}"></image>
+                    <view>
+                        <text>{{item.goods_description}}</text>
+                        <text class="goods-quantity">{{item.goods_quantity}}件</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:else class="no-order">您暂时还没有该类订单</view>
+</template>
+<!--陈列订单信息的模版End-->
 <view class="my-container">
     <view class="head-nav">
         <block wx:for="{{navTabs}}">
@@ -6,9 +34,18 @@
         </block>
     </view>
     <view >
-        <view class="no-order" hidden="{{activeIndex != 0}}">您暂时还没有订单</view>
-        <view class="no-order" hidden="{{activeIndex != 1}}">您暂时还没有待支付订单</view>
-        <view class="no-order" hidden="{{activeIndex != 2}}">您暂时还没有待收货订单</view>
+        <!--全部订单部分-->
+        <view hidden="{{activeIndex != 0}}">
+            <template is="order-template" data="{{data:allOrder}}"></template>
+        </view>
+        <!--待付款部分-->
+        <view hidden="{{activeIndex != 1}}">
+            <template is="order-template" data="{{data:unpaidOrder}}"></template>
+        </view>
+        <!--待收货部分-->
+        <view hidden="{{activeIndex != 2}}">
+            <template is="order-template" data="{{data:paidOrder}}"></template>
+        </view>
     </view>
 </view>
 

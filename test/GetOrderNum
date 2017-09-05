@@ -1,6 +1,6 @@
 {
-  "all_orders":"5",
-  "unpaid_order":"2",
-  "not_received_order":"2",
+  "all_orders":"2",
+  "unpaid_order":"1",
+  "not_received_order":"",
   "discount_card":"5"
 }
