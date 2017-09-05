@@ -1,43 +1,52 @@
 // pages/index/goods_classification/goods_classification.js
+//获取应用实例
+const {
+    http
+    } = require('../../../utils/util.js');
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        placeholder: "请搜索商品",
-        static_show: false,
-        input_show: true
+        placeholder: "搜索京东商品",
+        cate_items: [],
+        "cur_nav": "1",
+        "cur_index": "0"
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        const _this = this;
+        http({
+            url: "GetClassification",
+            func: (data) => {
+                _this.setData({
+                    cate_items: data
+                })
+            }
+        });
     },
 
     /**
-     * 聚焦时清空input
+     *进入搜索页面
      */
-    clearInput: function (e) {
-        this.setData({
-            placeholder: "",
-            input_show: false,
-            static_show: true
+    goSearch: function () {
+        wx.navigateTo({
+            url: '../search/search'
         })
     },
     /**
-     * 失去焦点时恢复
+     * 点击左侧菜单切换
      */
-    recoverPlaceholder: function () {
+    switchRightTab: function (e) {
         this.setData({
-            placeholder: "请搜索商品",
-            input_show: true,
-            static_show: false
+            cur_nav: e.target.dataset.id,
+            cur_index: e.target.dataset.index
         })
     },
-
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

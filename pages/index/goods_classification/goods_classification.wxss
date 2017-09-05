@@ -1,5 +1,11 @@
 /* pages/index/goods_classification/goods_classification.wxss */
-
+page{
+    background-color: #fff;
+}
+.top-content{
+    border-top:1rpx solid #e4e4e4;
+    border-bottom:1rpx solid #e4e4e4;
+}
 .search{
     position: relative;
     padding:22rpx 0;
@@ -29,4 +35,40 @@
     border-radius: 35rpx;
     text-align: center;
     line-height: 58rpx;
+}
+.main-content{
+    overflow: hidden;
+    width:670rpx;
+    margin:0 auto;
+}
+.left-content{
+    float: left;
+    width:140rpx;
+}
+.right-content{
+    float: right;
+    width:520rpx;
+}
+.nav-right{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-left-item{
+    margin-bottom:100rpx;
+}
+.nav-right-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40rpx 36rpx 18rpx 36rpx;
+}
+.nav-right-items image{
+    width: 95rpx;
+    height: 125rpx;
+}
+.nav-right-items text{
+    margin-top:18rpx;
+}
+.main-content{
+    margin-top:50rpx;
 }

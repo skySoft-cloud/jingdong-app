@@ -67,7 +67,7 @@
 
 }
 .tags>text{
-    padding:10rpx 24rpx;
+    padding:10rpx 20rpx;
     background: #e9e8ee;
     margin-right:14rpx;
 }

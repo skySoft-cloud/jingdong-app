@@ -50,7 +50,7 @@ Page({
      */
     goDetail: (e)=> {
         wx.navigateTo({
-            url: `search/search?product_id=${e.currentTarget.dataset.id}` //将该商品的id传到详情页
+            url: `goods_detail/goods_detail?product_id=${e.currentTarget.dataset.id}` //将该商品的id传到详情页
         })
     }
 });

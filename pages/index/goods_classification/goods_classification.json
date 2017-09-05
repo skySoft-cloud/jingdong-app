@@ -1,5 +1,6 @@
 {
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "商品分类",
-  "navigationBarTextStyle": "#000"
+  "navigationBarTextStyle": "black",
+  "backgroundTextStyle": "dark"
 }

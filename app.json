@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/get_coupons/get_coupons",
     "pages/index/goods_classification/goods_classification",
+    "pages/index/get_coupons/get_coupons",
     "pages/index/search/search",
 
     "pages/cart/cart",

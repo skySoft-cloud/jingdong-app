@@ -1,6 +1,6 @@
 {
-  "backgroundTextStyle": "light",
+  "backgroundTextStyle": "black",
   "navigationBarBackgroundColor": " #fff",
   "navigationBarTitleText": "搜索",
-  "navigationBarTextStyle": "#000"
+  "navigationBarTextStyle": "black"
 }

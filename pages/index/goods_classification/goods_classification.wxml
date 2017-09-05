@@ -1,8 +1,26 @@
 <!--pages/index/goods_classification/goods_classification.wxml-->
 <view class="top-content">
-    <view class="search">
-        <icon type="search" size="16" class="static" hidden="{{static_show}}"/>
-        <input placeholder="{{placeholder}}" bindfocus="clearInput" bindblur="recoverPlaceholder"/>
-        <icon type="search" size="16" class="active" hidden="{{input_show}}"/>
+    <view class="search" bindtap="goSearch">
+        <icon type="search" size="16" class="static"/>
+        <input placeholder="{{placeholder}}"/>
+    </view>
+</view>
+<view class="main-content">
+    <view class="left-content">
+        <view class="nav-left">
+            <block wx:for="{{cate_items.cate_items}}">
+                <view class="nav-left-item {{cur_nav == item.cate_id ? 'color-red font-16' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}">{{item.cate_name}}</view>
+            </block>
+        </view>
+    </view>
+    <view class="right-content">
+        <view class="nav-right">
+            <block wx:for="{{cate_items.cate_items[cur_index].children}}">
+                <view class="nav-right-items font-12">
+                        <image src="{{item.image}}"></image>
+                        <text>{{item.name}}</text>
+                </view>
+            </block>
+        </view>
     </view>
 </view>
