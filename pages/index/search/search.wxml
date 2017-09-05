@@ -1,8 +1,10 @@
 <!--pages/index/search/search.wxml-->
+<!-- 搜索页面 -->
 <view class="search-title">
     <view class="search-bar">
         <icon type="search" size="16" class="search"/>
         <input placeholder="搜索京东商品" placeholder-class="placeholder" bindinput="inputShow" value="{{input_value}}"/>
+        <!-- 点击取消返回上一页 -->
         <button type="default" class="cancel" bindtap="getBack">取消</button>
         <icon hidden="{{cancel_icon}}" type="cancel"  color="grey" size="16" class="cancel-icon" bindtap="clearInput"/>
     </view>
@@ -13,23 +15,11 @@
         <text>热门搜索</text>
         <text>换一批</text>
     </view>
-    <view class="tags">
-        <text>苹果手机</text>
-        <text>三星</text>
-        <text>真丝连衣裙</text>
-        <text>衬衫女</text>
-        <text>摩托车</text>
-    </view>
-    <view class="tags">
-        <text>休闲鞋</text>
-        <text>电话手表</text>
-        <text>玩具</text>
-        <text>运动鞋</text>
-        <text>自行车</text>
-    </view>
-    <view class="tags">
-        <text>孕妇装</text>
-        <text>汽车用品</text>
-    </view>
-</view>
+     <view class="tags">
+     <!-- 遍历从接口请求来的热门搜索数据并显示 -->
+    <block wx:for="{{hot_search}}">
+     <text>{{item}}</text>
+    </block>
+     </view>
+ </view>
 </view>

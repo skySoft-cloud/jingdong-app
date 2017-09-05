@@ -1,20 +1,28 @@
 <!--pages/index/goods_classification/goods_classification.wxml-->
+<!-- 商品分类页面 -->
+<!-- 搜索searchbar部分 -->
 <view class="top-content">
     <view class="search" bindtap="goSearch">
         <icon type="search" size="16" class="static"/>
         <input placeholder="{{placeholder}}"/>
     </view>
 </view>
+<!-- 商品分类部分 -->
 <view class="main-content">
+<!-- 左边菜单部分 -->
     <view class="left-content">
         <view class="nav-left">
             <block wx:for="{{cate_items.cate_items}}">
-                <view class="nav-left-item {{cur_nav == item.cate_id ? 'color-red font-16' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}">{{item.cate_name}}</view>
+            <!--当选中菜单的id和设置的id一致就添加样式  -->
+            <!--动态添加索引index和对应菜单的id  -->
+                <view class="nav-left-item {{cur_nav == item.cate_id ? 'color-red' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}">{{item.cate_name}}</view>
             </block>
         </view>
     </view>
+    <!--右边商品展示部分  -->
     <view class="right-content">
         <view class="nav-right">
+        <!--渲染当前选中菜单对应索引的数据  -->
             <block wx:for="{{cate_items.cate_items[cur_index].children}}">
                 <view class="nav-right-items font-12">
                         <image src="{{item.image}}"></image>

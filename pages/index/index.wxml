@@ -1,6 +1,7 @@
 <!--index.wxml-->
 <!--首页-->
 <view class="wrap-content">
+<!-- 头部搜索部分 -->
     <view class="header">
         <view class="logo01">
             <image src="../../images/index/logo01.png"></image>
@@ -8,12 +9,15 @@
         <view class="motto">
             <text>多·快·好·省</text>
         </view>
+        <!-- 点击事件，跳转搜索页面 -->
         <view class="search" bindtap="goSearchPage">
             <icon class="search-static" type="search" size="16"/>
             <input placeholder="搜索京东商品"/>
         </view>
     </view>
+    <!-- 导航部分 -->
     <view class="nav">
+    <!-- 界面跳转 navigator -->
         <navigator url="get_coupons/get_coupons" open-type="navigate">
             <view class="nav-item1">
                 <image src="../../images/index/cheap_card.png"></image>
@@ -40,6 +44,7 @@
         </navigator>
     </view>
     <view class="section-bar"></view>
+    <!-- 秒杀时间列表 -->
     <view class="content">
         <view class="seckill">
             <text>京东秒杀</text>
@@ -68,8 +73,11 @@
         </view>
         <view class="count_down">
             <text>距本场结束</text>
+             <!-- 倒计时的功能未完成 -->
         </view>
     </view>
+    <!-- 秒杀商品展示部分 -->
+    <!-- 点击跳转详情 -->
     <view class="goods_item" data-id="{{products_data.id}}" bindtap="goDetail">
         <view class="goods_item01">
             <image src="{{products_data.src}}"></image>
