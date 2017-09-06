@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <!--首页-->
 <view class="wrap-content">
-<!-- 头部搜索部分 -->
+    <!-- 头部搜索部分 -->
     <view class="header">
         <view class="logo01">
             <image src="../../images/index/logo01.png"></image>
@@ -17,7 +17,7 @@
     </view>
     <!-- 导航部分 -->
     <view class="nav">
-    <!-- 界面跳转 navigator -->
+        <!-- 界面跳转 navigator -->
         <navigator url="get_coupons/get_coupons" open-type="navigate">
             <view class="nav-item1">
                 <image src="../../images/index/cheap_card.png"></image>
@@ -73,31 +73,60 @@
         </view>
         <view class="count_down">
             <text>距本场结束</text>
-             <!-- 倒计时的功能未完成 -->
+            <!-- 倒计时的功能未完成 -->
         </view>
     </view>
     <!-- 秒杀商品展示部分 -->
-    <!-- 点击跳转详情 -->
-    <view class="goods_item" data-id="{{products_data.id}}" bindtap="goDetail">
-        <view class="goods_item01">
-            <image src="{{products_data.src}}"></image>
-        </view>
-        <view class="goods_item01_pro">
-            <text>{{products_data.description}}</text>
-            <text>{{products_data.product_name}}</text>
-            <view class="now-price">
-                <text>￥</text>{{products_data.now_price}}
-                <text>￥{{products_data.old_price}}</text>
+    <block wx:for="{{products_data}}">
+        <!-- 点击跳转详情 -->
+        <view class="goods_item" data-id="{{item.id}}" bindtap="goDetail">
+            <view class="goods_item01">
+                <image src="{{item.src}}"></image>
             </view>
-            <view>
-                <text class="percent">已售 {{products_data.sold}}</text>
-                <progress percent="17" activeColor="#f35a5f" active="{{true}}"></progress>
-                <view></view>
-            </view>
-            <view class="immediately-btn">
-                <text>立即抢购</text>
+            <view class="goods_item01_pro">
+                <text>{{item.description}}</text>
+                <text>{{item.product_name}}</text>
+                <view class="now-price">
+                    <text>￥</text>{{item.now_price}}
+                    <text>￥{{item.old_price}}</text>
+                </view>
+                <view>
+                    <text class="percent">已售 {{item.sold}}</text>
+                    <progress percent="17" activeColor="#f35a5f" active="{{true}}"></progress>
+                    <view></view>
+                </view>
+                <view class="immediately-btn">
+                    <text>立即抢购</text>
 
+                </view>
             </view>
         </view>
-    </view>
+    </block>
+
+    <!--下拉加载更多-->
+    <!--todo 上拉加载更多只能渲染一次，之后无法继续渲染-->
+    <block wx:for="{{products_data}}">
+        <view class="goods_item" data-id="{{item.id}}" bindtap="goDetail" hidden="{{is_hide_loadmore}}">
+            <view class="goods_item01">
+                <image src="{{item.src}}"></image>
+            </view>
+            <view class="goods_item01_pro">
+                <text>{{item.description}}</text>
+                <text>{{item.product_name}}</text>
+                <view class="now-price">
+                    <text>￥</text>{{item.now_price}}
+                    <text>￥{{item.old_price}}</text>
+                </view>
+                <view>
+                    <text class="percent">已售 {{item.sold}}</text>
+                    <progress percent="17" activeColor="#f35a5f" active="{{true}}"></progress>
+                    <view></view>
+                </view>
+                <view class="immediately-btn">
+                    <text>立即抢购</text>
+
+                </view>
+            </view>
+        </view>
+    </block>
 </view>

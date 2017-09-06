@@ -5,8 +5,9 @@ const {
 
 Page({
   data: {
-    num: 1,                  //默认选中抢购的第一项
-    products_data: {}        //页面秒杀商品的信息
+    num: 1,                   //默认选中抢购的第一项
+    products_data: {},        //页面秒杀商品的信息
+    is_hide_loadmore: true    //控制加载更多的显示
   },
 
   /**
@@ -20,7 +21,7 @@ Page({
       url: "GetSeckillProducts",
       func: (data) => {
         // 成功后加载页面
-        _this.initPage(data);
+        _this.initPage(data["products_data"]);
       }
     });
   },
@@ -45,7 +46,7 @@ Page({
       num: e.target.dataset.num
     })
   },
-  
+
   /**
    * 点击searchbar进入搜索页面
    */
@@ -64,5 +65,24 @@ Page({
       //将该商品的id传到详情页
       url: `goods_detail/goods_detail?product_id=${e.currentTarget.dataset.id}`
     })
+  },
+
+  /**
+   * 下拉加载更多
+   */
+  onReachBottom: function () {
+    //保存this对象
+    const _this = this;
+    //请求数据
+    http({
+      url: "GetSeckillProducts",
+      func: (data) => {
+        // 成功后加载页面
+        _this.setData({
+          products_data: data["products_data"],
+          is_hide_loadmore: false
+        });
+      }
+    });
   }
 });
