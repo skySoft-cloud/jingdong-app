@@ -63,7 +63,7 @@ Page({
   goDetail: (e) => {
     wx.navigateTo({
       //将该商品的id传到详情页
-      url: `../goods_detail/goods_detail?product_id=${e.currentTarget.dataset.id}`
+      url: `../cart/goods_detail/goods_detail?product_id=${e.currentTarget.dataset.id}`
     })
   },
 
