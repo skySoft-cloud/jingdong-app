@@ -6,12 +6,12 @@ Page({
    */
   data: {
     imgUrls: [
-      "../../images/goods_detail/1.jpg",
-      "../../images/goods_detail/2.jpg",
-      "../../images/goods_detail/3.jpg",
-      "../../images/goods_detail/4.jpg",
-      "../../images/goods_detail/5.jpg",
-      "../../images/goods_detail/6.jpg"
+      "../../../images/goods_detail/1.jpg",
+      "../../../images/goods_detail/2.jpg",
+      "../../../images/goods_detail/3.jpg",
+      "../../../images/goods_detail/4.jpg",
+      "../../../images/goods_detail/5.jpg",
+      "../../../images/goods_detail/6.jpg"
     ],
     indicatorDots: true,
     autoplay: false,
