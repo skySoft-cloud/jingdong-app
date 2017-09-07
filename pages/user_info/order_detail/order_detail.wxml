@@ -26,7 +26,7 @@
     </view>
     <view wx:if="{{cur_order_detail.order_status == '0'}}" class="two-btn">
         <button>去支付</button>
-        <button>申请取消订单</button>
+        <button bindtap="cancelOrderDlg">申请取消订单</button>
     </view>
     <view class="user-info">
         <view>

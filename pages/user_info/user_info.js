@@ -17,7 +17,7 @@ Page({
      */
     tapPaidOrder: () => {
         wx.showModal({
-            content: `请至"微信-发现-购物-个人中心"进行售后订单管理`,
+            title: `请至"微信-发现-购物-个人中心"进行售后订单管理`,
             confirmText: "知道了",
             confirmColor: "#E45050",
             showCancel: false,

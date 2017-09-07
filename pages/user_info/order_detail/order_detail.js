@@ -35,6 +35,20 @@ Page({
     },
 
     /**
+     * tap申请取消订单
+     */
+    cancelOrderDlg: () => {
+        wx.showModal({
+            title: `是否申请取消订单？`,
+            confirmText: "确定",
+            confirmColor: "#E45050",
+            success: function () {
+
+            }
+        });
+    },
+
+    /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
