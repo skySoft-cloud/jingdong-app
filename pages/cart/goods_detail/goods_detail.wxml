@@ -1,0 +1,190 @@
+<!--pages/goods_detail/goods_detail.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicator_color}}" indicator-active-color="{{indicator_active_color}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="goods-price">
+  <view class="price-wrap">
+    <view class="new-price">
+      <text>￥</text>
+      <text class="font-24">58</text>
+      <text>.00</text>
+    </view>
+    <view>
+      <view class="old-price font-12">￥99.00</view>
+      <view class="font-12">京东秒杀</view>
+    </view>
+  </view>
+  <view class="count-down">
+    <text class="color-grey">距结束还剩</text>
+    <view class="time font-18">22:15:01</view>
+  </view>
+</view>
+<view class="goods-describe">
+  [秋装钜惠 买两件立减8元] 短款修身针织衫开衫时尚百搭毛衣外套女8040 浅咖啡色 均码
+</view>
+<view class="get_coupon">
+
+</view>
+<view class="sales accordion-group" bindtap="collapse">
+  <view class="accordion-heading">
+    <text class="sale-title">促销</text>
+    <text class="font-12 color-grey">订单享受促销以确认订单页展示为准</text>
+    <text class="icon arrow-up fr"></text>
+  </view>
+  <view class="accordion-body collapse">
+    <view class="sale-item">
+      <text class="sale-tag">限购</text>
+      <text>购买1-10件时享受优惠，超出数量以结算件为准</text>
+    </view>
+    <view class="sale-item">
+      <text class="sale-tag">限制</text>
+      <text>此价格不与套装优惠同时享受</text>
+    </view>
+    <view class="sale-item">
+      <text class="sale-tag">满减</text>
+      <text>每满116元，可减8元现金</text>
+    </view>
+  </view>
+</view>
+<view class="picked accordion-group">
+  <view class="accordion-heading">
+    <text class="sale-title">已选</text>
+    <text>红色，</text>
+    <text>2个</text>
+    <text class="icon arrow-up fr"></text>
+  </view>
+  <view class="accordion-body collapse">
+    <view class="picked-item no-padding-bottom">
+      <view class="left">
+        <text>颜色</text>
+      </view>
+      <view>
+        <text class="goods-color goods-color-picked">红色</text>
+        <text class="goods-color">黄色</text>
+        <text class="goods-color">浅蓝色</text>
+        <text class="goods-color">浅咖啡色</text>
+        <text class="goods-color">白色</text>
+      </view>
+    </view>
+    <view class="picked-item no-padding-top">
+      <view class="left">
+        <text>数量</text>
+      </view>
+      <view class="num-wrap">
+        <view class="minus">-</view>
+        <view class="input-num">
+          <input type="text" value="2" />
+        </view>
+        <view class="add">+</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="address">
+  <view class="choose-addr addr-item">
+    <text>地址</text>
+    <text>广东省</text>
+    <text>深圳市</text>
+    <text>宝安区</text>
+    <text class="icon arrow-right fr margin-0"></text>
+  </view>
+  <view class="addr-item">
+    <view class="margin-bottom-20">
+      <text class="color-red">[现货]</text>18:00前下单，预计 明天（09月07日）送达
+    </view>
+    <view class="color-grey">重量不计重量</view>
+  </view>
+  <view class="customer-service addr-item font-12">
+    <view class="service">
+      <view class="service-type">
+        <icon class="icon-check" type="success" color="#f23030" size="15" /> 商家发货&售后
+      </view>
+      <view class="service-type">
+        <icon class="icon-check" type="success" color="#f23030" size="15" /> 七天退货
+      </view>
+      <view class="service-type">
+        <icon class="icon-check" type="success" color="#f23030" size="15" /> 货到付款
+      </view>
+    </view>
+    <view class="icon-arrow-right">
+      <text class="icon arrow-right fr"></text>
+    </view>
+  </view>
+</view>
+<view class="shop-info">
+  <image class="shop-logo" src="../../images/goods_detail/shop-logo.png"></image>
+  <text class="shop-name font-24">爱立歌旗舰店</text>
+</view>
+<view class="comments">
+  <view class="comment-title">
+    <text>评价</text>
+    <text class="color-red fr">93.5%好评</text>
+  </view>
+  <view class="comment-list">
+    <view class="user-account">
+      <text class="font-12">膜拜高手</text>
+      <text class="font-12 color-grey">(PLUS会员)</text>
+      <text>&&&&</text>
+    </view>
+    <view class="comment-txt">非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢</view>
+    <view class="pictures">
+      <view class="pic-wrap">
+        <image class="pic" src="../../images/goods_detail/comment.jpg"></image>
+      </view>
+      <view class="pic-wrap">
+        <image class="pic" src="../../images/goods_detail/comment.jpg"></image>
+      </view>
+      <view class="pic-wrap">
+        <image class="pic" src="../../images/goods_detail/comment.jpg"></image>
+      </view>
+      <view class="pic-wrap">
+        <image class="pic" src="../../images/goods_detail/comment.jpg"></image>
+        <view class="more-pic">更多</view>
+      </view>
+    </view>
+    <view class="user-info">
+      <text>2017-08-02</text>
+      <text>|</text>
+      <text>粉色触屏版</text>
+    </view>
+  </view>
+  <view class="comment-bottom color-grey">
+    <text>共600+评论</text>
+    <text class="icon arrow-right fr"></text>
+    <text class="more fr">查看更多</text>
+  </view>
+</view>
+<view class="goods-detail">
+  <view class="menu">
+    <view class="menu-list cur-menu">
+      <text class="menu-title">商品介绍</text>
+      <text class="menu-line"></text>
+    </view>
+    <view class="menu-list">
+      <text class="menu-title">规格参数</text>
+      <text class="menu-line"></text>
+    </view>
+    <view class="menu-list">
+      <text class="menu-title">售后保障</text>
+      <text class="menu-line"></text>
+    </view>
+  </view>
+  <view class="goods-intro detail-content">
+    <image class="pic-detail" src="../../images/goods_detail/comment.jpg"></image>
+  </view>
+  <view class="goods-spec detail-content"></view>
+  <view class="goods-service detail-content"></view>
+</view>
+<view class="bottom">
+  <view class="cart font-12 color-grey">
+    <text class="cart-txt">购物车
+      <text class="dot">0</text>
+    </text>
+  </view>
+  <view class="add-cart font-18">加入购物车</view>
+  <view class="go-pay font-18">立即购买</view>
+</view>

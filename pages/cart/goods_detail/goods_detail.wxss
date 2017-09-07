@@ -1,0 +1,415 @@
+/* pages/goods_detail/goods_detail.wxss */
+
+page {
+  border-top: 1rpx solid #ededed;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
+}
+
+.margin-0 {
+  margin: 0 !important;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20rpx !important;
+}
+
+swiper {
+  width: 100%;
+  height: 736rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.goods-price {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  display: flex;
+}
+
+.price-wrap {
+  width: 506rpx;
+  color: #fff;
+  background-color: #ec4c56;
+  display: flex;
+}
+
+.new-price {
+  padding: 0 20rpx;
+  line-height: 100rpx;
+}
+
+.old-price {
+  margin-top: 20rpx;
+  text-decoration: line-through;
+}
+
+.count-down {
+  width: 244rpx;
+  text-align: center;
+}
+
+.count-down .color-grey {
+  display: block;
+  margin-top: 10rpx;
+}
+
+.goods-describe {
+  padding: 20rpx 20rpx 30rpx 20rpx;
+  line-height: 1.5em;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.accordion-group {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding-left: 20rpx;
+}
+
+.accordion-heading {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-right: 20rpx;
+}
+
+.icon {
+  display: block;
+  background-image: url(https://st.360buyimg.com/item/images/5.4/product-detail-sprites-mjs.png?v=1);
+  background-repeat: no-repeat;
+  background-size: 200rpx 200rpx;
+}
+
+.arrow-up {
+  background-position: 0 -20rpx;
+  width: 20rpx;
+  height: 20rpx;
+  position: relative;
+  top: 36rpx;
+}
+
+.arrow-right {
+  width: 10rpx;
+  height: 20rpx;
+  background-position: 0 -40rpx;
+  position: relative;
+  top: 10rpx;
+}
+
+.accordion-heading {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.sale-title {
+  margin-right: 20rpx;
+}
+
+.sale-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.sale-tag {
+  border: 1px solid #f23030;
+  border-radius: 5rpx;
+  padding: 0 5rpx;
+  color: #f23030;
+  font-size: 24rpx;
+  margin-right: 10rpx;
+}
+
+.goods-color {
+  display: block;
+  float: left;
+  background-color: #f3f2f8;
+  padding: 15rpx 20rpx;
+  margin-right: 24rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.goods-color-picked {
+  background-color: #f23030;
+  color: #fff;
+}
+
+.picked-item {
+  display: flex;
+  padding: 30rpx 0;
+}
+
+.left {
+  width: 72rpx;
+  font-size: 24rpx;
+  color: #848689;
+  padding-top: 15rpx;
+}
+
+.num-wrap {
+  display: flex;
+  border: 1rpx solid #bebebe;
+  border-radius: 10rpx;
+}
+
+.minus, .add {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.minus {
+  border-right: 1rpx solid #bebebe;
+}
+
+.add {
+  border-left: 1rpx solid #bebebe;
+}
+
+.input-num {
+  width: 90rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.input-num input {
+  height: 100%;
+}
+
+.address {
+  background-color: #fff;
+  padding: 0 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.addr-item {
+  border-bottom: 1px solid #f4f4f4;
+  padding: 20rpx 0;
+}
+
+.choose-addr text {
+  margin-right: 20rpx;
+}
+
+.service-type {
+  margin-right: 20rpx;
+  margin-bottom: 10rpx;
+  display: inline-block;
+}
+
+.customer-service {
+  display: flex;
+}
+
+.service {
+  width: 80%;
+}
+
+.icon-arrow-right {
+  width: 20%;
+  text-align: right;
+}
+
+.service-type .icon-check {
+  position: relative;
+  top: 8rpx;
+}
+
+.shop-info {
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+}
+
+.shop-logo {
+  width: 260rpx;
+  height: 88rpx;
+  margin-right: 20rpx;
+  position: relative;
+  top: 10rpx;
+}
+
+.shop-name {
+  position: relative;
+  top: -20rpx;
+}
+
+.comments {
+  background: #fff;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.comment-title {
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.comment-list {
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.user-account {
+  padding: 20rpx 0;
+}
+
+.comment-txt {
+  padding: 20rpx 0;
+}
+
+.user-info {
+  padding: 20rpx 0;
+}
+
+.comment-bottom {
+  padding-top: 20rpx;
+  font-size: 24rpx;
+}
+
+.comment-bottom .arrow-right {
+  top: 6rpx;
+}
+
+.more {
+  margin-right: 10rpx;
+}
+
+.pic-wrap {
+  display: inline-block;
+  margin-right: 10rpx;
+  position: relative;
+}
+
+.pic {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.more-pic {
+  width: 160rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+}
+
+.comment-txt {
+  line-height: 1.5em;
+}
+
+.user-account text {
+  margin-right: 20rpx;
+}
+
+.user-info text {
+  margin-right: 10rpx;
+  font-size: 24rpx;
+  color: #848689;
+}
+
+.goods-detail {
+  background-color: #fff;
+  padding-bottom: 95rpx;
+}
+
+.menu {
+  display: flex;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.menu-list {
+  width: 33.33%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  position: relative;
+}
+
+.menu-line {
+  display: block;
+  width: 100%;
+  height: 4rpx;
+}
+
+.cur-menu {
+  color: #f23030;
+}
+
+.cur-menu .menu-line {
+  background-color: #f23030;
+}
+
+.detail-content {
+  padding-top: 20rpx;
+}
+
+.pic-detail {
+  width: 100%;
+  /*height: auto;*/
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  height: 95rpx;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  z-index: 10;
+  color: #fff;
+}
+
+.cart {
+  width: 20%;
+}
+
+.add-cart {
+  width: 40%;
+  line-height: 95rpx;
+  background-color: #ff9600;
+}
+
+.go-pay {
+  width: 40%;
+  line-height: 95rpx;
+  background-color: #f23030;
+}
+
+.dot {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  margin-right: 10rpx;
+  margin-top: -10rpx;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #f23030;
+  border-radius: 50%;
+}
+
+.cart-txt {
+  display: block;
+  margin-top: 35rpx;
+  position: relative;
+}
