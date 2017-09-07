@@ -1,7 +1,7 @@
 <!--陈列订单信息的模版Start-->
 <template name="order-template">
     <view wx:if="{{data.length > 0}}" class="has-order">
-        <view wx:for="{{data}}">
+        <view wx:for="{{data}}" id="{{item.order_id}}" bindtap="showOrderDetail">
             <view class="order-head">
                 <view class="status-price">
                     <view wx:if="{{item.order_status == '0'}}">状态: <text class="unpaid-color">待支付</text></view>

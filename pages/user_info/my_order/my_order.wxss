@@ -65,9 +65,8 @@
     height: 56rpx;
     background-color: #E64240;
     color: white;
-    border: 1rpx solid #993D40;
     font-size:24rpx;
-    line-height:55rpx;
+    line-height:56rpx;
     margin-top: 8rpx;
 }
 .goods-content {

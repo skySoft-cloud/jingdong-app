@@ -1,2 +1,89 @@
-<!--pages/user_info/order_detail/order_detail.wxml-->
-<text>pages/user_info/order_detail/order_detail.wxml</text>
+<view class="my-container" xmlns:wx="http://www.w3.org/1999/XSL/Transform">
+    <view class="head-info">
+        <view wx:if="{{cur_order_detail.order_status == '1'}}" class="cancel-note">
+            <text>您的订单已取消!</text>
+            <text>订单取消成功</text>
+        </view>
+    </view>
+    <view class="status-info">
+        <view>
+            状态：
+            <text wx:if="{{cur_order_detail.order_status == '0'}}" class="unpaid-color">待支付</text>
+            <text wx:elif="{{cur_order_detail.order_status == '1'}}">已取消</text>
+            <text wx:else>已支付</text>
+        </view>
+        <view>
+            订单编号：
+            <text>{{cur_order_detail.order_number}}</text>
+        </view>
+        <view>
+            下单时间：
+            <text>{{cur_order_detail.ordered_time}}</text>
+        </view>
+    </view>
+    <view wx:if="{{cur_order_detail.order_status == '1'}}" class="buy-again">
+        <button>再次购买</button>
+    </view>
+    <view wx:if="{{cur_order_detail.order_status == '0'}}" class="two-btn">
+        <button>去支付</button>
+        <button>申请取消订单</button>
+    </view>
+    <view class="user-info">
+        <view>
+            商品金额：
+            <text class="goods-amount-color">￥{{cur_order_detail.actual_amount}}</text>
+        </view>
+        <view>
+            收货地址：
+            <text>{{cur_order_detail.consignee_address}}</text>
+        </view>
+        <view>
+            收货人：
+            <text class="consignee-name">{{cur_order_detail.consignee_name}}</text>
+        </view>
+        <view>
+            发票信息：
+            <text>{{cur_order_detail.invoice_info}}</text>
+        </view>
+    </view>
+    <view class="goods-info">
+        <view class="goods-info-head">
+            <text>{{cur_order_detail.goods_brand}}</text>
+            <text>共计{{cur_order_detail.order_goods.length}}件商品</text>
+        </view>
+        <view class="goods-info-body" wx:for="{{cur_order_detail.order_goods}}">
+            <view>
+                <image src="{{item.img_url}}"></image>
+            </view>
+            <view class="goods-detail">
+                <view>
+                    <text>{{item.goods_description}}</text>
+                </view>
+                <view class="price-quantity">
+                    <text>￥{{item.goods_price}}</text>
+                    <text>X{{item.goods_quantity}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class="money-count">
+            <view class="money-item">
+                <text>商品总额：</text>
+                <text>￥ {{cur_order_detail.actual_amount}}</text>
+            </view>
+            <view class="money-item">
+                <text>返现：</text>
+                <text>- ￥ {{cur_order_detail.discount_money}}</text>
+            </view>
+            <view class="money-item">
+                <text>运费：</text>
+                <text>+ ￥ {{cur_order_detail.freight_change}}</text>
+            </view>
+        </view>
+        <view class="actual-amount">
+            实付金额：
+            <text>￥{{cur_order_detail.actual_amount}}</text>
+        </view>
+    </view>
+</view>

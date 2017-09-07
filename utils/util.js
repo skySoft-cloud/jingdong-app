@@ -28,6 +28,7 @@ function http(options) {
         header: {
             'content-type': 'application/xml'
         },
+        data: options.data,
         method: options.data ? "POST" : "GET",
         success: (res)=> {
             //回调

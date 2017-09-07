@@ -25,12 +25,12 @@ Page({
         // 调接口GetReceivedCoupon
         http({
             url: "GetMyOrder",
-            func: function(data){
+            func: function (data) {
                 // 定义unpaidOrder和canceledOrder
                 let unpaidOrder = [],
                     paidOrder = [];
                 // 遍历data，将数据重新组合
-                for (let i = 0; i < data.length; i++){
+                for (let i = 0; i < data.length; i++) {
                     // 订单状态为0，为待付款订单，加入unpaidOrder
                     if (data[i]["order_status"] == "0") {
                         unpaidOrder.push(data[i]);
@@ -59,5 +59,16 @@ Page({
         this.setData({
             activeIndex: e.currentTarget.id
         });
+    },
+
+    /**
+     * tap当前订单去当前订单详情页
+     */
+    showOrderDetail: function (e) {
+        // 获取当前订单的ID作为值传入url中
+        const order_id = e.currentTarget.id;
+        wx.redirectTo({
+            url: `../order_detail/order_detail?order_id=${order_id}`
+        })
     }
 })
