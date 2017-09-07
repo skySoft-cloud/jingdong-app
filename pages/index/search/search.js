@@ -9,9 +9,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cancel_icon: true,  //searchbar关闭按钮的显示
-    input_value: "",    //初始化输入框为空
-    hot_search: []      //热门搜索的数据
+    active_search_val: "",                 //实时搜索显示
+    active_search: true,                   //实时搜索推荐
+    search_show_status: false,             //控制热搜和历史搜索显示
+    history_show: false,                   //控制历史搜索显示隐藏
+    btnsearch_status: true,                //控制显示隐藏搜索按钮
+    btncancel_status: false,               //控制显示隐藏取消按钮
+    cancel_icon: true,                     //searchbar关闭按钮的显示
+    input_value: "",                       //初始化输入框为空
+    hot_search: [],                        //热门搜索的数据
+    history_search: []                     //历史搜索的数据
   },
 
   /**
@@ -20,14 +27,14 @@ Page({
   onLoad: function (options) {
     //保存this对象
     const _this = this;
-    //请求数据
+    //请求热搜数据
     http({
-      url: "GetHotSearch",
+      url: "GetSearch",
       func: (data) => {
         // 成功后加载页面
         _this.initPage(data);
       }
-    });
+    })
   },
 
   /**
@@ -38,15 +45,54 @@ Page({
     //输入值时
     if (e.detail.value) {
       this.setData({
-        cancel_icon: false,         //显示关闭按钮
-        input_value: e.detail.value //设置输入框的值为当前输入的值 
+        active_search_val: e.detail.value,  //当前下拉显示的实时搜索功能
+        active_search: false,               //显示实时搜索的结果   
+        search_show_status: true,           //隐藏页面历史搜索和热门搜索
+        btncancel_status: true,             //隐藏取消按钮
+        btnsearch_status: false,            //显示搜索按钮
+        cancel_icon: false,                 //显示关闭按钮
+        input_value: e.detail.value         //设置输入框的值为当前输入的值
       })
     } else {
       this.setData({
-        cancel_icon: true,          //隐藏关闭按钮
-        input_value: ""             //输入框的值为空
+        active_search: true,           //隐藏实时搜索的结果
+        search_show_status: false,     //隐藏页面历史搜索和热门搜索
+        btncancel_status: false,       //显示取消按钮
+        btnsearch_status: true,        //隐藏搜索按钮
+        cancel_icon: true,             //隐藏关闭按钮
+        input_value: ""                //输入框的值为空
       })
     }
+  },
+
+  /**
+   * 点击清除隐藏历史搜索
+   */
+  clearHistorySearch() {
+    this.setData({
+      history_show: true
+    });
+    http({
+      url: "SetClearHistory",
+      data: this.data.history_search,
+      func: (data) => {
+        //成功后提示信息
+        wx.showToast({
+          title: '清除成功',
+          icon: 'success',
+          duration: 2000
+        })
+      }
+    })
+  },
+
+  /**
+   * 搜索按钮点击事件
+   */
+  searchGoods() {
+    wx.navigateTo({
+      url: `../search_result/search_result?title=${this.data.active_search_val}`
+    })
   },
 
   /**
@@ -55,8 +101,12 @@ Page({
    */
   clearInput(e) {
     this.setData({
+      active_search: true,
       cancel_icon: true,
-      input_value: ""
+      input_value: "",
+      search_show_status: false,         //隐藏页面历史搜索和热门搜索
+      btncancel_status: false,           //显示取消按钮
+      btnsearch_status: true             //隐藏搜索按钮
     })
   },
 
@@ -69,62 +119,31 @@ Page({
     })
   },
 
-/**
- * 初始化页面
- * @pram data 页面加载的数据
- */
+  /**
+   * 初始化页面
+   * @pram data 页面加载的数据
+   */
   initPage: function (data) {
     this.setData({
-      hot_search: data["hot_search"]  //赋值请求到的值给当前page下面的data.hot_search
+      hot_search: data["hot_search"],          //赋值请求到的值给当前page下面的data.hot_search
+      history_search: data["history_search"]   //赋值请求到的值给当前page下面的data.history_search
     });
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 换一批点击事件
    */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  changeHotItems: function () {
+    //保存this对象
+    const _this = this;
+    //请求数据
+    http({
+      url: "GetChangeHotSearch",
+      func: (data) => {
+        // 成功后加载页面
+        _this.initPage(data);
+      }
+    })
   }
-})
+
+});

@@ -1,4 +1,4 @@
-/* pages/index/search/search.wxss */
+/* pages/index/search_result/search_result.wxss */
 .search-title{
     margin:0 20rpx;
 }
@@ -20,7 +20,7 @@
     top:10rpx;
 }
 .search-bar>input{
-    width:508rpx;
+    width:650rpx;
     height:60rxp;
     border-radius:25rpx;
     background-color:#e9e8ee;
@@ -85,11 +85,5 @@
   text-indent: 10rpx;
   padding-bottom: 15rpx;
 }
-
-
-
-
-
-
 
 

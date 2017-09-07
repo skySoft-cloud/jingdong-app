@@ -5,15 +5,28 @@
         <icon type="search" size="16" class="search"/>
         <input placeholder="搜索京东商品" placeholder-class="placeholder" bindinput="inputShow" value="{{input_value}}"/>
         <!-- 点击取消返回上一页 -->
-        <button type="default" class="cancel" bindtap="getBack">取消</button>
+        <button type="default" hidden='{{btncancel_status}}' class="cancel" bindtap="getBack">取消</button>
+        <button  hidden="{{btnsearch_status}}" class="search-btn" bindtap="searchGoods">搜索</button>
         <icon hidden="{{cancel_icon}}" type="cancel"  color="grey" size="16" class="cancel-icon" bindtap="clearInput"/>
     </view>
 </view>
 <view class="content">
-<view class="wrap-content">
+    <view class="wrap-content" hidden='{{search_show_status}}'>
+    <!--加入逻辑，有历史搜索数据才显示历史搜索  -->
+        <view class="content-title" hidden='{{history_show}}' wx:if="{{history_search.length>0}}">
+            <text>历史搜索</text>
+            <!--点击清除隐藏历史搜索  -->
+            <text bindtap="clearHistorySearch">清除</text>
+        </view>
+        <view class="tags" hidden='{{history_show}}' wx:if="{{history_search.length>0}}">
+            <!-- 遍历从接口请求来的历史搜索数据并显示 -->
+            <block wx:for="{{history_search}}">
+                <text>{{item}}</text>
+            </block>
+        </view>
     <view class="content-title">
         <text>热门搜索</text>
-        <text>换一批</text>
+        <text bindtap="changeHotItems">换一批</text>
     </view>
      <view class="tags">
      <!-- 遍历从接口请求来的热门搜索数据并显示 -->
@@ -21,5 +34,12 @@
      <text>{{item}}</text>
     </block>
      </view>
+ </view>
+ 
+ <!--显示搜索的条目  -->
+ <view class='wrap-content' hidden='{{active_search}}'>
+   <navigator open-type='navigate' url="../search_result/search_result?search_title={{active_search_val}}">
+     <view class='bod-style'>{{active_search_val}}</view>
+   </navigator>
  </view>
 </view>

@@ -133,7 +133,7 @@
     display: inline-block;
     color: #e77c89;
     font-size:26rpx;
-    margin:16rpx 22rpx 0rpx 0;
+    margin:8rpx 22rpx 0rpx 0;
 }
 .now-price{
     font-size: 30rpx;
@@ -147,7 +147,7 @@
 .percent{
     display: inline-block;
     font-size:26rpx;
-    margin:0 16rpx 16rpx 0 ;
+    margin:0 16rpx 8rpx 0 ;
     color: #707070;
 }
 progress{

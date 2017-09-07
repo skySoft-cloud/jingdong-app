@@ -1,0 +1,9 @@
+<!--pages/index/search_result/search_result.wxml-->
+<!--搜索结果页面  -->
+<!-- 搜索页面 -->
+<view class="search-title">
+    <view class="search-bar">
+        <icon type="search" size="16" class="search"/>
+        <input placeholder="搜索京东商品" placeholder-class="placeholder" bindinput="inputShow" value="{{input_value}}"/>
+    </view>
+</view>
