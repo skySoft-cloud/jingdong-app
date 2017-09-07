@@ -4,7 +4,6 @@
     "pages/index/index",
     "pages/index/search/search",
     "pages/index/search_result/search_result",
-    "pages/goods_detail/goods_detail",
     "pages/index/goods_classification/goods_classification",
     "pages/index/get_coupons/get_coupons",
 
