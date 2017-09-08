@@ -36,13 +36,23 @@ Page({
     /**
      * tap申请取消订单
      */
-    cancelOrderDlg: () => {
+    cancelOrderDlg: function(){
+        const that = this;
+        // 获取data中的cur_order_detail
+        const cur_order_detail = this.data.cur_order_detail;
+        // 将order_status状态设为1，即订单取消的状态
+        cur_order_detail.order_status = "1";
         wx.showModal({
             title: `是否申请取消订单？`,
             confirmText: "确定",
             confirmColor: "#E45050",
-            success: function () {
-
+            success: function (res) {
+                // 点确定将页面设为订单取消的状态
+                if (res.confirm) {
+                    that.setData({
+                        cur_order_detail: cur_order_detail
+                    });
+                }
             }
         });
     },
