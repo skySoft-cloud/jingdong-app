@@ -31,6 +31,9 @@ function http(options) {
         data: options.data,
         method: options.data ? "POST" : "GET",
         success: (res)=> {
+            // 在控制台打印接口及接口的返回结果
+            console.log(options.url);
+            console.log(res.data);
             //回调
             options.func(res.data);
         }

@@ -51,7 +51,7 @@
             <text>{{cur_order_detail.goods_brand}}</text>
             <text>共计{{cur_order_detail.order_goods.length}}件商品</text>
         </view>
-        <view class="goods-info-body" wx:for="{{cur_order_detail.order_goods}}">
+        <view class="goods-info-body" wx:for="{{cur_order_detail.order_goods}}" wx:key="*this">
             <view>
                 <image src="{{item.img_url}}"></image>
             </view>

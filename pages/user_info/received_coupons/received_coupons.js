@@ -62,7 +62,6 @@ Page({
     this.setData({
       activeIndex: e.currentTarget.id
     });
-    console.log(this.activeIndex)
   },
   /**
    * 点击去领取链接到领券中心

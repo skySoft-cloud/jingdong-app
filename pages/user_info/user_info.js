@@ -37,7 +37,6 @@ Page({
           that.setData({
               wechatInfo: userInfo
           });
-          console.log(userInfo)
       });
       // 调接口GetOrderNum
       http({

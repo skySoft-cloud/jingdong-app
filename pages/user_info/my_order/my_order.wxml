@@ -1,7 +1,7 @@
 <!--陈列订单信息的模版Start-->
 <template name="order-template">
     <view wx:if="{{data.length > 0}}" class="has-order">
-        <view wx:for="{{data}}" id="{{item.order_id}}" bindtap="showOrderDetail">
+        <view wx:for="{{data}}" wx:key="*this" id="{{item.order_id}}" bindtap="showOrderDetail">
             <view class="order-head">
                 <view class="status-price">
                     <view wx:if="{{item.order_status == '0'}}">状态: <text class="unpaid-color">待支付</text></view>
@@ -13,7 +13,7 @@
                     <button>去支付</button>
                 </view>
             </view>
-            <view wx:for="{{item.order_goods}}" class="goods-content">
+            <view wx:for="{{item.order_goods}}" wx:key="*this" class="goods-content">
                 <view class="goods-info">
                     <image src="{{item.img_url}}"></image>
                     <view>
@@ -29,7 +29,7 @@
 <!--陈列订单信息的模版End-->
 <view class="my-container">
     <view class="head-nav">
-        <block wx:for="{{navTabs}}">
+        <block wx:for="{{navTabs}}" wx:key="*this">
             <view class="{{activeIndex == index ? 'active-item':''}}" id="{{index}}" bindtap="tapNavItem">{{item}}</view>
         </block>
     </view>

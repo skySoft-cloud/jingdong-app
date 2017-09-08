@@ -24,7 +24,6 @@ Page({
                 for (let i = 0; i < data.length; i++) {
                     if (data[i]["order_id"] == order_id) {
                         // 将获取的当前订单详情赋值给cur_order_detail
-                        console.log(data[i]);
                         that.setData({
                             cur_order_detail: data[i]
                         });

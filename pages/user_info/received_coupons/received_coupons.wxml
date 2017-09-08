@@ -2,7 +2,7 @@
 <template name="coupon-template">
     <!--有领取的优惠券信息，陈列这些优惠券-->
     <view wx:if="{{data.length > 0}}" class="coupon-content">
-        <block wx:for="{{data}}">
+        <block wx:for="{{data}}" wx:key="*this">
             <view class="{{item['use_condition'] ? 'green-coupon' : 'red-coupon'}}">
                 <view class="coupon-info">
                     <view class="coupon-info-left">
@@ -33,7 +33,7 @@
 <!--陈列优惠券信息的模版End-->
 <view class="my-container">
     <view class="head-nav">
-        <block wx:for="{{navTabs}}">
+        <block wx:for="{{navTabs}}" wx:key="*this">
             <view class="{{activeIndex == index ? 'active-item':''}}" id="{{index}}" bindtap="tapNavItem">{{item}}</view>
         </block>
     </view>
