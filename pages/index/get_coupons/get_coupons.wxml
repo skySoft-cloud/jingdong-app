@@ -1,2 +1,9 @@
-<!--pages/index/get_coupons/get_coupons.wxml-->
-<text>pages/index/get_coupons/get_coupons.wxml</text>
+<view class="my-container">
+    <view class="title">
+        <text>今日福利</text>
+        <text>/ 专享福利 天天优惠 /</text>
+    </view>
+    <view class="coupon_content">
+        <view class="coupon_info" style="background-image:url('../../../images/index/not_get.png')"></view>
+    </view>
+</view>

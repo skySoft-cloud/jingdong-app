@@ -18,3 +18,4 @@ pages里的文件结构
 
   3. wxss方面
      不支持"a > b > c"双箭头写法，控制台会报错
+     背景图属性background-image必须写在标签中
