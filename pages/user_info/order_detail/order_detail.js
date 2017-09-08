@@ -48,6 +48,17 @@ Page({
     },
 
     /**
+     * 点击某一商品链接到该商品的详情页
+     */
+    toGoodsDetail: (e) => {
+        // 获取当前订单的ID作为值传入url中
+        const goods_id = e.currentTarget.id;
+        wx.navigateTo({
+            url: `../../cart/goods_detail/goods_detail?goods_id=${goods_id}`
+        })
+    },
+
+    /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
