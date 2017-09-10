@@ -1,0 +1,61 @@
+{
+    "goods_list": [
+        {
+            "page": [
+                {
+                    "goods_description": "瑞士军刀双肩包，男女学生书包...",
+                    "goods_price": "138.00",
+                    "goods_url": "../../../images/user_info/goods_03.png"
+                },
+                {
+                    "goods_description": "【京东配送】 瑞士军刀双肩电脑包...",
+                    "goods_price": "159.00",
+                    "goods_url": "../../../images/user_info/goods_05.png"
+                },
+                {
+                    "goods_description": "瑞士军刀 男士胸包单肩斜挎包...",
+                    "goods_price": "235.00",
+                    "goods_url": "../../../images/user_info/goods_07.png"
+                }
+            ]
+        },
+        {
+            "page": [
+                {
+                    "goods_description": "瑞士军刀双肩包，男女学生书包...",
+                    "goods_price": "138.00",
+                    "goods_url": "../../../images/user_info/goods_03.png"
+                },
+                {
+                    "goods_description": "【京东配送】 瑞士军刀双肩电脑包...",
+                    "goods_price": "159.00",
+                    "goods_url": "../../../images/user_info/goods_05.png"
+                },
+                {
+                    "goods_description": "瑞士军刀 男士胸包单肩斜挎包...",
+                    "goods_price": "235.00",
+                    "goods_url": "../../../images/user_info/goods_07.png"
+                }
+            ]
+        },
+        {
+            "page": [
+                {
+                    "goods_description": "瑞士军刀双肩包，男女学生书包...",
+                    "goods_price": "138.00",
+                     "goods_url": "../../../images/user_info/goods_03.png"
+                },
+                {
+                    "goods_description": "【京东配送】 瑞士军刀双肩电脑包...",
+                    "goods_price": "159.00",
+                     "goods_url": "../../../images/user_info/goods_05.png"
+                },
+                {
+                    "goods_description": "瑞士军刀 男士胸包单肩斜挎包...",
+                    "goods_price": "235.00",
+                     "goods_url": "../../../images/user_info/goods_07.png"
+                }
+            ]
+        }
+    ]
+}

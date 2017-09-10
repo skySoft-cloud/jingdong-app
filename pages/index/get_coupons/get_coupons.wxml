@@ -4,6 +4,49 @@
         <text>/ 专享福利 天天优惠 /</text>
     </view>
     <view class="coupon_content">
-        <view class="coupon_info" style="background-image:url('../../../images/index/not_get.png')"></view>
+       <block wx:for="{{couponInfo}}">
+           <view class="coupon_info" style="background-image:url('../../../images/index/{{item.coupon_status == 1 ? \'geted.png\':\'not_get.png\'}}')" id="{{item.coupon_id}}" bindtap="{{item.coupon_status == '0' ? 'tapGetCoupon' : 'getCouponGoods'}}">
+               <view class="coupon_classification">
+                   <image src="{{item.coupon_img_url}}"></image>
+               </view>
+               <view class="coupon_detail">
+                   <view>
+                       <text>{{item.description}}</text>
+                   </view>
+                   <view class="discount_detail">
+                       <text>{{item.discount_amount}}</text>
+                       <text>满{{item.use_case}}可用</text>
+                   </view>
+               </view>
+               <view class="get-coupon" wx:if="{{item.coupon_status == '0'}}">
+                   <text>立即领取</text>
+               </view>
+               <view wx:else class="to-use">
+                   <text>{{item.show_list ? "去使用" : "收起"}}</text>
+                   <text class="circle"></text>
+               </view>
+           </view>
+           <view class="coupon_goods_list" hidden="{{item.show_list}}">
+               <text class="angle"></text>
+               <view class="coupon-title">该券适用于以下商品：</view>
+               <swiper indicator-dots="true" indicator-color="#C6C6C6" indicator-active-color="#CC3C5D">
+                   <block wx:for="{{item.goods_list}}" wx:key="{{index}}">
+                       <swiper-item>
+                           <view wx:for="{{item.page}}" wx:key="{{index}}" class="goods-content">
+                               <view>
+                                   <image src="{{item.goods_url}}"></image>
+                               </view>
+                               <view class="goods-description">
+                                   {{item.goods_description}}
+                               </view>
+                               <view class="money-detail">
+                                   ￥{{item.goods_price}}
+                               </view>
+                           </view>
+                       </swiper-item>
+                   </block>
+               </swiper>
+           </view>
+       </block>
     </view>
 </view>

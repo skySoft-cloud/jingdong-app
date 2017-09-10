@@ -1,0 +1,47 @@
+[
+    {
+        "coupon_id": "001",
+        "coupon_status": "0",
+        "coupon_img_url": "../../../images/user_info/coupon_03.png",
+        "discount_amount": "10",
+        "use_case": "100",
+        "show_list": "false",
+        "description": "[WESHIGERE官方旗舰店]可用"
+    },
+    {
+        "coupon_id": "002",
+        "coupon_status": "1",
+        "coupon_img_url": "../../../images/user_info/coupon_03.png",
+        "discount_amount": "100",
+        "use_case": "1000",
+         "show_list": "false",
+        "description": "[WESHIGERE官方旗舰店]可用"
+    },
+    {
+        "coupon_id": "003",
+         "coupon_status": "0",
+        "coupon_img_url": "../../../images/user_info/coupon_03.png",
+        "discount_amount": "100",
+        "use_case": "1000",
+         "show_list": "false",
+        "description": "[WESHIGERE官方旗舰店]可用"
+    },
+    {
+        "coupon_id": "004",
+        "coupon_status": "1",
+        "coupon_img_url": "../../../images/user_info/coupon_03.png",
+        "discount_amount": "200",
+        "use_case": "1500",
+         "show_list": "false",
+        "description": "[WESHIGERE官方旗舰店]可用"
+    },
+    {
+        "coupon_id": "005",
+        "coupon_status": "0",
+        "coupon_img_url": "../../../images/user_info/coupon_03.png",
+        "discount_amount": "200",
+        "use_case": "1500",
+         "show_list": "false",
+        "description": "[WESHIGERE官方旗舰店]可用"
+    }
+]
