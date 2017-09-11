@@ -105,7 +105,7 @@
 
     <!--下拉加载更多-->
     <!--todo 上拉加载更多只能渲染一次，之后无法继续渲染-->
-    <block wx:for="{{products_data}}">
+    <block wx:for="{{products_data}}" wx:key="*this">
         <view class="goods_item" data-id="{{item.id}}" bindtap="goDetail" hidden="{{is_hide_loadmore}}">
             <view class="goods_item01">
                 <image src="{{item.src}}"></image>
