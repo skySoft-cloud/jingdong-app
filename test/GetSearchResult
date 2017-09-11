@@ -1,0 +1,44 @@
+{
+    "search_products": [
+        {
+            "id": "000001",
+            "image_url": "../../../images/index/result_image01.png",
+            "title": "赛菲尔足金999.9黄金手链 足金手表链男款 土豪老板链 霸气貔貅手链首饰改运势",
+            "price": "24854",
+            "num_comment": "2",
+            "good_comment_percent": "100"
+        },
+        {
+            "id": "000002",
+            "image_url": "../../../images/index/result_image01.png",
+            "title": "赛菲尔足金999.9黄金手链 足金手表链男款 土豪老板链 霸气貔貅手链首饰改运势",
+            "price": "24854",
+            "num_comment": "2",
+            "good_comment_percent": "100"
+        },
+        {
+            "id": "000003",
+            "image_url": "../../../images/index/result_image01.png",
+            "title": "赛菲尔足金999.9黄金手链 足金手表链男款 土豪老板链 霸气貔貅手链首饰改运势",
+            "price": "24854",
+            "num_comment": "2",
+            "good_comment_percent": "100"
+        },
+        {
+            "id": "000003",
+            "image_url": "../../../images/index/result_image01.png",
+            "title": "赛菲尔足金999.9黄金手链 足金手表链男款 土豪老板链 霸气貔貅手链首饰改运势",
+            "price": "24854",
+            "num_comment": "2",
+            "good_comment_percent": "100"
+        },
+        {
+            "id": "000003",
+            "image_url": "../../../images/index/result_image01.png",
+            "title": "赛菲尔足金999.9黄金手链 足金手表链男款 土豪老板链 霸气貔貅手链首饰改运势",
+            "price": "24854",
+            "num_comment": "2",
+            "good_comment_percent": "100"
+        }
+    ]
+}

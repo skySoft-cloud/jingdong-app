@@ -2,8 +2,36 @@
 <!--搜索结果页面  -->
 <!-- 搜索页面 -->
 <view class="search-title">
-    <view class="search-bar">
-        <icon type="search" size="16" class="search"/>
-        <input placeholder="搜索京东商品" placeholder-class="placeholder" bindinput="inputShow" value="{{input_value}}"/>
+  <view class="search-bar">
+    <icon type="search" size="16" class="search" />
+    <input placeholder="搜索京东商品" placeholder-class="placeholder" bindinput="inputShow" value="{{input_value}}" />
+  </view>
+</view>
+<view class='nav-wrapper'>
+  <view>综合</view>
+  <view>销量</view>
+  <view>价格</view>
+  <view class='filter'>筛选
+    <image src='../../../images/index/filter_icon.png'></image>
+  </view>
+</view>
+<view class='wrap-result_content'>
+  <block wx:for="{{search_data}}" wx:key="{{index}}">
+    <view class="result_item">
+      <view class='left-image'>
+        <image src='{{item.image_url}}'></image>
+      </view>
+      <view class='right-production'>
+        <text class='item-title'>{{item.title}}</text>
+        <view class="price color-red">
+          ￥
+          <text>{{item.price}}</text>.00
+        </view>
+        <view class='comment'>
+          <text>{{item.num_comment}}条评价</text>
+          <text>{{item.good_comment_percent}}%好评</text>
+        </view>
+      </view>
     </view>
+  </block>
 </view>

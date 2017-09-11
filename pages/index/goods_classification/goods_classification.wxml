@@ -12,7 +12,7 @@
 <!-- 左边菜单部分 -->
     <view class="left-content">
         <view class="nav-left">
-            <block wx:for="{{cate_items.cate_items}}">
+            <block wx:for="{{cate_items.cate_items}}" wx:key="{{index}}">
             <!--当选中菜单的id和设置的id一致就添加样式  -->
             <!--动态添加索引index和对应菜单的id  -->
                 <view class="nav-left-item {{cur_nav == item.cate_id ? 'color-red' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}">{{item.cate_name}}</view>
@@ -23,7 +23,7 @@
     <view class="right-content">
         <view class="nav-right">
         <!--渲染当前选中菜单对应索引的数据  -->
-            <block wx:for="{{cate_items.cate_items[cur_index].children}}" wx:key="*this">
+            <block wx:for="{{cate_items.cate_items[cur_index].children}}" wx:key="{{index}}">
                 <view class="nav-right-items font-12">
                         <image src="{{item.image}}"></image>
                         <text>{{item.name}}</text>

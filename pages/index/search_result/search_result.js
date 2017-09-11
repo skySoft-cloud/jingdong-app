@@ -1,10 +1,15 @@
 // pages/index/search_result/search_result.js
+//获取应用实例，请求数据的方法
+const {
+    http
+    } = require('../../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    search_data:[],   //页面加载用的数据
     input_value: ""  //输入框显示的文本
   },
 
@@ -12,12 +17,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const _this = this;
     //根据页面跳转带来的搜索条件发起请求
     http({
       url: "GetSearchResult",
       data: { title: options.title },
       func: (data) => {
-
+        _this.setData({
+          search_data:data["search_products"]
+        })
       }
     })
     //输入框默认显示为页面跳转传递过来的数据
