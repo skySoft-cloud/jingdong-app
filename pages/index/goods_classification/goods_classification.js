@@ -2,7 +2,7 @@
 //获取应用实例
 const {
     http
-    } = require('../../../utils/util.js');
+} = require("../../../utils/util.js");
 Page({
 
   /**
@@ -17,6 +17,7 @@ Page({
 
   /**
    * 生命周期函数--监听页面加载
+   * @pram options--页面跳转带来的参数
    */
   onLoad: function (options) {
     const _this = this;
@@ -36,17 +37,28 @@ Page({
    */
   goSearch: function () {
     wx.navigateTo({
-      url: '../search/search'
+      url: "../search/search"
     })
   },
+
   /**
    * 点击左侧菜单切换
-   * @pram e 当前点击对象的属性集合
+   * @pram e--当前点击对象的属性集合
    */
   switchRightTab: function (e) {
     this.setData({
       cur_nav: e.target.dataset.id,
       cur_index: e.target.dataset.index
+    })
+  },
+
+  /**
+   * 点击商品进入详情
+   * @pram e--当前点击对象的属性集合
+   */
+  goDetail(e) {
+    wx.navigateTo({
+      url: "../../cart/goods_detail/goods_detail"
     })
   }
 })

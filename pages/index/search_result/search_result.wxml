@@ -1,33 +1,46 @@
 <!--pages/index/search_result/search_result.wxml-->
 <!--搜索结果页面  -->
-<!-- 搜索页面 -->
-<view class="search-title">
-  <view class="search-bar">
-    <icon type="search" size="16" class="search" />
-    <input placeholder="搜索京东商品" placeholder-class="placeholder" bindinput="inputShow" value="{{input_value}}" />
+<!--头部包含searchbar和导航栏nav  -->
+<view class="header">
+  <!--搜索栏部分  -->
+  <view class="search-title">
+    <view class="search-bar">
+      <icon type="search" size="16" class="search" />
+      <input placeholder="搜索京东商品" placeholder-class="placeholder" bindinput="inputShow" value="{{input_value}}" />
+    </view>
+  </view>
+  <!--导航部分  -->
+  <view class="nav-wrapper" bindtap="changeFilterRules">
+    <view class="{{num==0?'selected':''}}" data-num="0" id="comprehensive">综合</view>
+    <view class="{{num==1?'selected':''}}" data-num="1" id="sales">销量</view>
+    <view class="{{num==2?'selected':''}} nav-price" data-num="2">价格
+      <text class="top-arrow" hidden="{{normal_arrow}}" bindtap="HighToLowPrice"></text>
+      <text class="top-arrow-slected" hidden="{{arrow_selected}}"></text>
+      <text class="bottom-arrow" hidden="{{arrow_selected}}" bindtap="lowToHighPrice"></text>
+      <text class="bottom-arrow-selected" hidden="{{normal_arrow}}"></text>
+    </view>
+    <view class="filter {{num==3?'selected':''}}" data-num="3" bindtap="waitTodo">筛选
+      <image src="../../../images/index/filter_icon.png"></image>
+    </view>
   </view>
 </view>
-<view class='nav-wrapper'>
-  <view>综合</view>
-  <view>销量</view>
-  <view>价格</view>
-  <view class='filter'>筛选
-    <image src='../../../images/index/filter_icon.png'></image>
-  </view>
-</view>
-<view class='wrap-result_content'>
+<!--空白填充部分，否则固定定位header后内容区部分被遮挡  -->
+<view class="header-fill"></view>
+<!--内容区部分，商品item  -->
+<view class="wrap-result_content">
+  <!--遍历search_data（查询结果）  -->
   <block wx:for="{{search_data}}" wx:key="{{index}}">
     <view class="result_item">
-      <view class='left-image'>
-        <image src='{{item.image_url}}'></image>
+      <view class="left-image">
+        <image src="{{item.image_url}}"></image>
       </view>
-      <view class='right-production'>
-        <text class='item-title'>{{item.title}}</text>
+      <view class="right-production">
+        <text class="item-title">{{item.title}}</text>
         <view class="price color-red">
           ￥
           <text>{{item.price}}</text>.00
         </view>
-        <view class='comment'>
+        <view class="comment">
           <text>{{item.num_comment}}条评价</text>
           <text>{{item.good_comment_percent}}%好评</text>
         </view>

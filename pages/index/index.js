@@ -1,7 +1,7 @@
 //获取应用实例，请求数据的方法
 const {
     http
-    } = require('../../utils/util.js');
+} = require("../../utils/util.js");
 
 Page({
   data: {
@@ -28,7 +28,7 @@ Page({
 
   /**
    * 初始化页面
-   * @pram data 页面加载的数据
+   * @pram data--页面加载的数据
    */
   initPage: function (data) {
     this.setData({
@@ -38,7 +38,7 @@ Page({
 
   /**
    * 点击抢购的时间切换样式
-   * @pram e 当前点击对象的属性集合
+   * @pram e--当前点击对象的属性集合
    */
   clickNum: function (e) {
     //设置当前点击的项为选中样式
@@ -58,7 +58,7 @@ Page({
 
   /**
    * 点击商品进入商品对应的详情页
-   * @pram e 当前点击对象的属性集合
+   * @pram e--当前点击对象的属性集合
    */
   goDetail: (e) => {
     wx.navigateTo({
@@ -73,13 +73,18 @@ Page({
   onReachBottom: function () {
     //保存this对象
     const _this = this;
+    //页面已存在的商品数据
+    let exsit_data = _this.data.products_data,
+      products_data;
     //请求数据
     http({
       url: "GetSeckillProducts",
       func: (data) => {
+        //合并已有的数据和请求到加载更多的数据
+        products_data = exsit_data.concat(data.products_data);
         // 成功后加载页面
         _this.setData({
-          products_data: data["products_data"],
+          products_data: products_data,
           is_hide_loadmore: false
         });
       }

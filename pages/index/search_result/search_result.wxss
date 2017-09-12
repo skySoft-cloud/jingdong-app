@@ -4,6 +4,16 @@ page {
   background-color: #fff;
 }
 
+.header {
+  position: fixed;
+  background-color: #fff;
+}
+
+.header-fill {
+  width: 100%;
+  height: 79.25px;
+}
+
 .search-title {
   margin: 0 20rpx;
 }
@@ -163,4 +173,54 @@ page {
 
 .comment>text {
   margin-right: 10rpx;
+}
+
+.selected {
+  color: #f23030;
+  font-weight: 700;
+}
+
+.nav-price {
+  position: relative;
+}
+
+.top-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-top: 12rpx solid #c7cfcc;
+  top: 20rpx;
+  right: -15px;
+}
+.top-arrow-slected{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-top: 12rpx solid #f23030;
+  top: 20rpx;
+  right: -15px;
+}
+.bottom-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-bottom: 12rpx solid #c7cfcc;
+  top: 6rpx;
+  right: -30rpx;
+}
+.bottom-arrow-selected{
+   position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-bottom: 12rpx solid #f23030;
+  top: 6rpx;
+  right: -30rpx;
 }

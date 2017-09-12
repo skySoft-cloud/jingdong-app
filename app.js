@@ -1,4 +1,5 @@
 //app.js
+/******************************存放全局变量*********************************/ 
 App({
     /**
      * 获取用户信息，供各页面调用
@@ -26,7 +27,7 @@ App({
     },
     globalData: {
         userInfo: null,
-        // 和baron接口调试置为true用前者base url;本地接口调试置为false,使用后者base url
-        baseUrl: false ? "http://10.8.6.97:8080/" : "https://localhost:63342/jingdong-app/test/"
+        // 和baron接口调试置为true用前者baseUrl;本地接口调试置为false,使用后者baseUrl
+        baseUrl: false ? "http://10.8.6.107:8080/wx/" : "https://localhost:63342/jingdong-app/test/"
     }
 });

@@ -24,7 +24,7 @@
         <view class="nav-right">
         <!--渲染当前选中菜单对应索引的数据  -->
             <block wx:for="{{cate_items.cate_items[cur_index].children}}" wx:key="{{index}}">
-                <view class="nav-right-items font-12">
+                <view class="nav-right-items font-12" bindtap="goDetail">
                         <image src="{{item.image}}"></image>
                         <text>{{item.name}}</text>
                 </view>

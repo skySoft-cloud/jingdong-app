@@ -1,4 +1,3 @@
-
 {
     "cate_items": [
         {
@@ -51,28 +50,26 @@
                     "image": "../../../images/index/product03.png"
                 },
                 {
-                                            "child_id": "4",
-                                            "name": "红色卫衣",
-                                            "image": "../../../images/index/product04.png"
-                                        },
-                                        {
-                                            "child_id": "5",
-                                            "name": "高仿卫衣",
-                                            "image": "../../../images/index/product01.png"
-                                        },
-                                        {
-                                            "child_id": "6",
-                                            "name": "西西卫衣",
-                                            "image": "../../../images/index/product04.png"
-                                        }
-
+                    "child_id": "4",
+                    "name": "红色卫衣",
+                    "image": "../../../images/index/product04.png"
+                },
+                {
+                    "child_id": "5",
+                    "name": "高仿卫衣",
+                    "image": "../../../images/index/product01.png"
+                },
+                {
+                    "child_id": "6",
+                    "name": "西西卫衣",
+                    "image": "../../../images/index/product04.png"
+                }
             ]
         },
         {
             "cate_id": "2",
             "cate_name": "时尚搭配",
             "children": [
-
                 {
                     "child_id": "4",
                     "name": "红色卫衣",
@@ -119,20 +116,20 @@
                     "image": "../../../images/index/product01.png"
                 },
                 {
-                                            "child_id": "4",
-                                            "name": "红色卫衣",
-                                            "image": "../../../images/index/product04.png"
-                                        },
-                                        {
-                                            "child_id": "5",
-                                            "name": "高仿卫衣",
-                                            "image": "../../../images/index/product01.png"
-                                        },
-                                        {
-                                            "child_id": "6",
-                                            "name": "西西卫衣",
-                                            "image": "../../../images/index/product04.png"
-                                        }
+                    "child_id": "4",
+                    "name": "红色卫衣",
+                    "image": "../../../images/index/product04.png"
+                },
+                {
+                    "child_id": "5",
+                    "name": "高仿卫衣",
+                    "image": "../../../images/index/product01.png"
+                },
+                {
+                    "child_id": "6",
+                    "name": "西西卫衣",
+                    "image": "../../../images/index/product04.png"
+                }
             ]
         },
         {
@@ -140,11 +137,10 @@
             "cate_name": "家用电器",
             "children": [
                 {
-                                "child_id": "3",
-                                "name": "安踏系列",
-                                "image": "../../../images/index/product05.png"
+                    "child_id": "3",
+                    "name": "安踏系列",
+                    "image": "../../../images/index/product05.png"
                 },
-
                 {
                     "child_id": "1",
                     "name": "潮人必备",
@@ -242,16 +238,16 @@
             "cate_id": "5",
             "cate_name": "运动户外",
             "children": [
-                 {
-                        "child_id": "3",
-                        "name": "安踏系列",
-                        "image": "../../../images/index/product05.png"
-                 },
-                 {
-                        "child_id": "4",
-                        "name": "红色卫衣",
-                        "image": "../../../images/index/product04.png"
-                 },
+                {
+                    "child_id": "3",
+                    "name": "安踏系列",
+                    "image": "../../../images/index/product05.png"
+                },
+                {
+                    "child_id": "4",
+                    "name": "红色卫衣",
+                    "image": "../../../images/index/product04.png"
+                },
                 {
                     "child_id": "1",
                     "name": "潮人必备",
@@ -329,84 +325,82 @@
                     "image": "../../../images/index/product05.png"
                 },
                 {
-                                     "child_id": "6",
-                                     "name": "西西卫衣",
-                                     "image": "../../../images/index/product04.png"
+                    "child_id": "6",
+                    "name": "西西卫衣",
+                    "image": "../../../images/index/product04.png"
                 },
                 {
-                                     "child_id": "7",
-                                     "name": "两元卫衣",
-                                     "image": "../../../images/index/product05.png"
+                    "child_id": "7",
+                    "name": "两元卫衣",
+                    "image": "../../../images/index/product05.png"
                 }
             ]
         },
-             {
-                    "cate_id": "7",
-                    "cate_name": "冬季潮流",
-                    "children": [
-                        {
-                            "child_id": "1",
-                            "name": "潮人必备",
-                            "image": "../../../images/index/product02.png"
-                        },
-                        {
-                            "child_id": "2",
-                            "name": "耐克系列",
-                            "image": "../../../images/index/product01.png"
-                        },
-                        {
-                            "child_id": "3",
-                            "name": "安踏系列",
-                            "image": "../../../images/index/product05.png"
-                        },
-                        {
-                            "child_id": "4",
-                            "name": "红色卫衣",
-                            "image": "../../../images/index/product04.png"
-                        },
-                        {
-                            "child_id": "5",
-                            "name": "高仿卫衣",
-                            "image": "../../../images/index/product01.png"
-                        },
-                        {
-                            "child_id": "6",
-                            "name": "西西卫衣",
-                            "image": "../../../images/index/product04.png"
-                        },
-                        {
-                            "child_id": "7",
-                            "name": "两元卫衣",
-                            "image": "../../../images/index/product05.png"
-                        },
-                        {
-                                             "child_id": "6",
-                                             "name": "西西卫衣",
-                                             "image": "../../../images/index/product04.png"
-                        },
-                        {
-                                             "child_id": "7",
-                                             "name": "两元卫衣",
-                                             "image": "../../../images/index/product05.png"
-                        },
-                        {
-                                                    "child_id": "4",
-                                                    "name": "红色卫衣",
-                                                    "image": "../../../images/index/product04.png"
-                                                },
-                                                {
-                                                    "child_id": "5",
-                                                    "name": "高仿卫衣",
-                                                    "image": "../../../images/index/product01.png"
-                                                },
-                                                {
-                                                    "child_id": "6",
-                                                    "name": "西西卫衣",
-                                                    "image": "../../../images/index/product04.png"
-                                                }
-                    ]
+        {
+            "cate_id": "7",
+            "cate_name": "冬季潮流",
+            "children": [
+                {
+                    "child_id": "1",
+                    "name": "潮人必备",
+                    "image": "../../../images/index/product02.png"
+                },
+                {
+                    "child_id": "2",
+                    "name": "耐克系列",
+                    "image": "../../../images/index/product01.png"
+                },
+                {
+                    "child_id": "3",
+                    "name": "安踏系列",
+                    "image": "../../../images/index/product05.png"
+                },
+                {
+                    "child_id": "4",
+                    "name": "红色卫衣",
+                    "image": "../../../images/index/product04.png"
+                },
+                {
+                    "child_id": "5",
+                    "name": "高仿卫衣",
+                    "image": "../../../images/index/product01.png"
+                },
+                {
+                    "child_id": "6",
+                    "name": "西西卫衣",
+                    "image": "../../../images/index/product04.png"
+                },
+                {
+                    "child_id": "7",
+                    "name": "两元卫衣",
+                    "image": "../../../images/index/product05.png"
+                },
+                {
+                    "child_id": "6",
+                    "name": "西西卫衣",
+                    "image": "../../../images/index/product04.png"
+                },
+                {
+                    "child_id": "7",
+                    "name": "两元卫衣",
+                    "image": "../../../images/index/product05.png"
+                },
+                {
+                    "child_id": "4",
+                    "name": "红色卫衣",
+                    "image": "../../../images/index/product04.png"
+                },
+                {
+                    "child_id": "5",
+                    "name": "高仿卫衣",
+                    "image": "../../../images/index/product01.png"
+                },
+                {
+                    "child_id": "6",
+                    "name": "西西卫衣",
+                    "image": "../../../images/index/product04.png"
                 }
+            ]
+        }
     ]
 }
-
- 

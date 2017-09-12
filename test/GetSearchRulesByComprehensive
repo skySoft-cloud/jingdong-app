@@ -2,7 +2,7 @@
     "search_products": [
         {
             "id": "000001",
-            "image_url": "../../../images/index/result_image01.png",
+            "image_url": "../../../images/index/result_image02.png",
             "title": "赛菲尔足金999.9黄金手链 足金手表链男款 土豪老板链 霸气貔貅手链首饰改运势",
             "price": "24854",
             "num_comment": "2",
@@ -10,7 +10,7 @@
         },
         {
             "id": "000002",
-            "image_url": "../../../images/index/result_image02.png",
+            "image_url": "../../../images/index/result_image01.png",
             "title": "299元/克 熙禧珠宝 999足金马鞭手链男士黄金手链 经典双幅口 马鞭土豪改变运势",
             "price": "15312",
             "num_comment": "2",
@@ -28,7 +28,7 @@
             "id": "000003",
             "image_url": "../../../images/index/result_image01.png",
             "title": "赛菲尔足金999.9黄金手链 足金手表链男款 土豪老板链 霸气貔貅手链首饰改运势",
-            "price": "999",
+            "price": "35820",
             "num_comment": "2",
             "good_comment_percent": "100"
         },
@@ -36,25 +36,25 @@
             "id": "000003",
             "image_url": "../../../images/index/result_image02.png",
             "title": "赛菲尔足金999.9黄金手链 足金手表链男款 土豪老板链 霸气貔貅手链首饰改运势",
-            "price": "688",
+            "price": "999",
             "num_comment": "2",
             "good_comment_percent": "100"
         },
         {
-                     "id": "000001",
-                     "image_url": "../../../images/index/result_image01.png",
-                     "title": "赛菲尔足金999.9黄金手链 足金手表链男款 土豪老板链 霸气貔貅手链首饰改运势",
-                     "price": "525",
-                     "num_comment": "2",
-                     "good_comment_percent": "100"
-                 },
-                 {
-                     "id": "000002",
-                     "image_url": "../../../images/index/result_image02.png",
-                     "title": "299元/克 熙禧珠宝 999足金马鞭手链男士黄金手链 经典双幅口 马鞭土豪改变运势",
-                     "price": "1",
-                     "num_comment": "2",
-                     "good_comment_percent": "100"
-                 }
+            "id": "000001",
+            "image_url": "../../../images/index/result_image03.png",
+            "title": "赛菲尔足金999.9黄金手链 足金手表链男款 土豪老板链 霸气貔貅手链首饰改运势",
+            "price": "68885",
+            "num_comment": "2",
+            "good_comment_percent": "100"
+        },
+        {
+            "id": "000002",
+            "image_url": "../../../images/index/result_image02.png",
+            "title": "299元/克 熙禧珠宝 999足金马鞭手链男士黄金手链 经典双幅口 马鞭土豪改变运势",
+            "price": "425",
+            "num_comment": "2",
+            "good_comment_percent": "100"
+        }
     ]
 }

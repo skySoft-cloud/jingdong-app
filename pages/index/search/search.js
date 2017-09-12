@@ -2,7 +2,7 @@
 //获取应用实例，请求数据的方法
 const {
     http
-    } = require('../../../utils/util.js');
+} = require("../../../utils/util.js");
 Page({
 
   /**
@@ -23,6 +23,7 @@ Page({
 
   /**
    * 生命周期函数--监听页面加载
+   * @pram options--页面跳转带来的参数
    */
   onLoad: function (options) {
     //保存this对象
@@ -72,15 +73,16 @@ Page({
     this.setData({
       history_show: true
     });
+    //发起清除历史记录的请求
     http({
       url: "SetClearHistory",
       data: this.data.history_search,
       func: (data) => {
-        //成功后提示信息
+        //成功后弹窗提示
         wx.showToast({
-          title: '清除成功',
-          icon: 'success',
-          duration: 2000
+          title: "清除成功",
+          icon: "success",             //icon的类型
+          duration: 2000               //弹窗持续时长
         })
       }
     })
@@ -91,13 +93,14 @@ Page({
    */
   searchGoods() {
     wx.navigateTo({
+      //页面跳转时将搜索的字段传入
       url: `../search_result/search_result?title=${this.data.active_search_val}`
     })
   },
 
   /**
    * input输入内容时cancel按钮的显示隐藏
-   * @pram e 当前点击对象的属性集合
+   * @pram e--当前点击对象的属性集合
    */
   clearInput(e) {
     this.setData({
@@ -121,7 +124,7 @@ Page({
 
   /**
    * 初始化页面
-   * @pram data 页面加载的数据
+   * @pram data--页面加载的数据
    */
   initPage: function (data) {
     this.setData({
@@ -144,6 +147,19 @@ Page({
         _this.initPage(data);
       }
     })
-  }
+  },
 
+  /**
+   * 点击热门搜索或历史搜索字段时自动填充到搜索框
+   * @pram e--当前点击对象的属性集合
+   */
+  fillInputValue(e) {
+    this.setData({
+      active_search_val: e.target.dataset.cur_value,  //设置当前搜索字段值为选中的字段值
+      input_value: e.target.dataset.cur_value,        //设置选中的字段值在输入框中
+      btncancel_status: true,                         //隐藏取消按钮
+      btnsearch_status: false,                        //显示搜索按钮
+      cancel_icon: false                              //显示关闭按钮
+    })
+  }
 });

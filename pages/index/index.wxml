@@ -1,132 +1,133 @@
 <!--index.wxml-->
 <!--首页-->
 <view class="wrap-content">
-    <!-- 头部搜索部分 -->
-    <view class="header">
-        <view class="logo01">
-            <image src="../../images/index/logo01.png"></image>
-        </view>
-        <view class="motto">
-            <text>多·快·好·省</text>
-        </view>
-        <!-- 点击事件，跳转搜索页面 -->
-        <view class="search" bindtap="goSearchPage">
-            <icon class="search-static" type="search" size="16"/>
-            <input placeholder="搜索京东商品"/>
-        </view>
+  <!-- 头部搜索部分 -->
+  <view class="header">
+    <view class="logo01">
+      <image src="../../images/index/logo01.png"></image>
     </view>
-    <!-- 导航部分 -->
-    <view class="nav">
-        <!-- 界面跳转 navigator -->
-        <navigator url="get_coupons/get_coupons" open-type="navigate">
-            <view class="nav-item1">
-                <image src="../../images/index/cheap_card.png"></image>
-                <text>领优惠券</text>
-            </view>
-        </navigator>
-        <navigator>
-            <view class="nav-item2">
-                <image src="../../images/index/scan_code.png"></image>
-                <text>扫码购物</text>
-            </view>
-        </navigator>
-        <navigator url="../user_info/my_order/my_order?activeIndex=2" open-type="navigate">
-            <view class="nav-item3">
-                <image src="../../images/index/logistics.png"></image>
-                <text>物流查询</text>
-            </view>
-        </navigator>
-        <navigator url="goods_classification/goods_classification" open-type="navigate">
-            <view class="nav-item4">
-                <image src="../../images/index/class_goods.png"></image>
-                <text>商品分类</text>
-            </view>
-        </navigator>
+    <view class="motto">
+      <text>多·快·好·省</text>
     </view>
-    <view class="section-bar"></view>
-    <!-- 秒杀时间列表 -->
-    <view class="content">
-        <view class="seckill">
-            <text>京东秒杀</text>
-        </view>
-        <view class="time" bindtap="clickNum">
-            <view class="time-item">
-                <text class="{{num == 1?'time-active':''}}" data-num="1">14:00</text>
-                <text>抢购中</text>
-            </view>
-            <view class="time-item">
-                <text class="{{num == 2?'time-active':''}}" data-num="2">16:00</text>
-                <text>即将开始</text>
-            </view>
-            <view class="time-item">
-                <text class="{{num == 3?'time-active':''}}" data-num="3">18:00</text>
-                <text>即将开始</text>
-            </view>
-            <view class="time-item">
-                <text class="{{num == 4?'time-active':''}}" data-num="4">20:00</text>
-                <text>即将开始</text>
-            </view>
-            <view class="time-item">
-                <text class="{{num == 5?'time-active':''}}" data-num="5">22:00</text>
-                <text>即将开始</text>
-            </view>
-        </view>
-        <view class="count_down">
-            <text>距本场结束</text>
-            <!-- 倒计时的功能未完成 -->
-        </view>
+    <!-- 点击事件，跳转搜索页面 -->
+    <view class="search" bindtap="goSearchPage">
+      <icon class="search-static" type="search" size="16" />
+      <input placeholder="搜索京东商品" />
     </view>
-    <!-- 秒杀商品展示部分 -->
-    <block wx:for="{{products_data}}" wx:key="{{index}}">
-        <!-- 点击跳转详情 -->
-        <view class="goods_item" data-id="{{item.id}}" bindtap="goDetail">
-            <view class="goods_item01">
-                <image src="{{item.src}}"></image>
-            </view>
-            <view class="goods_item01_pro">
-                <text>{{item.description}}</text>
-                <text>{{item.product_name}}</text>
-                <view class="now-price">
-                    <text>￥</text>{{item.now_price}}
-                    <text>￥{{item.old_price}}</text>
-                </view>
-                <view>
-                    <text class="percent">已售 {{item.sold}}</text>
-                    <progress percent="17" activeColor="#f35a5f" active="{{true}}"></progress>
-                    <view></view>
-                </view>
-                <view class="immediately-btn">
-                    <text>立即抢购</text>
-
-                </view>
-            </view>
+  </view>
+  <!-- 导航部分 -->
+  <view class="nav">
+    <!-- 界面跳转 navigator，跳转方式使用wx.navigateTo -->
+    <navigator url="get_coupons/get_coupons" open-type="navigate">
+      <view class="nav-item1">
+        <image src="../../images/index/cheap_card.png"></image>
+        <text>领优惠券</text>
+      </view>
+    </navigator>
+    <navigator>
+      <view class="nav-item2">
+        <image src="../../images/index/scan_code.png"></image>
+        <text>扫码购物</text>
+      </view>
+    </navigator>
+    <navigator url="../user_info/my_order/my_order?activeIndex=2" open-type="navigate">
+      <view class="nav-item3">
+        <image src="../../images/index/logistics.png"></image>
+        <text>物流查询</text>
+      </view>
+    </navigator>
+    <navigator url="goods_classification/goods_classification" open-type="navigate">
+      <view class="nav-item4">
+        <image src="../../images/index/class_goods.png"></image>
+        <text>商品分类</text>
+      </view>
+    </navigator>
+  </view>
+  <view class="section-bar"></view>
+  <!-- 秒杀时间列表 -->
+  <!--todo 倒计时未做  -->
+  <view class="content">
+    <view class="seckill">
+      <text>京东秒杀</text>
+    </view>
+    <view class="time" bindtap="clickNum">
+      <view class="time-item">
+        <text class="{{num == 1?'time-active':''}}" data-num="1">14:00</text>
+        <text>抢购中</text>
+      </view>
+      <view class="time-item">
+        <text class="{{num == 2?'time-active':''}}" data-num="2">16:00</text>
+        <text>即将开始</text>
+      </view>
+      <view class="time-item">
+        <text class="{{num == 3?'time-active':''}}" data-num="3">18:00</text>
+        <text>即将开始</text>
+      </view>
+      <view class="time-item">
+        <text class="{{num == 4?'time-active':''}}" data-num="4">20:00</text>
+        <text>即将开始</text>
+      </view>
+      <view class="time-item">
+        <text class="{{num == 5?'time-active':''}}" data-num="5">22:00</text>
+        <text>即将开始</text>
+      </view>
+    </view>
+    <view class="count_down">
+      <text>距本场结束</text>
+      <!-- 倒计时的功能未完成 -->
+    </view>
+  </view>
+  <!-- 秒杀商品展示部分 -->
+  <block wx:for="{{products_data}}" wx:key="{{index}}">
+    <!-- 点击跳转详情 -->
+    <view class="goods_item" data-id="{{item.id}}" bindtap="goDetail">
+      <view class="goods_item01">
+        <image src="{{item.src}}"></image>
+      </view>
+      <view class="goods_item01_pro">
+        <text>{{item.description}}</text>
+        <text>{{item.product_name}}</text>
+        <view class="now-price">
+          <text>￥</text>{{item.now_price}}
+          <text>￥{{item.old_price}}</text>
         </view>
-    </block>
-
-    <!--下拉加载更多-->
-    <!--todo 上拉加载更多只能渲染一次，之后无法继续渲染-->
-    <block wx:for="{{products_data}}" wx:key="{{index}}">
-        <view class="goods_item" data-id="{{item.id}}" bindtap="goDetail" hidden="{{is_hide_loadmore}}">
-            <view class="goods_item01">
-                <image src="{{item.src}}"></image>
-            </view>
-            <view class="goods_item01_pro">
-                <text>{{item.description}}</text>
-                <text>{{item.product_name}}</text>
-                <view class="now-price">
-                    <text>￥</text>{{item.now_price}}
-                    <text>￥{{item.old_price}}</text>
-                </view>
-                <view>
-                    <text class="percent">已售 {{item.sold}}</text>
-                    <progress percent="17" activeColor="#f35a5f" active="{{true}}"></progress>
-                    <view></view>
-                </view>
-                <view class="immediately-btn">
-                    <text>立即抢购</text>
-
-                </view>
-            </view>
+        <view>
+          <text class="percent">已售 {{item.sold}}</text>
+          <progress percent="17" activeColor="#f35a5f" active="{{true}}"></progress>
+          <view></view>
         </view>
-    </block>
+        <view class="immediately-btn">
+          <text>立即抢购</text>
+
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!--下拉加载更多-->
+  <!--todo 上拉加载更多只能渲染一次，之后无法继续渲染-->
+  <block wx:for="{{products_data}}" wx:key="{{index}}">
+    <view class="goods_item" data-id="{{item.id}}" bindtap="goDetail" hidden="{{is_hide_loadmore}}">
+      <view class="goods_item01">
+        <image src="{{item.src}}"></image>
+      </view>
+      <view class="goods_item01_pro">
+        <text>{{item.description}}</text>
+        <text>{{item.product_name}}</text>
+        <view class="now-price">
+          <text>￥</text>{{item.now_price}}
+          <text>￥{{item.old_price}}</text>
+        </view>
+        <view>
+          <text class="percent">已售 {{item.sold}}</text>
+          <progress percent="17" activeColor="#f35a5f" active="{{true}}"></progress>
+          <view></view>
+        </view>
+        <view class="immediately-btn">
+          <text>立即抢购</text>
+
+        </view>
+      </view>
+    </view>
+  </block>
 </view>
