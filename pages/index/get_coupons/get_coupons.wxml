@@ -4,7 +4,7 @@
         <text>/ 专享福利 天天优惠 /</text>
     </view>
     <view class="coupon_content">
-       <block wx:for="{{couponInfo}}">
+       <block wx:for="{{couponInfo}}" wx:key="{{index}}">
            <view class="coupon_info" style="background-image:url('../../../images/index/{{item.coupon_status == 1 ? \'geted.png\':\'not_get.png\'}}')" id="{{item.coupon_id}}" bindtap="{{item.coupon_status == '0' ? 'tapGetCoupon' : 'getCouponGoods'}}">
                <view class="coupon_classification">
                    <image src="{{item.coupon_img_url}}"></image>
@@ -32,7 +32,7 @@
                <swiper indicator-dots="true" indicator-color="#C6C6C6" indicator-active-color="#CC3C5D">
                    <block wx:for="{{item.goods_list}}" wx:key="{{index}}">
                        <swiper-item>
-                           <view wx:for="{{item.page}}" wx:key="{{index}}" class="goods-content">
+                           <view wx:for="{{item.page}}" wx:key="{{index}}" class="goods-content" id="{{item.goods_id}}" bindtap="toGoodsDetail">
                                <view>
                                    <image src="{{item.goods_url}}"></image>
                                </view>

@@ -106,6 +106,15 @@ Page({
 },
 
   /**
+   * 点击链接到当前商品的详情页
+   */
+toGoodsDetail: function (e) {
+  wx.navigateTo({
+    url: `../../cart/goods_detail/goods_detail?goods_id=${e.currentTarget.id}`
+  })
+},
+
+  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
