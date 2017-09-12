@@ -102,8 +102,13 @@ Page({
       carts[index].count = num;
     }
     this.setData({
-      cart: this.data.cart
+      cart: carts
     });
+    try {
+      wx.setStorageSync('cart', carts)
+    } catch (e) {
+      console.log(e)
+    }
     this.getTotalPrice();
   },
   // 计算总额
@@ -183,6 +188,11 @@ Page({
     this.setData({
       cart: carts
     });
+    try {
+      wx.setStorageSync('cart', carts)
+    } catch (e) {
+      console.log(e)
+    }
     this.getTotalPrice();
   },
 
@@ -201,6 +211,11 @@ Page({
     this.setData({
       cart: carts
     });
+    try {
+      wx.setStorageSync('cart', carts)
+    } catch (e) {
+      console.log(e)
+    }
     this.getTotalPrice();
   },
 

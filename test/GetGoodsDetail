@@ -2,24 +2,22 @@
     "goods_detail": {
         "id": "1",
         "big_img_urls":[
-            "../../../images/goods_detail/1.jpg",
-            "../../../images/goods_detail/2.jpg",
-            "../../../images/goods_detail/3.jpg",
-            "../../../images/goods_detail/4.jpg",
-            "../../../images/goods_detail/5.jpg",
-            "../../../images/goods_detail/6.jpg"
+            "../../../images/goods_detail/duorou_1.jpg",
+            "../../../images/goods_detail/duorou_2.jpg",
+            "../../../images/goods_detail/duorou_3.jpg",
+            "../../../images/goods_detail/duorou_4.jpg"
         ],
-        "small_img_url": "../../images/buycar/mask.jpg",
+        "small_img_url": "../../../images/goods_detail/duorou_1.jpg",
         "shop_name": "京东自营",
         "shop_logo_url": "../../../images/goods_detail/shop-logo.png",
-        "describe": "【京东超市】Mediheal可莱丝美迪惠尔水润保湿面膜10片水库针剂（保湿补水男女士 护肤品）新老包装随机发放",
-        "specification": "重量：0.350kg；规格：水润保湿面膜10片",
+        "describe": "多肉 多肉植物 赠陶瓷盆赠土 多肉植物盆栽 24款新手入门 花卉植物 马库斯",
+        "specification": "规格：马库斯",
         "is_selected": true,
         "is_touch_move": false,
-        "new_price": "128",
-        "old_price": "1288.00",
+        "new_price": "9.9",
+        "old_price": "19.00",
         "count": "0",
-        "type": ["红色","黄色","浅蓝色","浅咖啡色","白色"],
+        "type": ["马库斯","黑王子","姬胧月","黄丽","白牡丹","春萌","紫牡丹","吹雪之松锦","黄金草","乙女心","照波","观音莲","火祭","子持年华","玉珠莲","十二卷","霜之朝","晚霞之朝","苦娃娃","蒂亚"],
         "size": [],
         "default_type":"红色"
     }

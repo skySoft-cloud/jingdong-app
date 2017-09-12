@@ -62,7 +62,7 @@
       <view class="left">
         <text>颜色</text>
       </view>
-      <view>
+      <view class='right'>
         <text class="goods-color" wx:for="{{goods_detail.type}}" wx:key="">{{item}}</text>
       </view>
     </view>
@@ -129,16 +129,16 @@
     <view class="comment-txt">非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢非常喜欢</view>
     <view class="pictures">
       <view class="pic-wrap">
-        <image class="pic" src="../../../images/goods_detail/comment.jpg"></image>
+        <image class="pic" src="../../../images/goods_detail/comment_1.jpg"></image>
       </view>
       <view class="pic-wrap">
-        <image class="pic" src="../../../images/goods_detail/comment.jpg"></image>
+        <image class="pic" src="../../../images/goods_detail/comment_2.jpg"></image>
       </view>
       <view class="pic-wrap">
-        <image class="pic" src="../../../images/goods_detail/comment.jpg"></image>
+        <image class="pic" src="../../../images/goods_detail/comment_3.jpg"></image>
       </view>
       <view class="pic-wrap">
-        <image class="pic" src="../../../images/goods_detail/comment.jpg"></image>
+        <image class="pic" src="../../../images/goods_detail/comment_4.jpg"></image>
         <view class="more-pic">更多</view>
       </view>
     </view>

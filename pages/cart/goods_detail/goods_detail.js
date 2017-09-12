@@ -88,19 +88,20 @@ Page({
   },
   addToCart: function (e) {
     let cart_num = this.data.cart_num;
+    let cart_arr = this.data.cart_arr;
     this.setData({
       cart_num: cart_num + 1
     });
     this.data.goods_detail.count = 1;
     if (this.data.has_cart) {
-      for (var i in this.data.cart_list) {
+      for (var i in cart_arr) {
         // 判断购物车内的item的id，和事件传递过来的id，是否相等  
-        if (this.data.cart_list[i].id == this.data.goods_id) {
+        if (cart_arr[i].id == this.data.goods_id) {
           // 相等的话，给count+1（即再次添加入购物车，数量+1）  
-          this.data.cart_list[i].count = this.data.cart_list[i].count + 1;
+          cart_arr[i].count = cart_arr[i].count + 1;
           // 最后，把购物车数据，存放入缓存（此处不用再给购物车数组push元素进去，因为这个是购物车有的，直接更新当前数组即可）  
           try {
-            wx.setStorageSync('cart', this.data.cart_list)
+            wx.setStorageSync('cart', cart_arr)
           } catch (e) {
             console.log(e)
           }
@@ -109,25 +110,24 @@ Page({
         }
       }
       // 遍历完购物车后，没有对应的item项，把当前项放入购物车数组 
-      this.data.cart_list.push(this.data.goods_detail);
+      cart_arr.push(this.data.goods_detail);
     } else {
       // 购物车没有数据，把item项push放入当前数据（第一次存放时）  
-      this.data.cart_list.push(this.data.goods_detail);
+      cart_arr.push(this.data.goods_detail);
     }
     // 最后，把购物车数据，存放入缓存  
     try {
-      wx.setStorageSync('cart', this.data.cart_list)
-      this.setData({
-        has_cart: true
+      wx.setStorageSync('cart', cart_arr)
+      // 显示提示信息
+      wx.showToast({
+        title: '添加成功'
       });
       // 返回（在if内使用return，跳出循环节约运算，节约性能）  
       return;
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
-    wx.showToast({
-      title: '添加成功'
-    });
+
   },
   toCartPage: function (e) {
     console.log(e);

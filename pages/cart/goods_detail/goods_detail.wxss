@@ -150,12 +150,14 @@ swiper {
 }
 
 .left {
-  width: 72rpx;
+  width: 10%;
   font-size: 24rpx;
   color: #848689;
   padding-top: 15rpx;
 }
-
+.right{
+  width: 90%;
+}
 .num-wrap {
   display: flex;
   border: 1rpx solid #bebebe;
