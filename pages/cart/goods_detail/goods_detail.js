@@ -1,79 +1,138 @@
 // pages/goods_detail/goods_detail.js
+const {
+  http
+} = require('../../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      "../../../images/goods_detail/1.jpg",
-      "../../../images/goods_detail/2.jpg",
-      "../../../images/goods_detail/3.jpg",
-      "../../../images/goods_detail/4.jpg",
-      "../../../images/goods_detail/5.jpg",
-      "../../../images/goods_detail/6.jpg"
-    ],
-    indicatorDots: true,
-    autoplay: false,
-    interval: 5000,
-    duration: 1000,
-    indicator_color: "#848689",
-    indicator_active_color: "#f23030"
+    swiper_attrs: {
+      indicatorDots: true,
+      autoplay: true,
+      interval: 5000,
+      duration: 1000,
+      indicator_color: "#848689",
+      indicator_active_color: "#f23030"
+    },
+    goods_detail: [],
+    cart_num: 0,
+    has_cart: false,
+    total_num: 0,
+    cart_list: [],
+    goods_id: "",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    http({
+      url: "GetGoodsDetail",
+      data: options.product_id,
+      func: (data) => {
+        this.setData({
+          goods_detail: data.goods_detail,
+          goods_id: options.product_id
+        });
+      }
+    });
+    let arr = wx.getStorageSync('cart') || [];
+    let total_cart_count = 0;
+    if (arr.length > 0) {
+      for (let i in arr) {
+        total_cart_count += parseInt(arr[i].count);
+      }
+      this.setData({
+        has_cart: true,
+        cart_num: total_cart_count,
+        cart_arr: arr
+      });
+    }
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  minusCount: function (e) {
+    let goods_detail = this.data.goods_detail;
+    let num = parseInt(goods_detail.count);
+    if (num <= 1) {
+      return false;
+    }
+    num = num - 1;
+    goods_detail.count = num;
+    this.setData({
+      goods_detail: goods_detail
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  addCount: function (e) {
+    let goods_detail = this.data.goods_detail;
+    let num = parseInt(goods_detail.count);
+    num = num + 1;
+    goods_detail.count = num;
+    this.setData({
+      goods_detail: goods_detail
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  getInputVal: function (e) {
+    let goods_detail = this.data.goods_detail;
+    let num = parseInt(e.detail.value);
+    if (num == 0) {
+      goods_detail.count = 1;
+    } else {
+      goods_detail.count = num;
+    }
+    this.setData({
+      goods_detail: goods_detail
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  addToCart: function (e) {
+    let cart_num = this.data.cart_num;
+    this.setData({
+      cart_num: cart_num + 1
+    });
+    this.data.goods_detail.count = 1;
+    if (this.data.has_cart) {
+      for (var i in this.data.cart_list) {
+        // 判断购物车内的item的id，和事件传递过来的id，是否相等  
+        if (this.data.cart_list[i].id == this.data.goods_id) {
+          // 相等的话，给count+1（即再次添加入购物车，数量+1）  
+          this.data.cart_list[i].count = this.data.cart_list[i].count + 1;
+          // 最后，把购物车数据，存放入缓存（此处不用再给购物车数组push元素进去，因为这个是购物车有的，直接更新当前数组即可）  
+          try {
+            wx.setStorageSync('cart', this.data.cart_list)
+          } catch (e) {
+            console.log(e)
+          }
+          // 返回（在if内使用return，跳出循环节约运算，节约性能）  
+          return;
+        }
+      }
+      // 遍历完购物车后，没有对应的item项，把当前项放入购物车数组 
+      this.data.cart_list.push(this.data.goods_detail);
+    } else {
+      // 购物车没有数据，把item项push放入当前数据（第一次存放时）  
+      this.data.cart_list.push(this.data.goods_detail);
+    }
+    // 最后，把购物车数据，存放入缓存  
+    try {
+      wx.setStorageSync('cart', this.data.cart_list)
+      this.setData({
+        has_cart: true
+      });
+      // 返回（在if内使用return，跳出循环节约运算，节约性能）  
+      return;
+    } catch (e) {
+      console.log(e)
+    }
+    wx.showToast({
+      title: '添加成功'
+    });
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  toCartPage: function (e) {
+    console.log(e);
+    wx.switchTab({
+      url: '../cart',
+    });
   }
-})
+});

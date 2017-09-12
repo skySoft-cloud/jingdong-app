@@ -1,6 +1,6 @@
 <!--pages/goods_detail/goods_detail.wxml-->
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicator_color}}" indicator-active-color="{{indicator_active_color}}">
-  <block wx:for="{{imgUrls}}">
+<swiper indicator-dots="{{swiper_attrs.indicatorDots}}" autoplay="{{swiper_attrs.autoplay}}" interval="{{swiper_attrs.interval}}" duration="{{swiper_attrs.duration}}" indicator-color="{{swiper_attrs.indicator_color}}" indicator-active-color="{{swiper_attrs.indicator_active_color}}">
+  <block wx:for="{{goods_detail.big_img_urls}}" wx:key="">
     <swiper-item>
       <image src="{{item}}" class="slide-image" />
     </swiper-item>
@@ -10,11 +10,11 @@
   <view class="price-wrap">
     <view class="new-price">
       <text>￥</text>
-      <text class="font-24">58</text>
+      <text class="font-24">{{goods_detail.new_price}}</text>
       <text>.00</text>
     </view>
     <view>
-      <view class="old-price font-12">￥99.00</view>
+      <view class="old-price font-12">￥{{goods_detail.old_price}}</view>
       <view class="font-12">京东秒杀</view>
     </view>
   </view>
@@ -24,7 +24,7 @@
   </view>
 </view>
 <view class="goods-describe">
-  [秋装钜惠 买两件立减8元] 短款修身针织衫开衫时尚百搭毛衣外套女8040 浅咖啡色 均码
+  {{goods_detail.describe}}
 </view>
 <view class="get_coupon">
 
@@ -53,8 +53,8 @@
 <view class="picked accordion-group">
   <view class="accordion-heading">
     <text class="sale-title">已选</text>
-    <text>红色，</text>
-    <text>2个</text>
+    <text>{{goods_detail.default_type}}，</text>
+    <text>{{goods_detail.count}}个</text>
     <text class="icon arrow-up fr"></text>
   </view>
   <view class="accordion-body collapse">
@@ -63,11 +63,7 @@
         <text>颜色</text>
       </view>
       <view>
-        <text class="goods-color goods-color-picked">红色</text>
-        <text class="goods-color">黄色</text>
-        <text class="goods-color">浅蓝色</text>
-        <text class="goods-color">浅咖啡色</text>
-        <text class="goods-color">白色</text>
+        <text class="goods-color" wx:for="{{goods_detail.type}}" wx:key="">{{item}}</text>
       </view>
     </view>
     <view class="picked-item no-padding-top">
@@ -75,11 +71,11 @@
         <text>数量</text>
       </view>
       <view class="num-wrap">
-        <view class="minus">-</view>
+        <view class="minus" bindtap="minusCount">-</view>
         <view class="input-num">
-          <input type="text" value="2" />
+          <input type="text" value="{{goods_detail.count}}" bindblur="getInputVal" />
         </view>
-        <view class="add">+</view>
+        <view class="add" bindtap="addCount">+</view>
       </view>
     </view>
   </view>
@@ -180,11 +176,12 @@
   <view class="goods-service detail-content"></view>
 </view>
 <view class="bottom">
-  <view class="cart font-12 color-grey">
+  <view class="cart font-12 color-grey" bindtap='toCartPage'>
     <text class="cart-txt">购物车
-      <text class="dot">0</text>
+      <text class="dot" wx:if="{{has_cart}}">{{cart_num}}</text>
     </text>
   </view>
-  <view class="add-cart font-18">加入购物车</view>
+
+  <view class="add-cart font-18" bindtap='addToCart'>加入购物车</view>
   <view class="go-pay font-18">立即购买</view>
 </view>

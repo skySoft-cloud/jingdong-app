@@ -1,0 +1,26 @@
+{
+    "goods_detail": {
+        "id": "1",
+        "big_img_urls":[
+            "../../../images/goods_detail/1.jpg",
+            "../../../images/goods_detail/2.jpg",
+            "../../../images/goods_detail/3.jpg",
+            "../../../images/goods_detail/4.jpg",
+            "../../../images/goods_detail/5.jpg",
+            "../../../images/goods_detail/6.jpg"
+        ],
+        "small_img_url": "../../images/buycar/mask.jpg",
+        "shop_name": "京东自营",
+        "shop_logo_url": "../../../images/goods_detail/shop-logo.png",
+        "describe": "【京东超市】Mediheal可莱丝美迪惠尔水润保湿面膜10片水库针剂（保湿补水男女士 护肤品）新老包装随机发放",
+        "specification": "重量：0.350kg；规格：水润保湿面膜10片",
+        "is_selected": true,
+        "is_touch_move": false,
+        "new_price": "128",
+        "old_price": "1288.00",
+        "count": "0",
+        "type": ["红色","黄色","浅蓝色","浅咖啡色","白色"],
+        "size": [],
+        "default_type":"红色"
+    }
+}

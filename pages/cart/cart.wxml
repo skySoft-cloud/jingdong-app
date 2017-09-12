@@ -7,37 +7,37 @@
       <image src="../../images/buycar/JDshopTitle.png" class="shop-img"></image>
       <text class="shop-name color-pink">京东自营</text>
     </view>
-    <view class="goods-list" wx:for="{{goods_list}}" wx:key="">
+    <view class="goods-list" wx:for="{{cart}}" wx:key="">
       <view class="special-offer">
         <text class="money-off">满减</text>
         <text>购满2件，即可享受</text>
         <text class="fr jd-main-color">去凑单></text>
       </view>
-      <view class="goods-detail-wrap {{item.isTouchMove ? 'touch-move-active' : ''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}">
+      <view class="goods-detail-wrap {{item.is_touch_move ? 'touch-move-active' : ''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}" bindtap='goDetail' data-id='{{item.id}}'>
         <view class="goods-detail">
           <view class="margin-auto">
-            <icon wx:if="{{item.selected}}" type="success" color="#f23030" bindtap="selectList" data-index="{{index}}" />
-            <icon wx:else type="circle" color="#000" bindtap="selectList" data-index="{{index}}" />
+            <icon wx:if="{{item.is_selected}}" type="success" color="#f23030" catchtap="selectList" data-index="{{index}}" />
+            <icon wx:else type="circle" color="#000" catchtap="selectList" data-index="{{index}}" />
           </view>
           <view class="goods-img">
-            <image src="{{item.goods_img}}"></image>
+            <image src="{{item.small_img_url}}"></image>
           </view>
           <view class="goods-describe">
-            <view class="goods-describe-txt"> {{item.goods_describe}}</view>
-            <view class="goods-spec">{{item.goods_spec}}</view>
+            <view class="goods-describe-txt"> {{item.describe}}</view>
+            <view class="goods-spec">{{item.specification}}</view>
             <view class="goods-price-wrap">
-              <text class="goods-price">￥{{item.goods_price}}</text>
+              <text class="goods-price">￥{{item.new_price}}</text>
               <view class="goods-num">
-                <view class="subtract" bindtap="minusCount" data-index="{{index}}">-</view>
+                <view class="subtract" catchtap="minusCount" data-index="{{index}}">-</view>
                 <view class="num">
-                  <input type="number" value="{{item.default_num}}" data-index="{{index}}" bindblur="getInputVal" />
+                  <input type="number" value="{{item.count}}" data-index="{{index}}" bindblur="getInputVal" />
                 </view>
-                <view class="add" bindtap="addCount" data-index="{{index}}">+</view>
+                <view class="add" catchtap="addCount" data-index="{{index}}">+</view>
               </view>
             </view>
           </view>
         </view>
-        <view class="del" bindtap="delGoods">
+        <view class="del" catchtap="delGoods" data-index="{{index}}">
           <text>删除</text>
         </view>
       </view>
