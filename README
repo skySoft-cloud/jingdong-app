@@ -33,6 +33,7 @@ pages里的文件结构
     箭头函数 =>
     块级变量let、const
     模板字符串${...}
+    数组扩展let c = [...a,...b]
 
   2.微信相关
     WXML
@@ -40,6 +41,11 @@ pages里的文件结构
       template模板
       列表渲染：wx:for="" wx:key=""
       条件渲染：wx:if="" elif="" else
+
+    WXSS
+      flex布局
+      rpx自适应宽度
+
     JS相关封装
       setData()
       wx.request(OBJECT)
