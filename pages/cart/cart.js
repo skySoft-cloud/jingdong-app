@@ -113,7 +113,6 @@ Page({
   },
   // 计算总额
   getTotalPrice() {
-    debugger;
     let carts = this.data.cart;                                         // 获取购物车列表
     let total_price = 0;
     let total_num = 0;
