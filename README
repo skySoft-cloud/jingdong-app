@@ -1,8 +1,8 @@
 命名规范
   1.JS用驼峰法命名
-  2.css中class命名用"_"分隔，ID用"_"
-  3.接口中数据用"_"分隔
-  4.文件/文件夹命名用"_"
+  2.css中class命名用“-”分隔，ID用“_”
+  3.接口中数据用“_”分隔
+  4.文件/文件夹命名用“_”
 JS使用规范
   使用ECMAScript 2016
 pages里的文件结构
@@ -16,6 +16,7 @@ pages里的文件结构
 开发中遇到的坑：
   1. JS方面
      不支持DOM操作
+     wx.showToast()配置样式单一，且宽度不能自适应
   2. wxml方面
 
   3. wxss方面
@@ -26,3 +27,26 @@ pages里的文件结构
      app.json不允许在里面写注释，否则会报错加载不出页面
      在json文件中没有写内容的话也要加上一对{},否则也会报错
      json文件是配置window窗口的，但是此时可以省略window属性，如果加window则没有效果，也不会报错
+
+项目中使用过的API：
+  1.ES6相关
+    对象解构 {} = {}
+    箭头函数 =>
+    块级变量let、const
+    模板字符串${...}
+
+  2.微信相关
+    WXML
+      组件：view、text、image、icon、swiper、progress、navigator、button、input
+      template模板
+      列表渲染：wx:for="" wx:key=""
+      条件渲染：wx:if="" elif="" else
+    JS相关封装
+      setData()
+      wx.request(OBJECT)
+      wx.navigateTo()
+      wx.navigateBack()
+      wx.showToast(OBJECT)
+      wx.showModal(OBJECT)
+      绑定事件：bindtap、onReachBottom
+
