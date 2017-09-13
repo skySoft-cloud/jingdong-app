@@ -113,13 +113,14 @@ Page({
   },
   // 计算总额
   getTotalPrice() {
+    debugger;
     let carts = this.data.cart;                                         // 获取购物车列表
     let total_price = 0;
     let total_num = 0;
     for (let i = 0; i < carts.length; i++) {                            // 循环列表得到每个数据
       if (carts[i].is_selected) {                                       // 判断选中才会计算价格
         total_num += parseInt(carts[i].count);                          // 所有商品总数
-        total_price += carts[i].count * parseInt(carts[i].new_price);   // 所有价格加起来                           
+        total_price += carts[i].count * parseFloat(carts[i].new_price);   // 所有价格加起来                           
       }
     }
     this.setData({                                                      // 最后赋值到data中渲染到页面
