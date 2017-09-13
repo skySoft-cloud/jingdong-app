@@ -22,7 +22,7 @@ Page({
     total_num: 0,
     cart_arr: [],
     goods_id: "",
-    default_num:1
+    default_num: 1
   },
 
   /**
@@ -119,6 +119,9 @@ Page({
     // 最后，把购物车数据，存放入缓存  
     try {
       wx.setStorageSync('cart', cart_arr)
+      this.setData({
+        has_cart: true
+      });
       // 显示提示信息
       wx.showToast({
         title: '添加成功'
