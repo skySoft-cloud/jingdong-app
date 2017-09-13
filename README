@@ -15,15 +15,17 @@ pages里的文件结构
 
 开发中遇到的坑：
   1. JS方面
-     不支持DOM操作
+     不支持DOM操作，需要在开发时能够设置好所有需要的data属性值，然后渲染
      跳转到tabbar页面的时候只能使用wx.switchTab(OBJECT)
      wx.showToast()配置样式单一，且宽度不能自适应
-  2. wxml方面
 
+  2. wxml方面
+     标签不够语义化
   3. wxss方面
      不支持"a > b > c"双箭头写法，控制台会报错
-     背景图属性background-image必须写在标签中,写在CSS中的话background-image 只能用网络url或者base64 . 本地图片要用image标签才行
-
+     背景图属性background-image必须写在标签中,或者使用服务器上的图片
+     使用display:flex布局方式，容器大小会随内容大小变化，所以，最好给容器设置宽度
+     标注图标注的大小再设置时是原大小的2倍，比如图上标注10*10，css这边写20rpx*20rpx
   4. 其它方面
      json文件是配置window窗口的，但是此时可以省略window属性，如果加window则没有效果，也不会报错
 
