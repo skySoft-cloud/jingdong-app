@@ -132,5 +132,14 @@ Page({
       icon: "loading",
       duration: 2000
     })
+  },
+
+  /**
+   * 点击商品进入详情页
+   */
+  goDetail(e){
+    wx.navigateTo({
+      url: '../../cart/goods_detail/goods_detail',
+    })
   }
 })

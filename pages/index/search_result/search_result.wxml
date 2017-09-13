@@ -27,7 +27,7 @@
 <!--空白填充部分，否则固定定位header后内容区部分被遮挡  -->
 <view class="header-fill"></view>
 <!--内容区部分，商品item  -->
-<view class="wrap-result_content">
+<view class="wrap-result_content" bindtap="goDetail">
   <!--遍历search_data（查询结果）  -->
   <block wx:for="{{search_data}}" wx:key="{{index}}">
     <view class="result_item">
