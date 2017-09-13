@@ -81,7 +81,7 @@ Page({
       url: "GetSeckillProducts",
       func: (data) => {
         //合并已有的数据和请求到加载更多的数据
-        products_data = exsit_data.concat(data.products_data);
+        products_data = [...exsit_data, ...data["products_data"]];
         // 成功后加载页面
         _this.setData({
           products_data: products_data,

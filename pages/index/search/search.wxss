@@ -32,13 +32,13 @@
     color: #d6d6d9;
 }
 .cancel{
-    width:108rpx;
+    width:120rpx;
     height:54rpx;
     font-size:26rpx;
     line-height:54rpx;
 }
 .search-btn{
-  width:108rpx;
+  width:120rpx;
   height:54rpx;
   font-size:26rpx;
   line-height:54rpx;

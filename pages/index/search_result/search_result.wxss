@@ -192,7 +192,7 @@ page {
   border-right: 10rpx solid transparent;
   border-top: 12rpx solid #c7cfcc;
   top: 20rpx;
-  right: -15px;
+  right: -18px;
 }
 .top-arrow-slected{
   position: absolute;
@@ -202,7 +202,7 @@ page {
   border-right: 10rpx solid transparent;
   border-top: 12rpx solid #f23030;
   top: 20rpx;
-  right: -15px;
+  right: -34rpx;
 }
 .bottom-arrow {
   position: absolute;
@@ -212,7 +212,7 @@ page {
   border-right: 10rpx solid transparent;
   border-bottom: 12rpx solid #c7cfcc;
   top: 6rpx;
-  right: -30rpx;
+  right: -34rpx;
 }
 .bottom-arrow-selected{
    position: absolute;
@@ -222,5 +222,5 @@ page {
   border-right: 10rpx solid transparent;
   border-bottom: 12rpx solid #f23030;
   top: 6rpx;
-  right: -30rpx;
+  right: -34rpx;
 }

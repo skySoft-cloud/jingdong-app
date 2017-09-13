@@ -57,6 +57,7 @@ Page({
    * @pram e--当前点击对象的属性集合
    */
   goDetail(e) {
+    console.log(e)
     wx.navigateTo({
       url: "../../cart/goods_detail/goods_detail"
     })
