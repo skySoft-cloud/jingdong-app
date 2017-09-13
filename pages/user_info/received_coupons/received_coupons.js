@@ -26,6 +26,7 @@ Page({
     // 调接口GetReceivedCoupon
     http({
       url: "GetReceivedCoupon",
+      loading: true,
       func: function(data){
         // 定义渲染到视图层的数组
         let navTabs = [];

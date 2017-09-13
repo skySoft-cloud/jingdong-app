@@ -19,6 +19,7 @@ Page({
         // 调接口GetOrderDetail
         http({
             url: "GetOrderDetail",
+            loading: true,
             data: {"order_id": order_id},
             func: function (data) {
                 for (let i = 0; i < data.length; i++) {

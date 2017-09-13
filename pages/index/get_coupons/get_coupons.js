@@ -16,6 +16,7 @@ Page({
     // 调接口GetCoupon
     http({
       url: "GetCoupon",
+      loading: true,
       func: function(data){
         that.setData({
           couponInfo: data
@@ -80,6 +81,7 @@ Page({
         if (!coupon_info[i].hasOwnProperty("goods_list")) {
           http({
             url: "GetCouponGoods",
+            loading: true,
             // 传入当前优惠券的id
             data: {"coupon_id": coupon_id},
             func: function(data){

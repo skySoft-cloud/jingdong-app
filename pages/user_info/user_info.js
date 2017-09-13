@@ -41,6 +41,7 @@ Page({
       // 调接口GetOrderNum
       http({
           url: "GetOrderNum",
+          loading: true,
           func: function(data){
               that.setData({
                   allOrders: data["all_orders"] ? data["all_orders"]+"单" : "",

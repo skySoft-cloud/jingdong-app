@@ -25,6 +25,7 @@ Page({
         // 调接口GetReceivedCoupon
         http({
             url: "GetMyOrder",
+            loading: true,
             func: function (data) {
                 // 定义unpaidOrder和canceledOrder
                 let unpaidOrder = [],
