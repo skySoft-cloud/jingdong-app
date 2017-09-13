@@ -3,20 +3,16 @@
         {
             "id": "1",
             "img_urls":[
-                "../../../images/goods_detail/1.jpg",
-                "../../../images/goods_detail/2.jpg",
-                 "../../../images/goods_detail/3.jpg",
-                 "../../../images/goods_detail/4.jpg",
-                "../../../images/goods_detail/5.jpg",
-                 "../../../images/goods_detail/6.jpg"
+                "../../../images/goods_detail/comment_1.jpg",
+                "../../../images/goods_detail/comment_2.jpg",
+                "../../../images/goods_detail/comment_3.jpg",
+                "../../../images/goods_detail/comment_4.jpg"
             ],
-            "username": "哇哈哈",
-            "user_level": "钻石会员",
-            "user_comment": "【京东超市】Mediheal可莱丝美迪惠尔水润保湿面膜10片水库针剂（保湿补水男女士 护肤品）新老包装随机发放",
-            "goods_price": "128.00",
-            "default_num": "1",
-            "default_color": "红色",
-            "default_size": "M"
+            "username": "来东",
+            "user_level": "PLUS会员",
+            "user_comment": "货不错，包装的也很好，就是盆小了点，总体还满意",
+            "date":"2017-09-11",
+            "has_buy":"蒂亚"
         }
     ]
 }

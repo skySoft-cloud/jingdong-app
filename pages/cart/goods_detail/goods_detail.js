@@ -20,8 +20,9 @@ Page({
     cart_num: 0,
     has_cart: false,
     total_num: 0,
-    cart_list: [],
+    cart_arr: [],
     goods_id: "",
+    default_num:1
   },
 
   /**
@@ -38,7 +39,7 @@ Page({
         });
       }
     });
-    let arr = wx.getStorageSync('cart') || [];
+    let arr = wx.getStorageSync('cart');
     let total_cart_count = 0;
     if (arr.length > 0) {
       for (let i in arr) {
