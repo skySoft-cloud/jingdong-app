@@ -49,11 +49,10 @@ pages里的文件结构
       rpx自适应宽度
 
     JS相关封装
-      setData()
-      wx.request(OBJECT)
-      wx.navigateTo()
-      wx.navigateBack()
-      wx.showToast(OBJECT)
-      wx.showModal(OBJECT)
+      动态设置数据：setData()
+      发送接口请求：wx.request(OBJECT)
+      页面链接：wx.navigateTo()、wx.navigateBack()
+      页面弹框反馈：wx.showToast(OBJECT)、wx.showModal(OBJECT)
+      本地存储： wx.setStorageSync()、wx.getStorageSync()
       绑定事件：bindtap、onReachBottom
 
