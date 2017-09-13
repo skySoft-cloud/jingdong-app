@@ -25,6 +25,7 @@ Page({
     //根据页面跳转带来的搜索条件发起请求
     http({
       url: "GetSearchResult",
+      loading:true,
       data: { title: options.title },     //查询的具体商品
       //成功后处理
       func: (data) => {
@@ -32,7 +33,7 @@ Page({
           search_data: data["search_products"]
         })
       }
-    })
+    });
     //输入框默认显示为页面跳转传递过来的数据
     this.setData({
       input_value: options.title
@@ -70,7 +71,7 @@ Page({
               search_data: data["search_products"]
             })
           }
-        })
+        });
         break;
       //根据销量请求商品信息
       case "sales":
@@ -82,7 +83,7 @@ Page({
               search_data: data["search_products"]
             })
           }
-        })
+        });
         break;
     }
   },
@@ -99,7 +100,7 @@ Page({
         _this.setData({
           search_data: data["search_products"],
           normal_arrow: false,                   //下箭头显示灰色
-          arrow_selected: true,                  //上箭头显示红色
+          arrow_selected: true                  //上箭头显示红色
         })
       }
     })
@@ -117,7 +118,7 @@ Page({
         _this.setData({
           search_data: data["search_products"],
           normal_arrow: true,                    //上箭头显示灰色
-          arrow_selected: false,                 //下箭头显示红色
+          arrow_selected: false                 //下箭头显示红色
         })
       }
     })
@@ -139,7 +140,7 @@ Page({
    */
   goDetail(e){
     wx.navigateTo({
-      url: '../../cart/goods_detail/goods_detail',
+      url: '../../cart/goods_detail/goods_detail'
     })
   }
-})
+});

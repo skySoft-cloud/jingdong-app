@@ -19,6 +19,7 @@ Page({
     //请求数据
     http({
       url: "GetSeckillProducts",
+      loading:true,
       func: (data) => {
         // 成功后加载页面
         _this.initPage(data["products_data"]);
@@ -79,6 +80,7 @@ Page({
     //请求数据
     http({
       url: "GetSeckillProducts",
+      loading:true,
       func: (data) => {
         //合并已有的数据和请求到加载更多的数据
         products_data = [...exsit_data, ...data["products_data"]];

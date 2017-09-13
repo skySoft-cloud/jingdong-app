@@ -31,6 +31,7 @@ Page({
     //请求热搜数据
     http({
       url: "GetSearch",
+      loading:true,
       func: (data) => {
         // 成功后加载页面
         _this.initPage(data);
@@ -142,6 +143,7 @@ Page({
     //请求数据
     http({
       url: "GetChangeHotSearch",
+      loading:true,
       func: (data) => {
         // 成功后加载页面
         _this.initPage(data);
