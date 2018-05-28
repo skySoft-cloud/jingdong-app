@@ -1,3 +1,5 @@
+/*引入编写的共通样式*/
+@import "css/common.wxss";
 /**app.wxss**/
 
 /*全局共通样式均放在这里*/

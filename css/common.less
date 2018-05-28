@@ -1,0 +1,28 @@
+@full-height:100%;
+@base-padding:200rpx 0;
+@base-font-12: 24rpx !important;
+@base-font-16: 32rpx !important;
+@base-font-18: 36rpx !important;
+@base-font-24: 48rpx !important;
+@base-color-red:#f23030;
+@base-color-grey:#848689;
+@base-color-pink:#ff7878;
+@base-display:flex;
+@base-display-row:space-between;
+@base-display-column:center;
+@base-display-direction:column;
+@base-box-size:border-box;
+
+.base-flex{
+display: @base-display;
+flex-direction: @base-display-direction;
+justify-content: @base-display-row;
+align-items:@base-display-column;
+}
+
+.container{
+  width: @full-height;
+  .base-flex;
+  padding: @base-padding;
+  box-sizing:@base-box-size;
+}
