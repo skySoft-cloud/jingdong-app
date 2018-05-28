@@ -3,13 +3,13 @@
 /*全局共通样式均放在这里*/
 
 .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
 }
 
 /*页面基本样式
@@ -20,40 +20,40 @@
 */
 
 page {
-  background-color: #f0f2f5;
-  font-family: PingFangSC-Regular, Helvetica, "Droid Sans", Arial, sans-serif;
-  font-size: 28rpx;
-  color: #232326;
+    background-color: #f0f2f5;
+    font-family: PingFangSC-Regular, Helvetica, "Droid Sans", Arial, sans-serif;
+    font-size: 28rpx;
+    color: #232326;
 }
 
 .font-12 {
-  font-size: 24rpx !important;
+    font-size: 24rpx !important;
 }
 
 .font-16 {
-  font-size: 32rpx !important;
+    font-size: 32rpx !important;
 }
 
 .font-18 {
-  font-size: 36rpx !important;
+    font-size: 36rpx !important;
 }
 
 .font-24 {
-  font-size: 48rpx !important;
+    font-size: 48rpx !important;
 }
 
 .color-red {
-  color: #f23030;
+    color: #f23030;
 }
 
 .color-grey {
-  color: #848689;
+    color: #848689;
 }
 
 .color-pink {
-  color: #ff7878;
+    color: #ff7878;
 }
 
 .fr{
-  float: right;
+    float: right;
 }
