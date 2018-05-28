@@ -1,4 +1,4 @@
-const {http} = require('../../../utils/util.js');
+const {http,PageContent} = require('../../../utils/util.js');
 Page({
 
   /**
@@ -111,9 +111,7 @@ Page({
    * 点击链接到当前商品的详情页
    */
 toGoodsDetail: function (e) {
-  wx.navigateTo({
-    url: `../../cart/goods_detail/goods_detail?goods_id=${e.currentTarget.id}`
-  })
+    PageContent.loadNavigate(`../../cart/goods_detail/goods_detail?goods_id=${e.currentTarget.id}`);
 },
 
   /**

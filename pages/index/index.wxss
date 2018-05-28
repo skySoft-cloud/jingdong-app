@@ -3,6 +3,7 @@ page{
   background-color: #fff;
 }
 .header{
+    padding-top:28rpx;
     display: flex;
     flex-direction: column;
     align-items: center;

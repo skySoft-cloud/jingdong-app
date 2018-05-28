@@ -1,5 +1,5 @@
 // pages/user_info/my_order/my_order.js
-const {http} = require('../../../utils/util.js');
+const {http,PageContent} = require('../../../utils/util.js');
 Page({
 
     /**
@@ -68,8 +68,6 @@ Page({
     showOrderDetail: function (e) {
         // 获取当前订单的ID作为值传入url中
         const order_id = e.currentTarget.id;
-        wx.redirectTo({
-            url: `../order_detail/order_detail?order_id=${order_id}`
-        })
+        PageContent.loadNavigate(`../order_detail/order_detail?order_id=${order_id}`)
     }
-})
+});

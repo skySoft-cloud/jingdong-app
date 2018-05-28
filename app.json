@@ -41,5 +41,6 @@
         "selectedIconPath": "images/tabbar/me_sel.png"
       }
     ]
-  }
+  },
+  "debug": false
 }

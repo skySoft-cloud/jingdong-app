@@ -1,4 +1,4 @@
-const {http} = require('../../../utils/util.js');
+const {http,PageContent} = require('../../../utils/util.js');
 Page({
 
     /**
@@ -64,9 +64,7 @@ Page({
     toGoodsDetail: (e) => {
         // 获取当前订单的ID作为值传入url中
         const goods_id = e.currentTarget.id;
-        wx.navigateTo({
-            url: `../../cart/goods_detail/goods_detail?goods_id=${goods_id}`
-        })
+        PageContent.loadNavigate(`../../cart/goods_detail/goods_detail?goods_id=${goods_id}`);
     },
 
     /**
@@ -117,4 +115,4 @@ Page({
     onShareAppMessage: function () {
 
     }
-})
+});
